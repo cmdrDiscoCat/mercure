@@ -1,0 +1,10 @@
+discord.py
+aiohttp
+websocket
+requests
+python-dateutil
+beautifulsoup4
+markdownify
+html2text
+google-api-python-client
+oauth2client
