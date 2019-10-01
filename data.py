@@ -82,153 +82,153 @@ inara_ranks['empire'] = {
 13: "Roi"
 }
 
-materiaux = {}
+materials = {}
 
-materiaux['fer'] = {
+materials['fer'] = {
     'column': 'J',
     'number': 9,
     'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
 }
 
-materiaux['nickel'] = {
+materials['nickel'] = {
     'column': 'K',
     'number': 10,
     'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
 }
 
-materiaux['carbone'] = {
+materials['carbone'] = {
     'column': 'L',
     'number': 11,
     'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
 }
 
-materiaux['soufre'] = {
+materials['soufre'] = {
     'column': 'M',
     'number': 12,
     'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
 }
 
-materiaux['phosphore'] = {
+materials['phosphore'] = {
     'column': 'N',
     'number': 13,
     'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
 }
 
-materiaux['chrome'] = {
+materials['chrome'] = {
     'column': 'O',
     'number': 14,
     'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['manganese'] = {
+materials['manganese'] = {
     'column': 'P',
     'number': 15,
     'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['zinc'] = {
+materials['zinc'] = {
     'column': 'Q',
     'number': 16,
     'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['vanadium'] = {
+materials['vanadium'] = {
     'column': 'R',
     'number': 17,
     'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['germanium'] = {
+materials['germanium'] = {
     'column': 'S',
     'number': 18,
     'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['arsenic'] = {
+materials['arsenic'] = {
     'column': 'T',
     'number': 19,
     'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['tungstene'] = {
+materials['tungstene'] = {
     'column': 'U',
     'number': 20,
     'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['niobium'] = {
+materials['niobium'] = {
     'column': 'V',
     'number': 21,
     'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['selenium'] = {
+materials['selenium'] = {
     'column': 'W',
     'number': 22,
     'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['zirconium'] = {
+materials['zirconium'] = {
     'column': 'X',
     'number': 23,
     'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
 }
 
-materiaux['yttrium'] = {
+materials['yttrium'] = {
     'column': 'Y',
     'number': 24,
     'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
 }
 
-materiaux['molybdene'] = {
+materials['molybdene'] = {
     'column': 'Z',
     'number': 25,
     'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
 }
 
-materiaux['etain'] = {
+materials['etain'] = {
     'column': 'AA',
     'number': 26,
     'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
 }
 
-materiaux['mercure'] = {
+materials['mercure'] = {
     'column': 'AB',
     'number': 27,
     'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
 }
 
-materiaux['cadmium'] = {
+materials['cadmium'] = {
     'column': 'AC',
     'number': 28,
     'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
 }
 
-materiaux['technetium'] = {
+materials['technetium'] = {
     'column': 'AD',
     'number': 29,
     'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
 }
 
-materiaux['tellure'] = {
+materials['tellure'] = {
     'column': 'AE',
     'number': 30,
     'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
 }
 
-materiaux['polonium'] = {
+materials['polonium'] = {
     'column': 'AF',
     'number': 31,
     'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
 }
 
-materiaux['antimoine'] = {
+materials['antimoine'] = {
     'column': 'AG',
     'number': 32,
     'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
 }
 
-materiaux['ruthenium'] = {
+materials['ruthenium'] = {
     'column': 'AH',
     'number': 33,
     'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'

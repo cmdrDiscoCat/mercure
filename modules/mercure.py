@@ -4,6 +4,7 @@ from discord.ext import commands
 from config import *
 from data import *
 
+
 # Checks if the user is a server admin
 def is_admin():
     def predicate(ctx):
@@ -24,9 +25,14 @@ def acces_oracle():
             return True
     return commands.check(verifier_droits_oracle)
 
+
 class Mercure(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.command(pass_context=True)
+    async def presence(self, ctx, *, arg):
+        await self.bot.change_presence(game=discord.Game(name=arg))
 
     @commands.command(pass_context=True, aliases=['aide', 'liste'])
     @acces_oracle()
@@ -47,20 +53,17 @@ class Mercure(commands.Cog):
         embed = discord.Embed(title="Liste des commandes disponibles", description=aide_texte, color=0x00ff00)
         await ctx.send_message(ctx.message.channel, embed=embed)
 
-
     @commands.command(pass_context=True)
     @acces_oracle()
     async def poke(self, ctx):
         """ Just a poke to be sure the bot is still processing commands """
         await ctx.send_message(ctx.message.channel, 'Oui oui je suis là...:smiley_cat: ')
 
-
     @commands.command(pass_context=True,aliases=['cestquandlamaj', 'cestquandbeyond'])
     @acces_oracle()
     async def maj(self, ctx):
         """ Just a poke to be sure the bot is still processing commands """
         await ctx.send_message(ctx.message.channel, "C'est sorti !!!!! :ok_hand: :ok_hand: ")
-
 
     @commands.command(pass_context=True)
     @acces_oracle()

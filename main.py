@@ -11,12 +11,12 @@ from data import *
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
-log_filename = os.path.join("logs",'hermes.log')
+log_filename = os.path.join("logs",'mercure.log')
 handler = logging.FileHandler(filename=log_filename, encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-fileHandler = TimedRotatingFileHandler('logs/discobot.log', when='midnight')
+fileHandler = TimedRotatingFileHandler('logs/mercure.log', when='midnight')
 fileHandler.suffix = "%Y_%m_%d.log"
 fileHandler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s: %(message)s'))
 fileHandler.setLevel(logging.INFO)
@@ -26,12 +26,6 @@ description = '''Assistant BGS de la LGC'''
 bot = commands.Bot(command_prefix=config['prefix'], description=description, pm_help=True, heartbeat_timeout=150)
 bot.remove_command("help")
 
-
-try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
 
 
 # Checks if the user is a server admin
@@ -45,7 +39,7 @@ def is_admin():
 # wrote the command is in admin
 def acces_oracle():
     def verifier_droits_oracle(ctx):
-        if(str(ctx.message.channel) == 'oracle'):
+        if str(ctx.message.channel) == 'oracle':
             if ctx.message.author.id in admin_ids:
                 return True
             else:
@@ -66,7 +60,7 @@ def on_ready():
     # we load all modules
     for f in os.listdir("modules/"):
         if f.endswith('.py'):
-            client.load_extension(f"modules.{f[:-3]}")
+            bot.load_extension(f"modules.{f[:-3]}")
 
     yield from bot.change_presence(game=discord.Game(name='aider les cartographes'))
 

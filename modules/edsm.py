@@ -1,9 +1,13 @@
 import discord
 from discord.ext import commands
 
+from config import *
+from data import *
+
 import requests
 import urllib.parse
 from datetime import datetime
+
 
 # Checks if the user is a server admin
 def is_admin():
@@ -16,7 +20,7 @@ def is_admin():
 # wrote the command is in admin
 def acces_oracle():
     def verifier_droits_oracle(ctx):
-        if(str(ctx.message.channel) == 'oracle'):
+        if str(ctx.message.channel) == 'oracle':
             if ctx.message.author.id in admin_ids:
                 return True
             else:
@@ -24,6 +28,7 @@ def acces_oracle():
         else:
             return True
     return commands.check(verifier_droits_oracle)
+
 
 class Edsm(commands.Cog):
     def __init__(self, bot):
@@ -41,16 +46,16 @@ class Edsm(commands.Cog):
         informations = r.json()
 
         if informations['type'] == 'success':
-            couleur = 0x00ff00
+            color = 0x00ff00
         elif informations['type'] == 'warning':
-            couleur = 0xffff00
+            color = 0xffff00
         elif informations['type'] == 'danger':
-            couleur = 0xff0000
+            color = 0xff0000
         else:
-            couleur = 0x000000
+            color = 0x000000
 
         embed = discord.Embed(title="Message de statut retourné par les serveurs Elite Dangerous",
-                              description="```" + informations['message'] + "```", color=couleur)
+                              description="```" + informations['message'] + "```", color=color)
         embed.set_footer(text="Date de dernière mise à jour : " + informations['lastUpdate'])
         await ctx.send_message(ctx.message.channel, embed=embed)
 
@@ -67,7 +72,7 @@ class Edsm(commands.Cog):
         informations = r.json()
 
         await ctx.send_message(ctx.message.channel,
-                                    "***Informations sur le trafic dans le système " + informations["name"] + "***")
+                               "***Informations sur le trafic dans le système " + informations["name"] + "***")
 
         embed = discord.Embed(title="", color=0x000000)
         embed.add_field(name="Trafic total depuis la découverte du système", value=informations["traffic"]["total"],
@@ -100,7 +105,7 @@ class Edsm(commands.Cog):
         # for each station, an embed with all the intel
         for station in informations['stations']:
             await ctx.send_message(ctx.message.channel,
-                                        "```" + station["name"] + " de type " + station["type"] + "```")
+                                   "```" + station["name"] + " de type " + station["type"] + "```")
 
             embed = discord.Embed(title="", color=0x00ffff)
             try:
@@ -113,35 +118,35 @@ class Edsm(commands.Cog):
             embed.add_field(name="Gouvernement", value=traduction[station["government"]], inline=True)
             embed.add_field(name="Economie", value=traduction[station["economy"]], inline=True)
 
-            cocheOui = "Oui"
-            cocheNon = "Non"
+            yes_checkbox = "Oui"
+            no_checkbox = "Non"
             if station["haveMarket"]:
-                marche = cocheOui
+                market = yes_checkbox
             else:
-                marche = cocheNon
+                market = no_checkbox
 
             if station["haveShipyard"]:
-                chantierNaval = cocheOui
+                shipyard = yes_checkbox
             else:
-                chantierNaval = cocheNon
+                shipyard = no_checkbox
 
             if station["haveOutfitting"]:
-                equipement = cocheOui
+                equipment = yes_checkbox
             else:
-                equipement = cocheNon
+                equipment = no_checkbox
 
-            embed.add_field(name="Marché", value=marche, inline=True)
-            embed.add_field(name="Chantier naval", value=chantierNaval, inline=True)
-            embed.add_field(name="Equipement", value=equipement, inline=True)
+            embed.add_field(name="Marché", value=market, inline=True)
+            embed.add_field(name="Chantier naval", value=shipyard, inline=True)
+            embed.add_field(name="Equipement", value=equipment, inline=True)
 
             if not station['otherServices']:
                 pass
             else:
-                autresServices = ""
+                other_services = ""
                 for service in station['otherServices']:
-                    autresServices += traduction[service] + " / "
-                autresServices = autresServices.rstrip(' / ')
-                embed.add_field(name="Autres services", value=autresServices, inline=True)
+                    other_services += traduction[service] + " / "
+                other_services = other_services.rstrip(' / ')
+                embed.add_field(name="Autres services", value=other_services, inline=True)
 
             embed.add_field(name="Faction dirigeante", value=station['controllingFaction']['name'], inline=False)
 
@@ -164,7 +169,6 @@ class Edsm(commands.Cog):
             embed.set_thumbnail(url=url)
             await ctx.send_message(ctx.message.channel, embed=embed)
 
-
     @commands.command(pass_context=True)
     @acces_oracle()
     def systeme(self, ctx, *, arg):
@@ -172,15 +176,18 @@ class Edsm(commands.Cog):
         Displays the edsm data about a star system
         """
         system = urllib.parse.quote(arg)
-        url_to_call = "https://www.edsm.net/api-v1/system?systemName="+system+"&showId=1&showCoordinates=1&showPermit=1&showInformation=1&showPrimaryStar=1"
+        url_to_call = "https://www.edsm.net/api-v1/system?systemName="
+        url_to_call += system+"&showId=1&showCoordinates=1&showPermit=1&showInformation=1&showPrimaryStar=1"
 
         r = requests.get(url_to_call)
         informations = r.json()
 
         await ctx.send_message(ctx.message.channel, "***Résumé du système " + informations["name"]+"***")
 
-        if (informations["coords"]["x"]):
-            desc = "x :" + str(informations["coords"]["x"]) + ' / y : ' + str(informations["coords"]["y"]) + ' / z :  ' + str(informations["coords"]["z"])
+        if informations["coords"]["x"]:
+            desc = "x :" + str(informations["coords"]["x"]) \
+                   + ' / y : ' + str(informations["coords"]["y"]) \
+                   + ' / z :  ' + str(informations["coords"]["z"])
             embed = discord.Embed(title="Coordonnées", description = desc)
             await ctx.send_message(ctx.message.channel, embed=embed)
 
@@ -202,16 +209,16 @@ class Edsm(commands.Cog):
         embed.add_field(name="Sécurité et Economie", value=traduction[informations["information"]["security"]] + " / " + informations["information"]["economy"], inline=True)
         await ctx.send_message(ctx.message.channel, embed=embed)
 
-        if (informations["primaryStar"]):
+        if informations["primaryStar"]:
             scoopable = ""
             if informations["primaryStar"]["isScoopable"]:
                 scoopable = "Scoopable"
             else:
                 scoopable = "Non scoopable"
-            desc = str(informations["primaryStar"]["name"])+ " / Type spectral : " + str(informations["primaryStar"]["type"]) + " / "+ scoopable
+            desc = str(informations["primaryStar"]["name"])+ " / Type spectral : " \
+                   + str(informations["primaryStar"]["type"]) + " / "+ scoopable
             embed = discord.Embed(title="Etoile principale", description = desc, color=0xffaaaa)
             await ctx.send_message(ctx.message.channel, embed=embed)
-
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -235,7 +242,6 @@ class Edsm(commands.Cog):
         embed = discord.Embed(title="Colonia", description=desc, color=0x147119)
         await ctx.send_message(ctx.message.channel, embed=embed)
 
-
     @commands.command(pass_context=True)
     @acces_oracle()
     async def influence(self, ctx, *, arg):
@@ -254,32 +260,31 @@ class Edsm(commands.Cog):
 
             for faction in informations['factions']:
                 if faction['name'] == informations['controllingFaction']['name']:
-                    est_dirigeant = 1
+                    is_controlling = 1
                     nom_faction = "**" + faction['name'] + "**"
                 else:
-                    est_dirigeant = 0
+                    is_controlling = 0
                     nom_faction = faction['name']
 
                 if faction['isPlayer']:
-                    faction_joueur = ":grinning:"
+                    player_faction = ":grinning:"
                 else:
-                    faction_joueur = ":robot:"
+                    player_faction = ":robot:"
 
                 information_block += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
                 information_block += " | " + traduction[faction['state']]
                 information_block += " | " + traduction[faction['allegiance']]
                 information_block += " | " + traduction[faction['government']]
-                information_block += " " + faction_joueur + "\n"
-                if(faction['lastUpdate'] > last_update):
+                information_block += " " + player_faction + "\n"
+                if faction['lastUpdate'] > last_update:
                     last_update = faction['lastUpdate']
 
-            last_update = datetime.fromtimestamp(faction['lastUpdate'])
-            bloc_entete = "***Influences dans le système " +informations['name']
-            bloc_entete +="*** en date du ***"+last_update.strftime("%d/%m/%Y à %Hh%M")+"*** \n"
+            # last_update = datetime.fromtimestamp(faction['lastUpdate'])
+            bloc_entete = "***Influences dans le système " + informations['name']
+            bloc_entete += "*** en date du ***"+last_update.strftime("%d/%m/%Y à %Hh%M")+"*** \n"
             bloc_entete += "<https://www.edsm.net/en/system/id/"+str(informations['id'])+"/name/"+urllib.parse.quote_plus(arg)+">\n"
 
             await ctx.send_message(ctx.message.channel, bloc_entete)
-
             embed = discord.Embed(title="", description = information_block, color=0x00ff00)
             await ctx.send_message(ctx.message.channel, embed=embed)
         except:
@@ -287,7 +292,7 @@ class Edsm(commands.Cog):
 
     @commands.command(pass_context=True)
     @acces_oracle()
-    async def espionner(ctx, *, arg):
+    async def espionner(self, ctx, *, arg):
         """
         Displays the last known location in EDSM for a commander
         """
@@ -302,8 +307,7 @@ class Edsm(commands.Cog):
             information_block += "Pour en savoir plus, espionnez cette personne ici : <" + informations['url'] + ">"
             await ctx.send_message(ctx.message.channel, information_block)
         except:
-            await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
-
+            await ctx.send_message(ctx.message.channel, "Oops ! :crying_cat_face: ")
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -315,7 +319,7 @@ class Edsm(commands.Cog):
             r = requests.get(url_to_call)
             informations = r.json()
         except:
-            await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
+            await ctx.send_message(ctx.message.channel, "Oops ! :crying_cat_face: ")
 
 
 def setup(bot):
