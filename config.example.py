@@ -17,4 +17,4 @@ channel_for_daily_post = ''
 # example : https://inara.cz/galaxy-minorfaction-edit/12345/
 # Finally, note that id at the end (here 12435)
 # In the daily "bigbrother" function, the value assigned to each id
-followed_factions = {12345:"Displayed name for Faction 1",67890:"Displayed name for Faction 2"}
+followed_factions = {12345: "Displayed name for Faction 1", 67890: "Displayed name for Faction 2"}
