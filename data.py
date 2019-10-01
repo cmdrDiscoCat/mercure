@@ -1,6 +1,3 @@
-
-followed_factions = {76209:"LGC Bulle",76450:"LGC Colonia"}
-
 inara_ranks = {}
 
 inara_ranks['combat'] = {
