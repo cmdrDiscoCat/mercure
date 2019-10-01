@@ -250,7 +250,7 @@ class Edsm(commands.Cog):
             informations = r.json()
 
             last_update = 0
-            bloc_information = ""
+            information_block = ""
 
             for faction in informations['factions']:
                 if faction['name'] == informations['controllingFaction']['name']:
@@ -265,11 +265,11 @@ class Edsm(commands.Cog):
                 else:
                     faction_joueur = ":robot:"
 
-                bloc_information += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
-                bloc_information += " | " + traduction[faction['state']]
-                bloc_information += " | " + traduction[faction['allegiance']]
-                bloc_information += " | " + traduction[faction['government']]
-                bloc_information += " " + faction_joueur + "\n"
+                information_block += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
+                information_block += " | " + traduction[faction['state']]
+                information_block += " | " + traduction[faction['allegiance']]
+                information_block += " | " + traduction[faction['government']]
+                information_block += " " + faction_joueur + "\n"
                 if(faction['lastUpdate'] > last_update):
                     last_update = faction['lastUpdate']
 
@@ -280,7 +280,7 @@ class Edsm(commands.Cog):
 
             await ctx.send_message(ctx.message.channel, bloc_entete)
 
-            embed = discord.Embed(title="", description = bloc_information, color=0x00ff00)
+            embed = discord.Embed(title="", description = information_block, color=0x00ff00)
             await ctx.send_message(ctx.message.channel, embed=embed)
         except:
             await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
@@ -296,11 +296,11 @@ class Edsm(commands.Cog):
         try:
             r = requests.get(url_to_call)
             informations = r.json()
-            bloc_information = "D'après mes espions, **" + str(arg).title() + "** a été vu·e à **" + informations[
+            information_block = "D'après mes espions, **" + str(arg).title() + "** a été vu·e à **" + informations[
                 'system']
-            bloc_information += "** ce jour : **" + informations['date'] + "**.\n\n"
-            bloc_information += "Pour en savoir plus, espionnez cette personne ici : <" + informations['url'] + ">"
-            await ctx.send_message(ctx.message.channel, bloc_information)
+            information_block += "** ce jour : **" + informations['date'] + "**.\n\n"
+            information_block += "Pour en savoir plus, espionnez cette personne ici : <" + informations['url'] + ">"
+            await ctx.send_message(ctx.message.channel, information_block)
         except:
             await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
 

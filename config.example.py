@@ -2,6 +2,7 @@
 config = {}
 config["discord_token"] = "" # TO FILL
 config["inara_api_key"] = ""
+config["inara_appname"] = ""
 config["prefix"] = "!"
 
 # Admin ids

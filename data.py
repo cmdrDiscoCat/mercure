@@ -1,149 +1,9 @@
 
-nom_factions = {"LGC - Cartographers's Guild","LGC - Colonia Cartographers' Guild"}
+followed_factions = {76209:"LGC Bulle",76450:"LGC Colonia"}
 
-factions = {}
-factions["LGC - Cartographers's Guild"] = {}
-factions["LGC - Cartographers's Guild"]["name"] = "LGC - Cartographers's Guild"
-factions["LGC - Cartographers's Guild"]["id_edsm"] = 8172
-factions["LGC - Cartographers's Guild"]["id_eddb"] = 75388
+inara_ranks = {}
 
-factions["LGC - Colonia Cartographers' Guild"] = {}
-factions["LGC - Colonia Cartographers' Guild"]["name"] = "LGC - Colonia Cartographers' Guild"
-factions["LGC - Colonia Cartographers' Guild"]["id_edsm"] = 21093
-factions["LGC - Colonia Cartographers' Guild"]["id_eddb"] = 75524
-
-systemes_bulle = {}
-
-systemes_bulle['32 Mu Serpentis'] = {}
-systemes_bulle['32 Mu Serpentis']["name"] = '32 Mu Serpentis'
-systemes_bulle['32 Mu Serpentis']["id_esdm"] = 16803
-systemes_bulle['32 Mu Serpentis']["id_eddb"] = 155
-
-systemes_bulle['Cuachini'] = {}
-systemes_bulle['Cuachini']["name"] = 'Cuachini'
-systemes_bulle['Cuachini']["id_esdm"] = 16609
-systemes_bulle['Cuachini']["id_eddb"] = 3910
-
-systemes_bulle['30 Serpentis'] = {}
-systemes_bulle['30 Serpentis']["name"] = '30 Serpentis'
-systemes_bulle['30 Serpentis']["id_esdm"] = 15135
-systemes_bulle['30 Serpentis']["id_eddb"] = 143
-
-systemes_bulle['Weleutaheim'] = {}
-systemes_bulle['Weleutaheim']["name"] = 'Weleutaheim'
-systemes_bulle['Weleutaheim']["id_esdm"] = 4093
-systemes_bulle['Weleutaheim']["id_eddb"] = 18931
-
-systemes_bulle['Col 285 Sector YH-N b22-3'] = {}
-systemes_bulle['Col 285 Sector YH-N b22-3']["name"] = 'Col 285 Sector YH-N b22-3'
-systemes_bulle['Col 285 Sector YH-N b22-3']["id_esdm"] = 2639202
-systemes_bulle['Col 285 Sector YH-N b22-3']["id_eddb"] = 182545
-
-systemes_bulle['Hmon'] = {}
-systemes_bulle['Hmon']["name"] = 'Hmon'
-systemes_bulle['Hmon']["id_esdm"] = 5554
-systemes_bulle['Hmon']["id_eddb"] = 9101
-
-systemes_bulle['Yed Prior'] = {}
-systemes_bulle['Yed Prior']["name"] = 'Yed Prior'
-systemes_bulle['Yed Prior']["id_esdm"] = 214443
-systemes_bulle['Yed Prior']["id_eddb"] = 71803
-
-systemes_bulle['Shasantei'] = {}
-systemes_bulle['Shasantei']["name"] = 'Shasantei'
-systemes_bulle['Shasantei']["id_esdm"] = 8754
-systemes_bulle['Shasantei']["id_eddb"] = 16783
-
-systemes_bulle['Airmang'] = {}
-systemes_bulle['Airmang']["name"] = 'Airmang'
-systemes_bulle['Airmang']["id_esdm"] = 3241
-systemes_bulle['Airmang']["id_eddb"] = 598
-
-systemes_bulle['Kovantani'] = {}
-systemes_bulle['Kovantani']["name"] = 'Kovantani'
-systemes_bulle['Kovantani']["id_esdm"] = 820
-systemes_bulle['Kovantani']["id_eddb"] = 11070
-
-systemes_bulle['Txamsem'] = {}
-systemes_bulle['Txamsem']["name"] = 'Txamsem'
-systemes_bulle['Txamsem']["id_esdm"] = 1098
-systemes_bulle['Txamsem']["id_eddb"] = 18099
-
-systemes_bulle['HIP 78513'] = {}
-systemes_bulle['HIP 78513']["name"] = 'HIP 78513'
-systemes_bulle['HIP 78513']["id_esdm"] = 58969
-systemes_bulle['HIP 78513']["id_eddb"] = 32264
-
-systemes_bulle['HIP 76635'] = {}
-systemes_bulle['HIP 76635']["name"] = 'HIP 76635'
-systemes_bulle['HIP 76635']["id_esdm"] = 8965
-systemes_bulle['HIP 76635']["id_eddb"] = 8490
-
-systemes_bulle['Chiccan'] = {}
-systemes_bulle['Chiccan']["name"] = 'Chiccan'
-systemes_bulle['Chiccan']["id_esdm"] = 6430
-systemes_bulle['Chiccan']["id_eddb"] = 3325
-
-systemes_bulle['Lemoerige'] = {}
-systemes_bulle['Lemoerige']["name"] = 'Lemoerige'
-systemes_bulle['Lemoerige']["id_esdm"] = 5844
-systemes_bulle['Lemoerige']["id_eddb"] = 11665
-
-systemes_bulle['HIP 79117'] = {}
-systemes_bulle['HIP 79117']["name"] = 'HIP 79117'
-systemes_bulle['HIP 79117']["id_esdm"] = 6142
-systemes_bulle['HIP 79117']["id_eddb"] = 8558
-
-systemes_bulle['HIP 79008'] = {}
-systemes_bulle['HIP 79008']["name"] = 'HIP 79008'
-systemes_bulle['HIP 79008']["id_esdm"] = 6575
-systemes_bulle['HIP 79008']["id_eddb"] = 8555
-
-systemes_bulle['HR 5791'] = {}
-systemes_bulle['HR 5791']["name"] = 'HR 5791'
-systemes_bulle['HR 5791']["id_esdm"] = 15270
-systemes_bulle['HR 5791']["id_eddb"] = 9338
-
-systemes_bulle['HIP 76058'] = {}
-systemes_bulle['HIP 76058']["name"] = 'HIP 76058'
-systemes_bulle['HIP 76058']["id_esdm"] = 5843
-systemes_bulle['HIP 76058']["id_eddb"] = 9338
-
-systemes_bulle['Arthinn'] = {}
-systemes_bulle['Arthinn']["name"] = 'Arthinn'
-systemes_bulle['Arthinn']["id_esdm"] = 6261
-systemes_bulle['Arthinn']["id_eddb"] = 1323
-
-systemes_bulle['Tricates'] = {}
-systemes_bulle['Tricates']["name"] = 'Tricates'
-systemes_bulle['Tricates']["id_esdm"] = 11973
-systemes_bulle['Tricates']["id_eddb"] = 17936
-
-systemes_bulle['Manabush'] = {}
-systemes_bulle['Manabush']["name"] = 'Manabush'
-systemes_bulle['Manabush']["id_esdm"] = 2377
-systemes_bulle['Manabush']["id_eddb"] = 13189
-
-systemes_bulle['Col 285 Sector RU-E c12-8'] = {}
-systemes_bulle['Col 285 Sector RU-E c12-8']["name"] = 'Col 285 Sector RU-E c12-8'
-systemes_bulle['Col 285 Sector RU-E c12-8']["id_esdm"] = 28035
-systemes_bulle['Col 285 Sector RU-E c12-8']["id_eddb"] = 47423
-
-systemes_bulle['Yheling'] = {}
-systemes_bulle['Yheling']["name"] = 'Yheling'
-systemes_bulle['Yheling']["id_esdm"] = 15027
-systemes_bulle['Yheling']["id_eddb"] = 19579
-
-systemes_colonia = {}
-systemes_colonia['Pytheas'] = {}
-systemes_colonia['Pytheas']["name"] = 'Pytheas'
-systemes_colonia['Pytheas']["id_esdm"] = 13728187
-systemes_colonia['Pytheas']["id_eddb"] = 10918138
-
-
-rangs_inara = {}
-
-rangs_inara['combat'] = {
+inara_ranks['combat'] = {
 0: "Inoffensif",
 1: "Bleu",
 2: "Novice",
@@ -155,7 +15,7 @@ rangs_inara['combat'] = {
 8: "Elite"
 }
 
-rangs_inara['trade'] = {
+inara_ranks['trade'] = {
 0: "Sans le sou",
 1: "Mendiant",
 2: "Boutiquier",
@@ -167,7 +27,7 @@ rangs_inara['trade'] = {
 8: "Elite"
 }
 
-rangs_inara['exploration'] = {
+inara_ranks['exploration'] = {
 0: "Vagabond",
 1: "Touriste",
 2: "Voyageur",
@@ -179,7 +39,7 @@ rangs_inara['exploration'] = {
 8: "Elite"
 }
 
-rangs_inara['cqc'] = {
+inara_ranks['cqc'] = {
 0: "Irrécupérable",
 1: "Quasi irrécupérable",
 2: "Amateur(ice)",
@@ -191,7 +51,7 @@ rangs_inara['cqc'] = {
 8: "Elite"
 }
 
-rangs_inara['federation'] = {
+inara_ranks['federation'] = {
 0: "Recrue",
 1: "Cadet",
 2: "Matelot",
@@ -208,7 +68,7 @@ rangs_inara['federation'] = {
 13: "Amiral"
 }
 
-rangs_inara['empire'] = {
+inara_ranks['empire'] = {
 0: "Étranger",
 1: "Serf",
 2: "Vilain",

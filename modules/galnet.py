@@ -7,6 +7,11 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+
+from config import *
+from data import *
+
+
 # Checks if the user is a server admin
 def is_admin():
     def predicate(ctx):

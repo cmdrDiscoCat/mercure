@@ -1,6 +1,5 @@
-import discord, os, random, config
-from datetime import datetime
-from discord.ext import commands, tasks
+import discord
+from discord.ext import commands
 
 import requests
 import dateutil.parser
@@ -45,10 +44,10 @@ class Inara(commands.Cog):
         json_for_inara = """
     {
         "header": {
-            "appName": "DiscoBot",
+            "appName": "%s",
             "appVersion": "0.1",
             "isDeveloped": true,
-            "APIkey": "3z9xkavhum80k040w4sw4480k48s0kk4gwgw0cc",
+            "APIkey": "%s",
             "commanderName": "Disco Cat"
         },
         "events": [
@@ -58,7 +57,7 @@ class Inara(commands.Cog):
                "eventData": []
             }
         ]
-    }""" % (iso8601_time)
+    }""" % (config["inara_appname"], config["inara_api_key"],iso8601_time)
 
         url_to_call = "https://inara.cz/inapi/v1/"
 
@@ -130,7 +129,7 @@ class Inara(commands.Cog):
         json_for_inara = """
     {
         "header": {
-            "appName": "DiscoBot",
+            "appName": "%s",
             "appVersion": "0.1",
             "isDeveloped": true,
             "APIkey": "%s",
@@ -145,7 +144,7 @@ class Inara(commands.Cog):
                 }
             }
         ]
-    }""" % (config["inara_api_key"], cmdr_name, iso8601_time, cmdr_name)
+    }""" % (config["inara_appname"], config["inara_api_key"], cmdr_name, iso8601_time, cmdr_name)
         url_to_call = "https://inara.cz/inapi/v1/"
 
         message = ""
@@ -178,7 +177,7 @@ class Inara(commands.Cog):
         embed = discord.Embed(title="*Rangs de la Fédération des Pilotes*", color=0x00ff00)
         for donnee in donnees['commanderRanksPilot']:
             progression = 100 * donnee['rankProgress']
-            valeur = rangs_inara[donnee['rankName']][donnee['rankValue']]
+            valeur = inara_ranks[donnee['rankName']][donnee['rankValue']]
             if progression != 0:
                 valeur += " - " + str(progression) + "\%"
             embed.add_field(name=donnee['rankName'], value= valeur, inline=True)
