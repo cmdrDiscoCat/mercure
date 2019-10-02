@@ -1,4 +1,5 @@
 /config.py
 /venv/
 /env/
+/logs/*
 /.idea/
