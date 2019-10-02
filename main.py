@@ -48,6 +48,7 @@ def acces_oracle():
             return True
     return commands.check(verifier_droits_oracle)
 
+
 @bot.event
 def on_ready():
     """

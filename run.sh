@@ -1,3 +1,3 @@
 source env/bin/activate
-python3 discobot.py
+python3.6 main.py
 deactivate
