@@ -17,6 +17,6 @@ channel_for_daily_post = ''
 # here : https://inara.cz/galaxy-minorfaction/
 # Once you are on the desired faction page, hover over the "edit" link and do a right-click
 # example : https://inara.cz/galaxy-minorfaction-edit/12345/
-# Finally, note that id at the end (here 12435)
-# In the daily "bigbrother" function, the value assigned to each id
-followed_factions = {12345: "Displayed name for Faction 1", 67890: "Displayed name for Faction 2"}
+# Finally, note that id at the end (here 12435), and also use the scissors icon to copy the exact name of the faction
+# Make sure the ids are the correct ones, and that the paste names are exactly the same shown on EDSM
+followed_factions = {12345: "Exact displayed name of Faction 1", 67890: "Exact displayed name of Faction 2"}
