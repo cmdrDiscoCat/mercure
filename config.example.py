@@ -3,9 +3,11 @@ config = {}
 config["discord_token"] = "" # TO FILL
 config["inara_api_key"] = ""
 config["inara_appname"] = ""
+config["inara_cmdr_name"] = ""
 config["prefix"] = "!"
+config['DEBUG'] = False
 
-# Admin ids
+# Admin ids (put the ids directly, not in strings)
 admin_ids = []
 
 # Daily BGS update channel

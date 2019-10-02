@@ -1,37 +1,15 @@
-import discord, os, random, config
-from datetime import datetime
+import discord, os
 from discord.ext import commands, tasks
-import httplib2
+from main import acces_oracle, is_admin
 
 from config import *
 from data import *
 
-import os
+import httplib2
 from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
-
-
-# Checks if the user is a server admin
-def is_admin():
-    def predicate(ctx):
-        return ctx.message.author.id in admin_ids
-    return commands.check(predicate)
-
-
-# Checks if we are in the oracle channel, and if we are, that the user who
-# wrote the command is in admin
-def acces_oracle():
-    def verifier_droits_oracle(ctx):
-        if str(ctx.message.channel) == 'oracle':
-            if ctx.message.author.id in admin_ids:
-                return True
-            else:
-                return False
-        else:
-            return True
-    return commands.check(verifier_droits_oracle)
 
 
 # If modifying these scopes, delete your previously saved credentials
@@ -79,6 +57,7 @@ def get_credentials():
 
 class Google(commands.Cog):
     def __init__(self, bot):
+        if config['DEBUG']: print("Cog Google initialisé")
         self.bot = bot
 
     @commands.command(pass_context=True)
@@ -87,8 +66,9 @@ class Google(commands.Cog):
         """
         Displays the lines from Phoenix's spreadsheet to know which geysers sites contains asked material
         """
+        if config['DEBUG']: print("Commande farm")
         if not arg1:
-            await ctx.send_message(ctx.message.channel, "Il faut indiquer le matériau en paramètre !")
+            await ctx.send("Il faut indiquer le matériau en paramètre !")
             return
 
         material = str(arg1).lower()
@@ -128,10 +108,10 @@ class Google(commands.Cog):
         # We got our lines
         message = "**Liste des sites de geysers pour "
         message += material + "**"
-        await ctx.send_message(ctx.message.channel, message)
+        await ctx.send(message)
 
         embed = discord.Embed(title="Localisation", description=str(materials[material]['location']), color=0x0000ff)
-        await ctx.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
         # For each line, we check the columns for the values we seek and build the message we'll return
         for return_line in return_lines.items():
@@ -152,7 +132,7 @@ class Google(commands.Cog):
             message += str(columns[7]) + " sl**"
 
             embed = discord.Embed(title="", description=message, color=0x00ffaa)
-            await ctx.send_message(ctx.message.channel, embed=embed)
+            await ctx.send(embed=embed)
 
 
 def setup(bot):

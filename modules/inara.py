@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from main import acces_oracle, is_admin
 
 import requests
 import dateutil.parser
@@ -8,29 +9,9 @@ from datetime import datetime
 from config import *
 from data import *
 
-
-# Checks if the user is a server admin
-def is_admin():
-    def predicate(ctx):
-        return ctx.message.author.id in admin_ids
-    return commands.check(predicate)
-
-
-# Checks if we are in the oracle channel, and if we are, that the user who
-# wrote the command is in admin
-def acces_oracle():
-    def verifier_droits_oracle(ctx):
-        if(str(ctx.message.channel) == 'oracle'):
-            if ctx.message.author.id in admin_ids:
-                return True
-            else:
-                return False
-        else:
-            return True
-    return commands.check(verifier_droits_oracle)
-
 class Inara(commands.Cog):
     def __init__(self, bot):
+        if config['DEBUG']: print("Cog Inara initialisé")
         self.bot = bot
 
     @commands.command(pass_context=True)
@@ -39,6 +20,7 @@ class Inara(commands.Cog):
         """
         Displays the current CGs thanks to inara
         """
+        if config['DEBUG']: print("Commande cg")
         now = datetime.utcnow()
         iso8601_time = now.isoformat()
         json_for_inara = """
@@ -48,7 +30,7 @@ class Inara(commands.Cog):
             "appVersion": "0.1",
             "isDeveloped": true,
             "APIkey": "%s",
-            "commanderName": "Disco Cat"
+            "commanderName": "%s"
         },
         "events": [
             {
@@ -57,7 +39,7 @@ class Inara(commands.Cog):
                "eventData": []
             }
         ]
-    }""" % (config["inara_appname"], config["inara_api_key"],iso8601_time)
+    }""" % (config["inara_appname"], config["inara_api_key"], config["inara_cmdr_name"], iso8601_time)
 
         url_to_call = "https://inara.cz/inapi/v1/"
 
@@ -67,22 +49,20 @@ class Inara(commands.Cog):
             r = requests.get(url_to_call, data=json_for_inara)
             informations = r.json()
         except:
-            await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
+            await ctx.send("Oops, problème droit devant ! :crying_cat_face: ")
             return
 
-        try:
-            for cg in informations['events'][0]['eventData']:
+        active_cgs = 0
+
+        for cg in informations['events'][0]['eventData']:
+            if not cg['isCompleted']:
+                active_cgs += 1
                 # D'abord le titre du CG à part
                 message = "**" + cg["communitygoalName"] + "**"
-                await ctx.send_message(ctx.message.channel, message)
+                await ctx.send(message)
 
                 # Ensuite, un embed avec les infos du cg
-                if cg['isCompleted'] == False:
-                    couleur = 0x00ff00
-                else:
-                    couleur = 0xff0000
-
-                embed = discord.Embed(title="", color=couleur)
+                embed = discord.Embed(title="", color=0x00ff00)
                 embed.add_field(name="Système", value=cg["starsystemName"], inline=True)
                 embed.add_field(name="Station", value=cg["stationName"], inline=True)
                 date_expiration = dateutil.parser.parse(cg["goalExpiry"])
@@ -93,19 +73,18 @@ class Inara(commands.Cog):
                 embed.add_field(name="Contribution totale", value=str(cg['contributionsTotal']), inline=True)
                 last_update = dateutil.parser.parse(cg['lastUpdate'])
                 embed.set_footer(text=last_update.strftime("Mis à jour le %d/%m/%Y à %H:%M"))
-                await ctx.send_message(ctx.message.channel, embed=embed)
+                await ctx.send(embed=embed)
 
                 # Puis, un embed avec en description un blockquote le texte descriptif du cg
                 message = "```" + cg['goalDescriptionText'] + "```"
                 embed = discord.Embed(title=cg['goalObjectiveText'], description=message)
-                await ctx.send_message(ctx.message.channel, embed=embed)
-        except:
-            await ctx.send_message(ctx.message.channel, "Oops, problème droit devant ! :crying_cat_face: ")
-            return
+                await ctx.send(embed=embed)
 
-        message = "A vous de jouer pilotes !"
-        await ctx.send_message(ctx.message.channel, message)
-
+        if active_cgs > 0:
+            message = "A vous de jouer pilotes !"
+        else:
+            message = "Aucun CG actif. Revenez plus tard !"
+        await ctx.send(message)
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -113,13 +92,14 @@ class Inara(commands.Cog):
         """
         Displays the inara information about a commander
         """
+        if config['DEBUG']: print("Commande inara")
         # Si pas d'argument donné, on affiche juste le lien de la wing LGC
         if arg1 == "":
             embed = discord.Embed(title="", color=0x00ff00)
             embed.add_field(name="Escadrille LGC sur Inara", value="<https://inara.cz/wing/280/>", inline=True)
             url = "http://guilde-cartographes.fr/INFORMATIONS/32MU_STARNEWS/wp-content/uploads/2016/09/LOGO_LGC.png"
             embed.set_thumbnail(url=url)
-            await ctx.send_message(ctx.message.channel, embed=embed)
+            await ctx.send(embed=embed)
             return
 
 
@@ -153,7 +133,7 @@ class Inara(commands.Cog):
             r = requests.get(url_to_call, data=json_for_inara)
             informations = r.json()
         except:
-            await ctx.send_message(ctx.message.channel, "Requête à Inara : nope :crying_cat_face: ")
+            await ctx.send("Requête à Inara : nope :crying_cat_face: ")
             return
 
         donnees = informations['events'][0]['eventData']
@@ -161,16 +141,16 @@ class Inara(commands.Cog):
 
         try:
             message = "**Informations sur " + donnees['commanderName'] + "**"
-            await ctx.send_message(ctx.message.channel, message)
+            await ctx.send(message)
         except:
             message = "**Informations sur " + donnees['userName'] + "**"
-            await ctx.send_message(ctx.message.channel, message)
+            await ctx.send(message)
 
         try:
             if(donnees['avatarImageURL']):
                 embed = discord.Embed(title="")
                 embed.set_thumbnail(url=donnees['avatarImageURL'])
-                await ctx.send_message(ctx.message.channel, embed=embed)
+                await ctx.send(embed=embed)
         except:
             pass
 
@@ -182,7 +162,7 @@ class Inara(commands.Cog):
                 valeur += " - " + str(progression) + "\%"
             embed.add_field(name=donnee['rankName'], value= valeur, inline=True)
 
-        await ctx.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
         embed = discord.Embed(title="", color=0x00ffff)
 
@@ -190,7 +170,7 @@ class Inara(commands.Cog):
         embed.add_field(name="Rôle de préférence", value=donnees['preferredGameRole'], inline=False)
         embed.add_field(name="Lien du profil", value=donnees['inaraURL'], inline=False)
 
-        await ctx.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
         embed = discord.Embed(title="*Informations d\'escadrille*", color=0x0000ff)
 
@@ -199,7 +179,7 @@ class Inara(commands.Cog):
         embed.add_field(name="Rang dans l'escadrille", value=donnees['commanderWing']['wingMemberRank'], inline=True)
         embed.add_field(name="Lien de l'escadrille", value=donnees['commanderWing']['inaraURL'], inline=True)
 
-        await ctx.send_message(ctx.message.channel, embed=embed)
+        await ctx.send(embed=embed)
 
 
 def setup(bot):

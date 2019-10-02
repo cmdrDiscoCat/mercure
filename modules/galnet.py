@@ -1,41 +1,20 @@
 import discord, os, random, config
-from datetime import datetime
 from discord.ext import commands
+from main import acces_oracle, is_admin
 
 from html2text import html2text
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-
 from config import *
 from data import *
 
 
-# Checks if the user is a server admin
-def is_admin():
-    def predicate(ctx):
-        return ctx.message.author.id in admin_ids
-    return commands.check(predicate)
-
-
-# Checks if we are in the oracle channel, and if we are, that the user who
-# wrote the command is in admin
-def acces_oracle():
-    def verifier_droits_oracle(ctx):
-        if str(ctx.message.channel) == 'oracle':
-            if ctx.message.author.id in admin_ids:
-                return True
-            else:
-                return False
-        else:
-            return True
-    return commands.check(verifier_droits_oracle)
-
-
 class Galnet(commands.Cog):
-    def __init__(self, client):
-        self.client = client
+    def __init__(self, bot):
+        if config['DEBUG']: print("Cog Galnet initialité")
+        self.bot = bot
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -44,6 +23,7 @@ class Galnet(commands.Cog):
         Display today's galnet articles if there are any, or the articles for the date passed as a parameter
         The required format is DD-MMM-YYYY like 03-DEC-3303
         """
+        if config['DEBUG']: print("Commande galnet")
         now = datetime.utcnow()
         month = str(now.strftime("%b")).upper()
         year = str(int(now.strftime("%Y")) + 1286)
@@ -91,12 +71,12 @@ class Galnet(commands.Cog):
                     output += message
                     sending = output
                     output = ""
-                    await ctx.send_message(ctx.message.channel, sending)
+                    await ctx.send(sending)
             output += "\n"
 
         if output.strip() != "":
-            await ctx.send_message(ctx.message.channel, output)
+            await ctx.send(output)
 
 
-def setup(client):
-    client.add_cog(Galnet(client))
+def setup(bot):
+    bot.add_cog(Galnet(bot))

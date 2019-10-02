@@ -27,7 +27,6 @@ bot = commands.Bot(command_prefix=config['prefix'], description=description, pm_
 bot.remove_command("help")
 
 
-
 # Checks if the user is a server admin
 def is_admin():
     def predicate(ctx):
@@ -50,87 +49,73 @@ def acces_oracle():
 
 
 @bot.event
-def on_ready():
+async def on_ready():
     """
     Actions to do when the bot is connected successfully and ready to process commands
     """
-    print('Connecté·e en tant que')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
+    if config['DEBUG']:
+        print('Connecté·e en tant que')
+        print(bot.user.name)
+        print(bot.user.id)
+        print('------')
+
     # we load all modules
     for f in os.listdir("modules/"):
         if f.endswith('.py'):
             bot.load_extension(f"modules.{f[:-3]}")
 
-    yield from bot.change_presence(game=discord.Game(name='aider les cartographes'))
+    await bot.change_presence(activity=discord.Game(name='aider les cartographes'))
 
 
 @bot.event
-def on_command(command, ctx):
+async def on_command(ctx):
     """Called when a command is called. Used to log commands on a file."""
-    if ctx.message.channel.is_private:
+    if config['DEBUG']: print("Event on_command")
+    if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
         destination = 'PM'
     else:
-        destination = '#{0.channel.name} ({0.server.name})'.format(ctx.message)
+        destination = '#{0.channel.name} ({0.guild.name})'.format(ctx.message)
     logger.info('Command by {0} in {1}: {2}'.format(ctx.message.author.display_name, destination, ctx.message.content))
 
 
 @bot.event
-def on_command_error(error, ctx):
-    """
-    What we do when there's something going wrong
-    - Unknown command
-    - Invoke error
-    - Something else
-    """
-    if isinstance(error, commands.errors.CommandNotFound):
-        aide_texte = "- !influence Nom du système : Affiche l'influence des factions d'un système.\n"\
-        "- !systeme Nom du système : Affiche les informations (coordonnées, gouvernement, sécurité, économie...) d'un système.\n"\
-        "- !trafic Nom du système : Affiche les informations sur le trafic récent d'un système.\n"\
-        "- !stations Nom du système : Affiche les stations (avec leurs informations) d'un système.\n"\
-        "- !farm Nom de matériau : Affiche les systèmes du tableau du Capitaine Phoenix où l'élément demandé peut être trouvé.\n"\
-        "- !oracle : Affiche la liste des liens EDSM et EDDB pour aller y consulter l'état de la LGC dans la bulle et à Colonia.\n"\
-        "- !galnet 01-DEC-3303 : Affiche les articles galnet de ce jour, remplacez 01-DEC-3303 par la date qui vous intéresse. Par défaut c'est à la date du jour.\n"\
-        "- !bigbrother : Affiche la liste des systèmes où LGC est présent dans la bulle et à Colonia, ainsi que notre influence dans chacun de ces systèmes.\n"\
-        "- !inara \"Nom de pilote\" : Affiche le profil de pilote Inara correspondant au nom demandé.\n"\
-        "- !reparations : Affiche les commodités nécessaires en français et en anglais pour réparer les stations.\n"\
-        "- !ed : Affiche l'état des serveurs Frontier pour Elite Dangerous.\n"\
-        "- !cg : Affiche la liste et les infos des CG en cours.\n"
-        embed = discord.Embed(title="Liste des commandes disponibles", description=aide_texte, color=0x00ff00)
-        yield from bot.send_message(ctx.message.channel, embed=embed)
-    elif isinstance(error, commands.CommandInvokeError):
-        print('In {0.command.qualified_name}:'.format(ctx))
-        traceback.print_tb(error.original.__traceback__)
-        print('{0.__class__.__name__}: {0}'.format(error.original))
-    else:
-        return
-
-
-@bot.event
-def on_message(message):
+async def on_message(message):
     """Called every time a message is sent on a visible channel.
     This is used to make commands case insensitive.
     Also, we check if we're in the channel where only admins can use the bot
     """
-    yield from bot.process_commands(message)
+    if config['DEBUG']: print("Fonction on_message")
+    await bot.process_commands(message)
 
 
 @bot.command()
 async def load(ctx, ext):
+    if config['DEBUG']: print(f"Chargement module {ext}")
     bot.load_extension(f"modules.{ext}")
 
 
 @bot.command()
 async def unload(ctx, ext):
+    if config['DEBUG']: print(f"Déchargement module {ext}")
     bot.unload_extension(f"modules.{ext}")
 
 
 @bot.command()
-async def reload(ctx, ext):
-    bot.unload_extension(f"modules.{ext}")
-    bot.load_extension(f"modules.{ext}")
+async def reload(ctx):
+    # we reload all modules
+    # we load all modules
+    for f in os.listdir("modules/"):
+        if f.endswith('.py'):
+            if config['DEBUG']: print(f"Rechargement module {f[:-3]}")
+            bot.unload_extension(f"modules.{f[:-3]}")
+            bot.load_extension(f"modules.{f[:-3]}")
 
+
+@bot.command()
+async def test(ctx):
+    """ Just a poke to be sure the bot is still processing commands """
+    if config['DEBUG']: print("Commande test")
+    await ctx.send('Oui oui je suis là...:smiley_cat: ')
 
 if __name__ == "__main__":
     try:
