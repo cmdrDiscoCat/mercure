@@ -13,8 +13,11 @@ from data import *
 
 class Galnet(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Galnet initialité")
+        if config['DEBUG']: print("Module Galnet chargé")
         self.bot = bot
+
+    def cog_unload(self):
+        if config['DEBUG']: print("Module Galnet déchargé")
 
     @commands.command(pass_context=True)
     @acces_oracle()

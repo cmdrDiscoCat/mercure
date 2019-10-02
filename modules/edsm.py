@@ -12,8 +12,11 @@ from datetime import datetime
 
 class Edsm(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Edsm initialisé")
+        if config['DEBUG']: print("Module Edsm chargé")
         self.bot = bot
+
+    def cog_unload(self):
+        if config['DEBUG']: print("Module Edsm déchargé")
 
     @commands.command(pass_context=True)
     @acces_oracle()

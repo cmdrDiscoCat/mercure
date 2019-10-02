@@ -57,8 +57,11 @@ def get_credentials():
 
 class Google(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Google initialisé")
+        if config['DEBUG']: print("Module Google chargé")
         self.bot = bot
+
+    def cog_unload(self):
+        if config['DEBUG']: print("Module Google déchargé")
 
     @commands.command(pass_context=True)
     @acces_oracle()

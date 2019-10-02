@@ -11,8 +11,11 @@ from data import *
 
 class Inara(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Inara initialisé")
+        if config['DEBUG']: print("Module Inara chargé")
         self.bot = bot
+
+    def cog_unload(self):
+        if config['DEBUG']: print("Module Google déchargé")
 
     @commands.command(pass_context=True)
     @acces_oracle()

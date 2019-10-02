@@ -8,8 +8,11 @@ from data import *
 
 class Mercure(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Mercure initialisé")
+        if config['DEBUG']: print("Module Mercure chargé")
         self.bot = bot
+
+    def cog_unload(self):
+        if config['DEBUG']: print("Module Mercure déchargé")
 
     @commands.command(pass_context=True)
     async def presence(self, ctx, *, arg):

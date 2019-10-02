@@ -13,14 +13,14 @@ from data import *
 
 class Bigbrother(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Cog Bigbrother initialisé")
+        if config['DEBUG']: print("Module Bigbrother chargé")
         self.bot = bot
-        self.ctx = self.bot.get_channel(channel_for_daily_post)
+        self.ctx = ''
         self.daily_bgs.start()
         self.factions_presence = {}
 
     def cog_unload(self):
-        if config['DEBUG']: print("Cog Bigbrother déchargé")
+        if config['DEBUG']: print("Module Bigbrother déchargé")
         self.daily_bgs.cancel()
 
     def system_presence_for_faction(self, id_faction):
@@ -54,10 +54,11 @@ class Bigbrother(commands.Cog):
         Then, it displays the status of those factions in those systems
         """
         if config['DEBUG']: print("Commande bb1984")
+
+        # if the function was called from the daily_bgs loop, we use as a Context the one initialized in the loop
         if ctx is None:
             ctx = self.ctx
 
-        print(ctx)
         self.refresh_faction_presence()
 
         for faction_name, faction_systems in self.factions_presence.items():
@@ -76,7 +77,6 @@ class Bigbrother(commands.Cog):
 
             information_block = ""
             for faction_system in faction_systems:
-                print("BB1984 for "+faction_system)
                 system_quote = urllib.parse.quote(faction_system)
                 url_to_call = "https://www.edsm.net/api-system-v1/factions?showHistory=1&systemName=" + system_quote
 
@@ -86,7 +86,6 @@ class Bigbrother(commands.Cog):
                 last_update = 0
 
                 for minor_faction in informations['factions']:
-                    print("BB1984 parcours des factions de " + faction_system+ " pour recherche de la nôtre")
                     if minor_faction['name'] == informations['controllingFaction']['name']:
                         minor_faction_name = "<:lgc:243332108636913665> "
                     else:
@@ -94,11 +93,7 @@ class Bigbrother(commands.Cog):
 
                     influence_previous = 0
 
-                    print(minor_faction['name'])
-                    print(followed_factions.values())
-
                     if minor_faction['name'] in followed_factions.values():
-                        print("BB1984 on est là !")
                         if minor_faction['lastUpdate'] > last_update:
                             last_update = minor_faction['lastUpdate']
 
@@ -137,10 +132,16 @@ class Bigbrother(commands.Cog):
     @tasks.loop(minutes=1)
     async def daily_bgs(self):
         if config['DEBUG']: print("Loop daily_bgs")
-        if datetime.now().strftime('%H:%M') == '16:30':
-            await self.bb1984()
+        ctx = self.bot.get_channel(channel_for_daily_post)
+        if datetime.now().strftime('%H:%M') == '16:00':
+            await self.bb1984(ctx)
         else:
             pass
+
+    @daily_bgs.before_loop
+    async def before_daily_bgs(self):
+        if config['DEBUG']: print('Bigbrother : Initialisation avant lancement boucle...')
+        await self.bot.wait_until_ready()
 
 
 def setup(bot):
