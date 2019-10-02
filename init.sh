@@ -1,3 +1,4 @@
+#!/bin/bash
 python3.6 -m venv env
 source env/bin/activate
 cp config.example.py config.py
