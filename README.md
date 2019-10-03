@@ -12,22 +12,22 @@ This is basically the new version of discobot, a BGS bot for Elite Dangerous I i
  * use of the cogs from discord.py to allow reloading parts of it in case of updates with a command to reload the cogs (simple named reload)
  * and more... soon...
  
- ##Installation
+##Installation
  
- Simply clone this repository on a linux or mac machine with python 3.6 installed (Python 2 or Python 3.7+ **won't** work).
+Simply clone this repository on a linux or mac machine with python 3.6 installed (Python 2 or Python 3.7+ **won't** work).
  
- Then in a terminal : `./init.sh`
+Then in a terminal : `./init.sh`
  
- Fill the config.py newly created with all the info needed (I won't cover getting a discord bot or edsm/inara token here).
+Fill the config.py newly created with all the info needed (I won't cover getting a discord bot or edsm/inara token here).
  
- Finally : `./run.sh`
+Finally : `./run.sh`
  
- That's it !
+That's it !
  
- ##Translation
+##Translation
  
- I'm currently trying to add translation to the whole bot be it the command names or the displayed text.
+I'm currently trying to add translation to the whole bot be it the command names or the displayed text.
  
- When that will be done, I'll probably add scripts to init/update/compile your translations files (.po) to manage your language.
+When that will be done, I'll probably add scripts to init/update/compile your translations files (.po) to manage your language.
  
- Note : don't forget to change the `config['LANGUAGE']` value to match your need.
+Note : don't forget to change the `config['LANGUAGE']` value to match your need.
