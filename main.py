@@ -2,12 +2,16 @@ import discord
 from discord.ext import commands
 import logging
 from logging.handlers import TimedRotatingFileHandler
-
-import os
-import traceback
-
 from config import *
 from data import *
+
+import os
+import gettext
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
+translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+_ = translate.gettext
+
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -22,7 +26,7 @@ fileHandler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s: %(message
 fileHandler.setLevel(logging.INFO)
 logger.addHandler(fileHandler)
 
-description = '''Assistant BGS de la LGC'''
+description = _('''Assistant BGS de la LGC''')
 bot = commands.Bot(command_prefix=config['prefix'], description=description, pm_help=True, heartbeat_timeout=150)
 bot.remove_command("help")
 
@@ -38,7 +42,7 @@ def is_admin():
 # wrote the command is in admin
 def acces_oracle():
     def verifier_droits_oracle(ctx):
-        if str(ctx.message.channel) == 'oracle':
+        if str(ctx.message.channel) == channel_for_daily_post_name:
             if ctx.message.author.id in admin_ids:
                 return True
             else:
@@ -54,7 +58,7 @@ async def on_ready():
     Actions to do when the bot is connected successfully and ready to process commands
     """
     if config['DEBUG']:
-        print('Connecté·e en tant que')
+        print(_("Logged in as"))
         print(bot.user.name)
         print(bot.user.id)
         print('------')
@@ -64,13 +68,13 @@ async def on_ready():
         if f.endswith('.py'):
             bot.load_extension(f"modules.{f[:-3]}")
 
-    await bot.change_presence(activity=discord.Game(name='aider les cartographes'))
+    await bot.change_presence(activity=discord.Game(name=_('helping the cartographers')))
 
 
 @bot.event
 async def on_command(ctx):
     """Called when a command is called. Used to log commands on a file."""
-    if config['DEBUG']: print("Event on_command")
+    if config['DEBUG']: print(_("on_command event"))
     if isinstance(ctx.message.channel, discord.abc.PrivateChannel):
         destination = 'PM'
     else:
@@ -84,19 +88,19 @@ async def on_message(message):
     This is used to make commands case insensitive.
     Also, we check if we're in the channel where only admins can use the bot
     """
-    if config['DEBUG']: print("Fonction on_message")
+    if config['DEBUG']: print(_("on_message function"))
     await bot.process_commands(message)
 
 
 @bot.command()
 async def load(ctx, ext):
-    if config['DEBUG']: print(f"Chargement module {ext}")
+    if config['DEBUG']: print(_("Module {module} loaded").format(module=ext))
     bot.load_extension(f"modules.{ext}")
 
 
 @bot.command()
 async def unload(ctx, ext):
-    if config['DEBUG']: print(f"Déchargement module {ext}")
+    if config['DEBUG']: print(_("Module {module} unloaded").format(module=ext))
     bot.unload_extension(f"modules.{ext}")
 
 
@@ -106,7 +110,7 @@ async def reload(ctx):
     # we load all modules
     for f in os.listdir("modules/"):
         if f.endswith('.py'):
-            if config['DEBUG']: print(f"Rechargement module {f[:-3]}")
+            if config['DEBUG']: print(_("Module {module} reloaded").format(module=f[:-3]))
             bot.unload_extension(f"modules.{f[:-3]}")
             bot.load_extension(f"modules.{f[:-3]}")
 
@@ -114,8 +118,8 @@ async def reload(ctx):
 @bot.command()
 async def test(ctx):
     """ Just a poke to be sure the bot is still processing commands """
-    if config['DEBUG']: print("Commande test")
-    await ctx.send('Oui oui je suis là...:smiley_cat: ')
+    if config['DEBUG']: print(_("test command"))
+    await ctx.send(_("Yeah yeah i'm here...:smiley_cat: "))
 
 if __name__ == "__main__":
     try:

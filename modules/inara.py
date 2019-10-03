@@ -9,13 +9,20 @@ from datetime import datetime
 from config import *
 from data import *
 
+import gettext
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
+translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+_ = translate.gettext
+
+
 class Inara(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Module Inara chargé")
+        if config['DEBUG']: print(_("Inara module loaded"))
         self.bot = bot
 
     def cog_unload(self):
-        if config['DEBUG']: print("Module Google déchargé")
+        if config['DEBUG']: print(_("Inara module unloaded"))
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -23,7 +30,7 @@ class Inara(commands.Cog):
         """
         Displays the current CGs thanks to inara
         """
-        if config['DEBUG']: print("Commande cg")
+        if config['DEBUG']: print(_("cg command"))
         now = datetime.utcnow()
         iso8601_time = now.isoformat()
         json_for_inara = """
@@ -52,7 +59,7 @@ class Inara(commands.Cog):
             r = requests.get(url_to_call, data=json_for_inara)
             informations = r.json()
         except:
-            await ctx.send("Oops, problème droit devant ! :crying_cat_face: ")
+            await ctx.send(_("Oops ! :crying_cat_face: "))
             return
 
         active_cgs = 0
@@ -66,16 +73,16 @@ class Inara(commands.Cog):
 
                 # Ensuite, un embed avec les infos du cg
                 embed = discord.Embed(title="", color=0x00ff00)
-                embed.add_field(name="Système", value=cg["starsystemName"], inline=True)
-                embed.add_field(name="Station", value=cg["stationName"], inline=True)
-                date_expiration = dateutil.parser.parse(cg["goalExpiry"])
-                embed.add_field(name="Expiration", value=date_expiration.strftime("%d/%m/%Y à %H:%M"), inline=True)
-                embed.add_field(name="Rang atteint", value=str(cg["tierReached"]) + "/" + str(cg["tierMax"]),
+                embed.add_field(name=_("Starsystem"), value=cg["starsystemName"], inline=True)
+                embed.add_field(name=_("Station"), value=cg["stationName"], inline=True)
+                goal_expiry = dateutil.parser.parse(cg["goalExpiry"])
+                embed.add_field(name=_("Expiration date"), value=goal_expiry.strftime(_("%d/%m/%Y at %H:%M")), inline=True)
+                embed.add_field(name=_("Tier reached"), value=str(cg["tierReached"]) + "/" + str(cg["tierMax"]),
                                 inline=True)
-                embed.add_field(name="Nombre de participant(e)s", value=str(cg["contributorsNum"]), inline=True)
-                embed.add_field(name="Contribution totale", value=str(cg['contributionsTotal']), inline=True)
+                embed.add_field(name="Contributors number", value=str(cg["contributorsNum"]), inline=True)
+                embed.add_field(name="Total of contributions", value=str(cg['contributionsTotal']), inline=True)
                 last_update = dateutil.parser.parse(cg['lastUpdate'])
-                embed.set_footer(text=last_update.strftime("Mis à jour le %d/%m/%Y à %H:%M"))
+                embed.set_footer(text=last_update.strftime(_("Updated on %d/%m/%Y at %H:%M")))
                 await ctx.send(embed=embed)
 
                 # Puis, un embed avec en description un blockquote le texte descriptif du cg
@@ -84,9 +91,9 @@ class Inara(commands.Cog):
                 await ctx.send(embed=embed)
 
         if active_cgs > 0:
-            message = "A vous de jouer pilotes !"
+            message = _("Your turn, Commanders !")
         else:
-            message = "Aucun CG actif. Revenez plus tard !"
+            message = _("No active CG, check back later")
         await ctx.send(message)
 
     @commands.command(pass_context=True)
@@ -95,11 +102,11 @@ class Inara(commands.Cog):
         """
         Displays the inara information about a commander
         """
-        if config['DEBUG']: print("Commande inara")
+        if config['DEBUG']: print(_("inara command"))
         # Si pas d'argument donné, on affiche juste le lien de la wing LGC
         if arg1 == "":
             embed = discord.Embed(title="", color=0x00ff00)
-            embed.add_field(name="Escadrille LGC sur Inara", value="<https://inara.cz/wing/280/>", inline=True)
+            embed.add_field(name=_("LGC Squadron on Inara"), value="<https://inara.cz/wing/280/>", inline=True)
             url = "http://guilde-cartographes.fr/INFORMATIONS/32MU_STARNEWS/wp-content/uploads/2016/09/LOGO_LGC.png"
             embed.set_thumbnail(url=url)
             await ctx.send(embed=embed)
@@ -136,51 +143,51 @@ class Inara(commands.Cog):
             r = requests.get(url_to_call, data=json_for_inara)
             informations = r.json()
         except:
-            await ctx.send("Requête à Inara : nope :crying_cat_face: ")
+            await ctx.send(_("Inara API request : nope :crying_cat_face: "))
             return
 
-        donnees = informations['events'][0]['eventData']
-        print(donnees)
+        inara_data = informations['events'][0]['eventData']
+        if config['DEBUG']: print(inara_data)
 
         try:
-            message = "**Informations sur " + donnees['commanderName'] + "**"
+            message = _("**Informations on {commander_name}**").format(commander_name = inara_data['commanderName'])
             await ctx.send(message)
         except:
-            message = "**Informations sur " + donnees['userName'] + "**"
+            message = _("**Informations on {commander_name}**").format(commander_name = inara_data['userName'])
             await ctx.send(message)
 
         try:
-            if(donnees['avatarImageURL']):
+            if(inara_data['avatarImageURL']):
                 embed = discord.Embed(title="")
-                embed.set_thumbnail(url=donnees['avatarImageURL'])
+                embed.set_thumbnail(url=inara_data['avatarImageURL'])
                 await ctx.send(embed=embed)
         except:
             pass
 
-        embed = discord.Embed(title="*Rangs de la Fédération des Pilotes*", color=0x00ff00)
-        for donnee in donnees['commanderRanksPilot']:
-            progression = 100 * donnee['rankProgress']
-            valeur = inara_ranks[donnee['rankName']][donnee['rankValue']]
+        embed = discord.Embed(title=_("*Pilot's Federation ranks*"), color=0x00ff00)
+        for data in inara_data['commanderRanksPilot']:
+            progression = 100 * data['rankProgress']
+            valeur = inara_ranks[data['rankName']][data['rankValue']]
             if progression != 0:
                 valeur += " - " + str(progression) + "\%"
-            embed.add_field(name=donnee['rankName'], value= valeur, inline=True)
+            embed.add_field(name=data['rankName'], value= valeur, inline=True)
 
         await ctx.send(embed=embed)
 
         embed = discord.Embed(title="", color=0x00ffff)
 
-        embed.add_field(name="Allégeance", value=donnees['preferredAllegianceName'], inline=False)
-        embed.add_field(name="Rôle de préférence", value=donnees['preferredGameRole'], inline=False)
-        embed.add_field(name="Lien du profil", value=donnees['inaraURL'], inline=False)
+        embed.add_field(name=_("Allegiance"), value=inara_data['preferredAllegianceName'], inline=False)
+        embed.add_field(name=_("Prefered game role"), value=inara_data['preferredGameRole'], inline=False)
+        embed.add_field(name=_("Inara profile link"), value=inara_data['inaraURL'], inline=False)
 
         await ctx.send(embed=embed)
 
         embed = discord.Embed(title="*Informations d\'escadrille*", color=0x0000ff)
 
-        embed.add_field(name="Nom", value=donnees['commanderWing']['wingName'], inline=True)
-        embed.add_field(name="Nombre de pilotes", value=donnees['commanderWing']['wingMembersCount'], inline=True)
-        embed.add_field(name="Rang dans l'escadrille", value=donnees['commanderWing']['wingMemberRank'], inline=True)
-        embed.add_field(name="Lien de l'escadrille", value=donnees['commanderWing']['inaraURL'], inline=True)
+        embed.add_field(name=_("Wing name"), value=donnees['commanderWing']['wingName'], inline=True)
+        embed.add_field(name=_("Members count"), value=donnees['commanderWing']['wingMembersCount'], inline=True)
+        embed.add_field(name=_("Wing member rank"), value=donnees['commanderWing']['wingMemberRank'], inline=True)
+        embed.add_field(name=_("Inara squadron link"), value=donnees['commanderWing']['inaraURL'], inline=True)
 
         await ctx.send(embed=embed)
 

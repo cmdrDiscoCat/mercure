@@ -11,6 +11,11 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 
+import gettext
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
+translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+_ = translate.gettext
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
@@ -57,11 +62,11 @@ def get_credentials():
 
 class Google(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Module Google chargé")
+        if config['DEBUG']: print(_("Google module loaded"))
         self.bot = bot
 
     def cog_unload(self):
-        if config['DEBUG']: print("Module Google déchargé")
+        if config['DEBUG']: print(_("Google module loaded"))
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -69,9 +74,9 @@ class Google(commands.Cog):
         """
         Displays the lines from Phoenix's spreadsheet to know which geysers sites contains asked material
         """
-        if config['DEBUG']: print("Commande farm")
+        if config['DEBUG']: print(_("farm command"))
         if not arg1:
-            await ctx.send("Il faut indiquer le matériau en paramètre !")
+            await ctx.send(_("You must specify a material !"))
             return
 
         material = str(arg1).lower()
@@ -96,7 +101,7 @@ class Google(commands.Cog):
         message = ""
 
         if not values:
-            message += 'Impossible de récupérer les valeurs.'
+            message += _("Can't get data.")
         else:
             for row in values:
                 try:
@@ -109,30 +114,24 @@ class Google(commands.Cog):
                     continue
 
         # We got our lines
-        message = "**Liste des sites de geysers pour "
-        message += material + "**"
+        message = _("**Geyser sites' list for {material}**").format(material=material)
         await ctx.send(message)
 
-        embed = discord.Embed(title="Localisation", description=str(materials[material]['location']), color=0x0000ff)
+        embed = discord.Embed(title=_("Location"), description=str(materials[material]['location']), color=0x0000ff)
         await ctx.send(embed=embed)
 
         # For each line, we check the columns for the values we seek and build the message we'll return
         for return_line in return_lines.items():
             columns = return_line[1]
             message = "**" + str(columns[1]) + "** - "
-            message += "Astre : **" + str(columns[2]) + "**."
-            message += " Coordonnées : **" + str(columns[3]) + "**\n"
-            message += "**["
-            message += str(columns[material_column])
-            message += "%]** - "
+            message += _("Body : **") + str(columns[2]) + "**."
+            message += _(" Coordinates : **") + str(columns[3]) + "**\n"
+            message += "**[" + str(columns[material_column]) + "%]** - "
             if columns[5] != '':
-                message += "Distance de 32 MU : **"
-                message += str(columns[5]) + " al** - "
+                message += _("Distance from 32 MU : **{distanceFromBubble} al** - ").format(distanceFromBubble=str(columns[5]))
             if columns[6] != '':
-                message += "Distance de Pythéas : **"
-                message += str(columns[6]) + " al** - "
-            message += "Distance de l'étoile principale : **"
-            message += str(columns[7]) + " sl**"
+                message += _("Distance from Pytheas : **{distanceFromColonia} al** - ").format(distanceFromColonia=str(columns[6]))
+            message += _("Distance from the main star : **{distanceFromStar} sl**").format(distanceFromStar=str(columns[7]))
 
             embed = discord.Embed(title="", description=message, color=0x00ffaa)
             await ctx.send(embed=embed)

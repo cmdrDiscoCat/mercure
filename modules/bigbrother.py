@@ -10,21 +10,27 @@ from bs4 import BeautifulSoup
 from config import *
 from data import *
 
+import gettext
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
+translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+_ = translate.gettext
+
 
 class Bigbrother(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Module Bigbrother chargé")
+        if config['DEBUG']: print(_("Bigbrother module loaded"))
         self.bot = bot
         self.ctx = ''
         self.daily_bgs.start()
         self.factions_presence = {}
 
     def cog_unload(self):
-        if config['DEBUG']: print("Module Bigbrother déchargé")
+        if config['DEBUG']: print(_("Bigbrother module unloaded"))
         self.daily_bgs.cancel()
 
     def system_presence_for_faction(self, id_faction):
-        if config['DEBUG']: print("Fonction system_presence_for_faction")
+        if config['DEBUG']: print(_("system_presence_for_faction function"))
         r = requests.get("https://inara.cz/galaxy-minorfaction/" + str(id_faction))
         soup = BeautifulSoup(r.text, "html.parser")
 
@@ -44,7 +50,7 @@ class Bigbrother(commands.Cog):
         return list(dict.fromkeys(systems))
 
     def refresh_faction_presence(self):
-        if config['DEBUG']: print("Fonction refresh_faction_presence")
+        if config['DEBUG']: print(_("refresh_faction_presence function"))
         for id_faction, faction_name in followed_factions.items():
             self.factions_presence[faction_name] = self.system_presence_for_faction(id_faction)
 
@@ -53,7 +59,7 @@ class Bigbrother(commands.Cog):
         Launches a refresh of the systems lists where the factions we follow (set in data.py) are present
         Then, it displays the status of those factions in those systems
         """
-        if config['DEBUG']: print("Commande bb1984")
+        if config['DEBUG']: print(_("bb1984 command"))
 
         # if the function was called from the daily_bgs loop, we use as a Context the one initialized in the loop
         if ctx is None:
@@ -64,13 +70,13 @@ class Bigbrother(commands.Cog):
         for faction_name, faction_systems in self.factions_presence.items():
             information_block = " "
             if faction_name == "LGC - Cartographers's Guild":
-                embed = discord.Embed(title="Bulle", description=information_block, color=0x00ff00)
+                embed = discord.Embed(title=_("Bubble"), description=information_block, color=0x00ff00)
                 url = "http://guilde-cartographes.fr/INFORMATIONS/32MU_STARNEWS/wp-content/uploads/2016/09/LOGO_LGC.png"
             elif faction_name == "LGC - Colonia Cartographers' Guild":
-                embed = discord.Embed(title="Colonia", description=information_block, color=0x147119)
+                embed = discord.Embed(title=_("Colonia"), description=information_block, color=0x147119)
                 url = "http://guilde-cartographes.fr/INFORMATIONS/32MU_STARNEWS/wp-content/uploads/2017/06/colonia.png"
             else:
-                embed = discord.Embed(title="{faction_name}", description=information_block, color=0x147119)
+                embed = discord.Embed(title=faction_name, description=information_block, color=0x147119)
                 url = ""
             embed.set_thumbnail(url=url)
             await ctx.send(embed=embed)
@@ -126,12 +132,12 @@ class Bigbrother(commands.Cog):
     @commands.command(pass_context=True)
     @acces_oracle()
     async def bigbrother(self, ctx):
-        if config['DEBUG']: print("Commande bigbrother")
+        if config['DEBUG']: print(_("Bigbrother command"))
         await self.bb1984(ctx)
 
     @tasks.loop(minutes=1)
     async def daily_bgs(self):
-        if config['DEBUG']: print("Loop daily_bgs")
+        if config['DEBUG']: print(_("daily_bgs loop"))
         ctx = self.bot.get_channel(channel_for_daily_post)
         if datetime.now().strftime('%H:%M') == '16:00':
             await self.bb1984(ctx)
@@ -140,7 +146,7 @@ class Bigbrother(commands.Cog):
 
     @daily_bgs.before_loop
     async def before_daily_bgs(self):
-        if config['DEBUG']: print("Bigbrother : Attente de l'état 'prêt' du bot avant lancement boucle...")
+        if config['DEBUG']: print(_("Bigbrother : waiting for the bot to be ready before we launch the loop..."))
         await self.bot.wait_until_ready()
 
 

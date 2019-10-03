@@ -10,14 +10,20 @@ from bs4 import BeautifulSoup
 from config import *
 from data import *
 
+import gettext
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
+translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+_ = translate.gettext
+
 
 class Galnet(commands.Cog):
     def __init__(self, bot):
-        if config['DEBUG']: print("Module Galnet chargé")
+        if config['DEBUG']: print(_("Galnet module loaded"))
         self.bot = bot
 
     def cog_unload(self):
-        if config['DEBUG']: print("Module Galnet déchargé")
+        if config['DEBUG']: print(_("Galnet module unloaded"))
 
     @commands.command(pass_context=True)
     @acces_oracle()
@@ -26,7 +32,7 @@ class Galnet(commands.Cog):
         Display today's galnet articles if there are any, or the articles for the date passed as a parameter
         The required format is DD-MMM-YYYY like 03-DEC-3303
         """
-        if config['DEBUG']: print("Commande galnet")
+        if config['DEBUG']: print(_("galnet command"))
         now = datetime.utcnow()
         month = str(now.strftime("%b")).upper()
         year = str(int(now.strftime("%Y")) + 1286)
@@ -61,7 +67,7 @@ class Galnet(commands.Cog):
             output += "--------------------\n"
 
         if output == "":
-            output += "** Pas d'article trouvé ce jour : " + jour + "**\n"
+            output += _("** No article found for that date : ") + jour + "**\n"
 
         messages = output.split('\n')
 

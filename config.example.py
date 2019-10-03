@@ -6,12 +6,15 @@ config["inara_appname"] = ""
 config["inara_cmdr_name"] = ""
 config["prefix"] = "!"
 config['DEBUG'] = False
+config['LANGUAGE'] = "en"
 
 # Admin ids (put the ids directly, not in strings)
 admin_ids = []
 
-# Daily BGS update channel
+# Daily BGS update channel id
 channel_for_daily_post = ''
+# we also want its name
+channel_for_daily_post_name = 'oracle'
 
 # Followed factions, find the ids on inara by searching for your faction
 # here : https://inara.cz/galaxy-minorfaction/
