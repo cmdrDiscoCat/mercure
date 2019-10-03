@@ -1,4 +1,4 @@
-import discord
+import discord, os
 from discord.ext import commands
 from main import acces_oracle, is_admin
 
@@ -81,7 +81,7 @@ class Mercure(commands.Cog):
         desc += _("- Insulating Membrane \n")
         desc += _("- Power Converters \n")
         desc += _("- Natural Fabrics \n")
-        "
+
         embed = discord.Embed(title=_("Commodities needed to repair a starport"),
                               description=desc, color=0x00ffaa)
         await ctx.send(embed=embed)

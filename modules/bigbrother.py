@@ -1,4 +1,4 @@
-import discord, config
+import discord, config, os
 from discord.ext import commands, tasks
 from main import acces_oracle, is_admin
 

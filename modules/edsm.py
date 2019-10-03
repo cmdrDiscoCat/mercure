@@ -1,4 +1,4 @@
-import discord
+import discord, os
 from discord.ext import commands
 from main import acces_oracle, is_admin
 
@@ -306,7 +306,7 @@ class Edsm(commands.Cog):
             embed = discord.Embed(title="", description = information_embed, color=0x00ff00)
             await ctx.send(embed=embed)
         else:
-            await ctx.send(_("No system found with the name {system} :crying_cat_face:").format(system=system)
+            await ctx.send(_("No system found with the name {system} :crying_cat_face:").format(system=system))
 
     @commands.command(pass_context=True, aliases=['espionner'])
     @acces_oracle()
