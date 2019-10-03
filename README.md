@@ -12,7 +12,7 @@ This is basically the new version of discobot, a BGS bot for Elite Dangerous I i
  * use of the cogs from discord.py to allow reloading parts of it in case of updates with a command to reload the cogs (simple named reload)
  * and more... soon...
  
-##Installation
+## Installation
  
 Simply clone this repository on a linux or mac machine with python 3.6 installed (Python 2 or Python 3.7+ **won't** work).
  
@@ -24,7 +24,7 @@ Finally : `./run.sh`
  
 That's it !
  
-##Translation
+## Translation
  
 I'm currently trying to add translation to the whole bot be it the command names or the displayed text.
  
