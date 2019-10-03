@@ -1,5 +1,11 @@
-/config.py
-/venv/
-/env/
+#Config
+config.py
+.idea
+.DS_Store
+# Translations
+*.mo
+# Virtualenv
+venv
+env
+# Logs
 /logs/mercure*
-/.idea/

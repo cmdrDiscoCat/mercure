@@ -8,3 +8,4 @@ markdownify
 html2text
 google-api-python-client
 oauth2client
+babel

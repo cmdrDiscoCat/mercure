@@ -1,4 +1,4 @@
-import discord
+import discord, os
 from discord.ext import commands
 from main import acces_oracle, is_admin
 
@@ -184,10 +184,10 @@ class Inara(commands.Cog):
 
         embed = discord.Embed(title="*Informations d\'escadrille*", color=0x0000ff)
 
-        embed.add_field(name=_("Wing name"), value=donnees['commanderWing']['wingName'], inline=True)
-        embed.add_field(name=_("Members count"), value=donnees['commanderWing']['wingMembersCount'], inline=True)
-        embed.add_field(name=_("Wing member rank"), value=donnees['commanderWing']['wingMemberRank'], inline=True)
-        embed.add_field(name=_("Inara squadron link"), value=donnees['commanderWing']['inaraURL'], inline=True)
+        embed.add_field(name=_("Wing name"), value=inara_data['commanderWing']['wingName'], inline=True)
+        embed.add_field(name=_("Members count"), value=inara_data['commanderWing']['wingMembersCount'], inline=True)
+        embed.add_field(name=_("Wing member rank"), value=inara_data['commanderWing']['wingMemberRank'], inline=True)
+        embed.add_field(name=_("Inara squadron link"), value=inara_data['commanderWing']['inaraURL'], inline=True)
 
         await ctx.send(embed=embed)
 
