@@ -15,6 +15,8 @@ admin_ids = []
 channel_for_daily_post = ''
 # we also want its name
 channel_for_daily_post_name = 'oracle'
+# then the time when you want it to run
+daily_time = "16:00"
 
 # Followed factions, find the ids on inara by searching for your faction
 # here : https://inara.cz/galaxy-minorfaction/

@@ -139,7 +139,7 @@ class Bigbrother(commands.Cog):
     async def daily_bgs(self):
         if config['DEBUG']: print(_("daily_bgs loop"))
         ctx = self.bot.get_channel(channel_for_daily_post)
-        if datetime.now().strftime('%H:%M') == '16:00':
+        if datetime.now().strftime('%H:%M') == daily_time:
             await self.bb1984(ctx)
         else:
             pass
