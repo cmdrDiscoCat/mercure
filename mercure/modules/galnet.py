@@ -1,6 +1,6 @@
-import discord, os, random, config
+import discord, os, random
 from discord.ext import commands
-from main import acces_oracle, is_admin
+from main import acces_oracle, is_admin, _
 
 from html2text import html2text
 import requests
@@ -9,12 +9,6 @@ from bs4 import BeautifulSoup
 
 from config import *
 from data import *
-
-import gettext
-
-localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
-translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
-_ = translate.gettext
 
 
 class Galnet(commands.Cog):

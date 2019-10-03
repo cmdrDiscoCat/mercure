@@ -1,6 +1,6 @@
 import discord, os
 from discord.ext import commands, tasks
-from main import acces_oracle, is_admin
+from main import acces_oracle, is_admin, _
 
 from config import *
 from data import *
@@ -11,11 +11,6 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 
-import gettext
-
-localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
-translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
-_ = translate.gettext
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
@@ -66,7 +61,7 @@ class Google(commands.Cog):
         self.bot = bot
 
     def cog_unload(self):
-        if config['DEBUG']: print(_("Google module loaded"))
+        if config['DEBUG']: print(_("Google module unloaded"))
 
     @commands.command(pass_context=True)
     @acces_oracle()

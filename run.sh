@@ -1,4 +1,5 @@
 #!/bin/bash
 source env/bin/activate
-python3.6 mercure/main.py
+cd mercure
+python3.6 main.py
 deactivate

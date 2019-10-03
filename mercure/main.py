@@ -1,32 +1,31 @@
-import discord
+import discord, os, gettext
 from discord.ext import commands
 import logging
 from logging.handlers import TimedRotatingFileHandler
+
 from config import *
 from data import *
 
-import os
-import gettext
-
 localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
-translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
+translate = gettext.translation('messages', localedir, languages=[config['LANGUAGE']])
+translate.install()
 _ = translate.gettext
 
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
-log_filename = os.path.join("logs",'mercure.log')
+log_filename = os.path.join("..","logs",'mercure.log')
 handler = logging.FileHandler(filename=log_filename, encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-fileHandler = TimedRotatingFileHandler('logs/mercure.log', when='midnight')
+fileHandler = TimedRotatingFileHandler(os.path.join("..","logs",'mercure.log'), when='midnight')
 fileHandler.suffix = "%Y_%m_%d.log"
 fileHandler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s: %(message)s'))
 fileHandler.setLevel(logging.INFO)
 logger.addHandler(fileHandler)
 
-description = _('''Assistant BGS de la LGC''')
+description = _('''LGC's BGS assistant''')
 bot = commands.Bot(command_prefix=config['prefix'], description=description, pm_help=True, heartbeat_timeout=150)
 bot.remove_command("help")
 
@@ -64,7 +63,7 @@ async def on_ready():
         print('------')
 
     # we load all modules
-    for f in os.listdir("modules/"):
+    for f in os.listdir("modules"+os.sep):
         if f.endswith('.py'):
             bot.load_extension(f"modules.{f[:-3]}")
 
@@ -108,7 +107,7 @@ async def unload(ctx, ext):
 async def reload(ctx):
     # we reload all modules
     # we load all modules
-    for f in os.listdir("modules/"):
+    for f in os.listdir("modules"+os.sep):
         if f.endswith('.py'):
             if config['DEBUG']: print(_("Module {module} reloaded").format(module=f[:-3]))
             bot.unload_extension(f"modules.{f[:-3]}")

@@ -1,6 +1,6 @@
 import discord, os
 from discord.ext import commands
-from main import acces_oracle, is_admin
+from main import acces_oracle, is_admin, _
 
 import requests
 import dateutil.parser
@@ -8,12 +8,6 @@ from datetime import datetime
 
 from config import *
 from data import *
-
-import gettext
-
-localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
-translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
-_ = translate.gettext
 
 
 class Inara(commands.Cog):

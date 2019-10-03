@@ -1,6 +1,6 @@
 import discord, os
 from discord.ext import commands
-from main import acces_oracle, is_admin
+from main import acces_oracle, is_admin, _
 
 from config import *
 from data import *
@@ -9,12 +9,6 @@ import requests
 import urllib.parse
 from datetime import datetime
 
-import gettext
-
-localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
-translate = gettext.translation('mercure', localedir, languages=[config['LANGUAGE']], fallback=True)
-_ = translate.gettext
-
 
 class Edsm(commands.Cog):
     def __init__(self, bot):
@@ -22,7 +16,7 @@ class Edsm(commands.Cog):
         self.bot = bot
 
     def cog_unload(self):
-        if config['DEBUG']: print(_("Edsm module loaded"))
+        if config['DEBUG']: print(_("Edsm module unloaded"))
 
     @commands.command(pass_context=True)
     @acces_oracle()
