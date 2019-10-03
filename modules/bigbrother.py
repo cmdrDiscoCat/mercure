@@ -140,7 +140,7 @@ class Bigbrother(commands.Cog):
 
     @daily_bgs.before_loop
     async def before_daily_bgs(self):
-        if config['DEBUG']: print('Bigbrother : Initialisation avant lancement boucle...')
+        if config['DEBUG']: print("Bigbrother : Attente de l'état 'prêt' du bot avant lancement boucle...")
         await self.bot.wait_until_ready()
 
 

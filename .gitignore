@@ -1,5 +1,5 @@
 /config.py
 /venv/
 /env/
-/logs/*
+/logs/mercure*
 /.idea/
