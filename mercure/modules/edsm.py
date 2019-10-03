@@ -39,9 +39,9 @@ class Edsm(commands.Cog):
         else:
             color = 0x000000
 
-        embed = discord.Embed(title="Message de statut retourné par les serveurs Elite Dangerous",
+        embed = discord.Embed(title=_("Status message returned by the Elite Dangerous servers"),
                               description="```" + informations['message'] + "```", color=color)
-        embed.set_footer(text="Date de dernière mise à jour : " + informations['lastUpdate'])
+        embed.set_footer(text=_("Last updated on : ") + informations['lastUpdate'])
         await ctx.send(embed=embed)
 
     @commands.command(pass_context=True, aliases=['trafic'])
@@ -102,9 +102,9 @@ class Edsm(commands.Cog):
                 except:
                     pass
 
-                embed.add_field(name=_("Allegiance"), value=traduction[station["allegiance"]], inline=True)
-                embed.add_field(name=_("Government"), value=traduction[station["government"]], inline=True)
-                embed.add_field(name=_("Economy"), value=traduction[station["economy"]], inline=True)
+                embed.add_field(name=_("Allegiance"), value=translations[station["allegiance"]], inline=True)
+                embed.add_field(name=_("Government"), value=translations[station["government"]], inline=True)
+                embed.add_field(name=_("Economy"), value=translations[station["economy"]], inline=True)
 
                 yes_checkbox = _("Yes")
                 no_checkbox = _("No")
@@ -132,7 +132,7 @@ class Edsm(commands.Cog):
                 else:
                     other_services = ""
                     for service in station['otherServices']:
-                        other_services += traduction[service] + " / "
+                        other_services += translations[service] + " / "
                     other_services = other_services.rstrip(' / ')
                     embed.add_field(name=_("Other services"), value=other_services, inline=True)
 
@@ -189,11 +189,11 @@ class Edsm(commands.Cog):
 
             embed = discord.Embed(title="", color=0x00ffff)
             embed.add_field(name=_("Allegiance"),
-                            value=traduction[informations["information"]["allegiance"]], inline=True)
+                            value=_("%s" % (translations[informations["information"]["allegiance"]])), inline=True)
             embed.add_field(name=_("Government"),
-                            value=traduction[informations["information"]["government"]], inline=True)
+                            value=_(f'{translations[informations["information"]["government"]]}'), inline=True)
             embed.add_field(name=_("State"),
-                            value=traduction[informations["information"]["factionState"]], inline=True)
+                            value=_(translations[informations["information"]["factionState"]]), inline=True)
             embed.add_field(name=_("Population"),
                             value=informations["information"]["population"], inline=True)
 
@@ -205,8 +205,8 @@ class Edsm(commands.Cog):
                                 value=_("None"), inline=True)
 
             embed.add_field(name=_("Security and Economy"),
-                            value=traduction[informations["information"]["security"]]
-                                  + " / " + informations["information"]["economy"],
+                            value=_(translations[informations["information"]["security"]])
+                                  + " / " + _(translations[informations["information"]["economy"]]),
                             inline=True)
             await ctx.send(embed=embed)
 
@@ -279,9 +279,9 @@ class Edsm(commands.Cog):
                     player_faction = ":robot:"
 
                 information_embed += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
-                information_embed += " | " + traduction[faction['state']]
-                information_embed += " | " + traduction[faction['allegiance']]
-                information_embed += " | " + traduction[faction['government']]
+                information_embed += " | " + _(translations[faction['state']])
+                information_embed += " | " + _(translations[faction['allegiance']])
+                information_embed += " | " + _(translations[faction['government']])
                 information_embed += " " + player_faction + "\n"
                 if faction['lastUpdate'] > last_update:
                     last_update = faction['lastUpdate']

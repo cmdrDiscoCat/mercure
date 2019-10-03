@@ -23,7 +23,7 @@ class Mercure(commands.Cog):
     async def help(self, ctx):
         if config['DEBUG']: print(_("help command"))
         text_help = ""
-        text_help += _("- !influence <system> : Display <system>'s faction and their influence/states.\n")
+        text_help += _("- !influence <system> : Display <system>'s factions and their influence/states.\n")
         text_help += _("- !system <system> : Displays every information about a system (coordinates, main state, economy...\n")
         text_help += _("- !traffic <system> : Displays recent traffic information of <system>.\n")
         text_help += _("- !stations <system> : Displays all the stations of <system> with their informations.\n")

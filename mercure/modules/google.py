@@ -123,10 +123,10 @@ class Google(commands.Cog):
             message += _(" Coordinates : **") + str(columns[3]) + "**\n"
             message += "**[" + str(columns[material_column]) + "%]** - "
             if columns[5] != '':
-                message += _("Distance from 32 MU : **{distanceFromBubble} al** - ").format(distanceFromBubble=str(columns[5]))
+                message += _("Distance from 32 MU : **{distanceFromBubble} ly** - ").format(distanceFromBubble=str(columns[5]))
             if columns[6] != '':
-                message += _("Distance from Pytheas : **{distanceFromColonia} al** - ").format(distanceFromColonia=str(columns[6]))
-            message += _("Distance from the main star : **{distanceFromStar} sl**").format(distanceFromStar=str(columns[7]))
+                message += _("Distance from Pytheas : **{distanceFromColonia} ly** - ").format(distanceFromColonia=str(columns[6]))
+            message += _("Distance from the main star : **{distanceFromStar} ls**").format(distanceFromStar=str(columns[7]))
 
             embed = discord.Embed(title="", description=message, color=0x00ffaa)
             await ctx.send(embed=embed)

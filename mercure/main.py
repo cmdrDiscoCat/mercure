@@ -4,12 +4,13 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 
 from config import *
-from data import *
 
 localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
 translate = gettext.translation('messages', localedir, languages=[config['LANGUAGE']])
 translate.install()
 _ = translate.gettext
+
+from data import *
 
 
 logger = logging.getLogger('discord')

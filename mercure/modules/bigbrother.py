@@ -109,7 +109,7 @@ class Bigbrother(commands.Cog):
                             information_block +=  "%]* > "
 
                         information_block += "**[{:.2%}".format(minor_faction['influence']) + "]**"
-                        information_block += " | " + traduction[minor_faction['state']]
+                        information_block += " | " + translations[minor_faction['state']]
                         information_block += " *(" + last_update.strftime("%d/%m-%Hh%M") + ")*\n"
 
                 if len(information_block) >= 1000:

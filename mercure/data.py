@@ -1,3 +1,5 @@
+from main import _
+
 inara_ranks = {}
 
 inara_ranks['combat'] = {
@@ -87,209 +89,208 @@ materials = {}
 materials['fer'] = {
     'column': 'J',
     'number': 9,
-    'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
+    'location': _('Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")')
 }
 
 materials['nickel'] = {
     'column': 'K',
     'number': 10,
-    'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
+    'location': _('Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")')
 }
 
 materials['carbone'] = {
     'column': 'L',
     'number': 11,
-    'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
+    'location': _('Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")')
 }
 
 materials['soufre'] = {
     'column': 'M',
     'number': 12,
-    'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
+    'location': _('Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")')
 }
 
 materials['phosphore'] = {
     'column': 'N',
     'number': 13,
-    'location': 'Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")'
+    'location': _('Matériaux très communs (Geysers: "Amas Asphaltéeen" / Spacetree: "Excroissance de Cordyceps")')
 }
 
 materials['chrome'] = {
     'column': 'O',
     'number': 14,
-    'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['manganese'] = {
     'column': 'P',
     'number': 15,
-    'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['zinc'] = {
     'column': 'Q',
     'number': 16,
-    'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['vanadium'] = {
     'column': 'R',
     'number': 17,
-    'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['germanium'] = {
     'column': 'S',
     'number': 18,
-    'location': 'Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux communs (Geysers: "Fragments Cristallins" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['arsenic'] = {
     'column': 'T',
     'number': 19,
-    'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['tungstene'] = {
     'column': 'U',
     'number': 20,
-    'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['niobium'] = {
     'column': 'V',
     'number': 21,
-    'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['selenium'] = {
     'column': 'W',
     'number': 22,
-    'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['zirconium'] = {
     'column': 'X',
     'number': 23,
-    'location': 'Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")'
+    'location': _('Matériaux (Geyser: "Amas Cristallin" / Spacetree: "Excroissance de Polypore")')
 }
 
 materials['yttrium'] = {
     'column': 'Y',
     'number': 24,
-    'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
+    'location': _('Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")')
 }
 
 materials['molybdene'] = {
     'column': 'Z',
     'number': 25,
-    'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
+    'location': _('Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")')
 }
 
 materials['etain'] = {
     'column': 'AA',
     'number': 26,
-    'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
+    'location': _('Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")')
 }
 
 materials['mercure'] = {
     'column': 'AB',
     'number': 27,
-    'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
+    'location': _('Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")')
 }
 
 materials['cadmium'] = {
     'column': 'AC',
     'number': 28,
-    'location': 'Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")'
+    'location': _('Matériaux rares (Geysers: "Amas Cristallin" / Spacetree: "Cosse mussidienne")')
 }
 
 materials['technetium'] = {
     'column': 'AD',
     'number': 29,
-    'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
+    'location': _('Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")')
 }
 
 materials['tellure'] = {
     'column': 'AE',
     'number': 30,
-    'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
+    'location': _('Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")')
 }
 
 materials['polonium'] = {
     'column': 'AF',
     'number': 31,
-    'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
+    'location': _('Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")')
 }
 
 materials['antimoine'] = {
     'column': 'AG',
     'number': 32,
-    'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
+    'location': _('Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")')
 }
 
 materials['ruthenium'] = {
     'column': 'AH',
     'number': 33,
-    'location': 'Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")'
+    'location': _('Matériaux très rares (Geysers: "Cristaux Epineux"/ Spacetree: "Excression de Phloème")')
 }
 
-
-traduction = {
-    "Federation": "Fédération",
-    "Empire": "Empire",
-    "Aliiance": "Alliance",
-    "Pilots Federation": "Cercle des pilotes",
-    "Independent": "Indépendant",
-    "Anarchy": "Anarchie",
-    "Colony": "Colonie",
-    "Communism": "Communisme",
-    "Confederacy": "Confédération",
-    "Cooperative": "Coopérative",
-    "Corporate": "Entreprise",
-    "Democracy": "Démocratie",
-    "Dictatorship": "Dictature",
-    "Feudal": "Féodal",
-    "Imperial": "Impérial",
-    "None": "Aucun",
-    "Patronage": "Patronage",
-    "Prison Colony": "Colonie pénitentiaire",
-    "Theocracy" : "Théocratie",
-    "Boom": "Essor économique",
-    "Bust": "Faillite",
-    "Civil unrest": "Emeutes",
-    "Civil war": "Guerre civile",
-    "Civil liberty": "Liberté",
-    "Election": "Élections",
-    "Expansion": "Expansion",
-    "Famine": "Famine",
-    "Investment": "Investissements",
-    "Lockdown": "Loi martiale",
-    "Outbreak": "Épidémie",
-    "Retreat": "Retraite",
-    "War": "Guerre",
-    "Workshop (Engineer)": "Atelier (Ingénieur·e)",
-    "Extraction": "Extraction",
-    "Refinery": "Raffinerie",
-    "Industrial": "Industriel",
-    "High Tech": "Haute technologie",
-    "Agriculture": "Agriculture",
-    "Terraforming": "Terraformation",
-    "Tourism": "Tourisme",
-    "Service": "Service",
-    "Military": "Militaire",
-    "Rescue": "Secours",
-    "Damaged": "Endommagé·e",
-    "Station Repair": "En réparation",
-    "Low": "Faible",
-    "Medium": "Moyenne",
-    "High": "Élevée",
-    "Lawless": "Anarchique",
-    "Black Market": "Marché noir",
-    "Restock": "Ravitaillement",
-    "Refuel": "Carburant",
-    "Repair": "Réparation",
-    "Universal Cartographics": "Universal Cartographics",
-    "Search and Rescue": "Agents des opérations de sauvetage",
-    "Interstellar Factors Contact": "Réseau de courtiers"
+translations = {
+    "Federation": _("Federation"),
+    "Empire": _("Empire"),
+    "Alliance": _("Alliance"),
+    "Pilots Federation": _("Pilots Federation"),
+    "Independent": _("Independant"),
+    "Anarchy": _("Anarchie"),
+    "Colony": _("Colony"),
+    "Communism": _("Communism"),
+    "Confederacy": _("Confederacy"),
+    "Cooperative": _("Cooperative"),
+    "Corporate": _("Corporate"),
+    "Democracy": _("Democracy"),
+    "Dictatorship": _("Dictatorship"),
+    "Feudal": _("Feudal"),
+    "Imperial": _("Imperial"),
+    "None": _("None"),
+    "Patronage": _("Patronage"),
+    "Prison Colony": _("Prison Colony"),
+    "Theocracy" : _("Theocracy"),
+    "Boom": _("Boom"),
+    "Bust": _("Bust"),
+    "Civil unrest": _("Civil unrest"),
+    "Civil war": _("Civil war"),
+    "Civil liberty": _("Civil liberty"),
+    "Election": _("Election"),
+    "Expansion": _("Expansion"),
+    "Famine": _("Famine"),
+    "Investment": _("Investment"),
+    "Lockdown": _("Lockdown"),
+    "Outbreak": _("Outbreak"),
+    "Retreat": _("Retreat"),
+    "War": _("War"),
+    "Workshop (Engineer)": _("Workshop (Engineer)"),
+    "Extraction": _("Extraction"),
+    "Refinery": _("Refinery"),
+    "Industrial": _("Industrial"),
+    "High Tech": _("High Tech"),
+    "Agriculture": _("Agriculture"),
+    "Terraforming": _("Terraforming"),
+    "Tourism": _("Tourism"),
+    "Service": _("Service"),
+    "Military": _("Military"),
+    "Rescue": _("Rescue"),
+    "Damaged": _("Damaged"),
+    "Station Repair": _("Station Repair"),
+    "Low": _("Low"),
+    "Medium": _("Medium"),
+    "High": _("High"),
+    "Lawless": _("Lawless"),
+    "Black Market": _("Black Market"),
+    "Restock": _("Restock"),
+    "Refuel": _("Refuel"),
+    "Repair": _("Repair"),
+    "Universal Cartographics": _("Universal Cartographics"),
+    "Search and Rescue": _("Search and Rescue"),
+    "Interstellar Factors Contact": _("Interstellar Factors Contact")
 }
