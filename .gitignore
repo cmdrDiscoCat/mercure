@@ -8,4 +8,4 @@ config.py
 venv
 env
 # Logs
-/logs/mercure*
+mercure.log*
