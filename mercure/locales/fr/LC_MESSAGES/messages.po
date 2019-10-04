@@ -50,63 +50,63 @@ msgstr ""
 
 #: data.py:240
 msgid "Federation"
-msgstr ""
+msgstr "Fédération"
 
 #: data.py:241
 msgid "Empire"
-msgstr ""
+msgstr "Empire"
 
 #: data.py:242
 msgid "Alliance"
-msgstr ""
+msgstr "Alliance"
 
 #: data.py:243
 msgid "Pilots Federation"
-msgstr ""
+msgstr "Cercle des Pilotes"
 
 #: data.py:244
 msgid "Independant"
 msgstr "Indépendant"
 
 #: data.py:245
-msgid "Anarchie"
-msgstr ""
+msgid "Anarchy"
+msgstr "Anarchie"
 
 #: data.py:246
 msgid "Colony"
-msgstr ""
+msgstr "Colonie"
 
 #: data.py:247
 msgid "Communism"
-msgstr ""
+msgstr "Communisme"
 
 #: data.py:248
 msgid "Confederacy"
-msgstr ""
+msgstr "Confédération"
 
 #: data.py:249
 msgid "Cooperative"
-msgstr ""
+msgstr "Coopérative"
 
 #: data.py:250
 msgid "Corporate"
-msgstr ""
+msgstr "Entreprise"
 
 #: data.py:251
 msgid "Democracy"
-msgstr ""
+msgstr "Démocratie"
 
 #: data.py:252
 msgid "Dictatorship"
-msgstr ""
+msgstr "Dictature"
 
 #: data.py:253
 msgid "Feudal"
-msgstr ""
+msgstr "Féodal"
 
 #: data.py:254
 msgid "Imperial"
-msgstr ""
+msgstr "Impérial"
 
 #: data.py:255 modules/edsm.py:205
 msgid "None"
@@ -118,67 +118,67 @@ msgstr "Mécénat"
 
 #: data.py:257
 msgid "Prison Colony"
-msgstr ""
+msgstr "Colonie pénitentiaire"
 
 #: data.py:258
 msgid "Theocracy"
-msgstr ""
+msgstr "Théocracie"
 
 #: data.py:259
 msgid "Boom"
-msgstr ""
+msgstr "Essor"
 
 #: data.py:260
 msgid "Bust"
-msgstr ""
+msgstr "Faillite"
 
 #: data.py:261
 msgid "Civil unrest"
-msgstr ""
+msgstr "Emeutes"
 
 #: data.py:262
 msgid "Civil war"
-msgstr ""
+msgstr "Guerre civile"
 
 #: data.py:263
 msgid "Civil liberty"
-msgstr ""
+msgstr "Liberté civile"
 
 #: data.py:264
 msgid "Election"
-msgstr ""
+msgstr "Election"
 
 #: data.py:265
 msgid "Expansion"
-msgstr ""
+msgstr "Expansion"
 
 #: data.py:266
 msgid "Famine"
-msgstr ""
+msgstr "Famine"
 
 #: data.py:267
 msgid "Investment"
-msgstr ""
+msgstr "Investissements"
 
 #: data.py:268
 msgid "Lockdown"
-msgstr ""
+msgstr "Loi martiale"
 
 #: data.py:269
 msgid "Outbreak"
-msgstr ""
+msgstr "Epidémie"
 
 #: data.py:270
 msgid "Retreat"
-msgstr ""
+msgstr "Retraite"
 
 #: data.py:271
 msgid "War"
-msgstr ""
+msgstr "Guerre"
 
 #: data.py:272
 msgid "Workshop (Engineer)"
-msgstr ""
+msgstr "Atelier (Ingénieur•e)"
 
 #: data.py:273
 msgid "Extraction"
@@ -186,91 +186,91 @@ msgstr ""
 
 #: data.py:274
 msgid "Refinery"
-msgstr ""
+msgstr "Raffinage"
 
 #: data.py:275
 msgid "Industrial"
-msgstr ""
+msgstr "Industriel"
 
 #: data.py:276
 msgid "High Tech"
-msgstr ""
+msgstr "High Tech"
 
 #: data.py:277
 msgid "Agriculture"
-msgstr ""
+msgstr "Agriculture"
 
 #: data.py:278
 msgid "Terraforming"
-msgstr ""
+msgstr "Terraformation"
 
 #: data.py:279
 msgid "Tourism"
-msgstr ""
+msgstr "Tourisme"
 
 #: data.py:280
 msgid "Service"
-msgstr ""
+msgstr "Service"
 
 #: data.py:281
 msgid "Military"
-msgstr ""
+msgstr "Militaire"
 
 #: data.py:282
 msgid "Rescue"
-msgstr ""
+msgstr "Sauvetage"
 
 #: data.py:283
 msgid "Damaged"
-msgstr ""
+msgstr "Endommagé•e"
 
 #: data.py:284
 msgid "Station Repair"
-msgstr ""
+msgstr "Réparation de station"
 
 #: data.py:285
 msgid "Low"
-msgstr ""
+msgstr "Basse"
 
 #: data.py:286
 msgid "Medium"
-msgstr ""
+msgstr "Moyenne"
 
 #: data.py:287
 msgid "High"
-msgstr ""
+msgstr "Elevée"
 
 #: data.py:288
 msgid "Lawless"
-msgstr ""
+msgstr "Anarchie"
 
 #: data.py:289
 msgid "Black Market"
-msgstr ""
+msgstr "Marché noir"
 
 #: data.py:290
 msgid "Restock"
-msgstr ""
+msgstr "Rechargement"
 
 #: data.py:291
 msgid "Refuel"
-msgstr ""
+msgstr "Refaire le plein"
 
 #: data.py:292
 msgid "Repair"
-msgstr ""
+msgstr "Réparer"
 
 #: data.py:293
 msgid "Universal Cartographics"
-msgstr ""
+msgstr "Universal Cartographics"
 
 #: data.py:294
 msgid "Search and Rescue"
-msgstr ""
+msgstr "Recherche et sauvetage"
 
 #: data.py:295
 msgid "Interstellar Factors Contact"
-msgstr ""
+msgstr "Contacts Interstellaires"
 
 #: main.py:29
 msgid "LGC's BGS assistant"
