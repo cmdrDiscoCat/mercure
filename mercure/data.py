@@ -3,85 +3,85 @@ from main import _
 inara_ranks = {}
 
 inara_ranks['combat'] = {
-0: "Inoffensif",
-1: "Bleu",
-2: "Novice",
-3: "Compétent",
-4: "Expert",
-5: "Maître",
-6: "Vétéran",
-7: "Létal",
-8: "Elite"
+0: _("Harmless"),
+1: _("Mostly harmless"),
+2: _("Novice"),
+3: _("Competent"),
+4: _("Expert"),
+5: _("Master"),
+6: _("Dangerous"),
+7: _("Deadly"),
+8: _("Elite")
 }
 
 inara_ranks['trade'] = {
-0: "Sans le sou",
-1: "Mendiant",
-2: "Boutiquier",
-3: "Revendeur",
-4: "Marchand",
-5: "Courtier",
-6: "Entrepreneur",
-7: "Magnat",
-8: "Elite"
+0: _("Penniless"),
+1: _("Mostly penniless"),
+2: _("Peddler"),
+3: _("Dealer"),
+4: _("Merchant"),
+5: _("Broker"),
+6: _("Entrepreneur"),
+7: _("Tycoon"),
+8: _("Elite")
 }
 
 inara_ranks['exploration'] = {
-0: "Vagabond",
-1: "Touriste",
-2: "Voyageur",
-3: "Éclaireur",
-4: "Prospecteur",
-5: "Découvreur",
-6: "Navigateur",
-7: "Pionnier",
-8: "Elite"
+0: _("Aimless"),
+1: _("Mostly aimless"),
+2: _("Scout"),
+3: _("Surveyor"),
+4: _("Trailblazer"),
+5: _("Pathfinder"),
+6: _("Ranger"),
+7: _("Pioneer"),
+8: _("Elite")
 }
 
 inara_ranks['cqc'] = {
-0: "Irrécupérable",
-1: "Quasi irrécupérable",
-2: "Amateur(ice)",
-3: "Semi-professionnel(le)",
-4: "Professionnel(le)",
-5: "Champion",
-6: "Héros/Héroïne",
-7: "Légende",
-8: "Elite"
+0: _("Helpless"),
+1: _("Mostly Helpless"),
+2: _("Amateur"),
+3: _("Semi-professional"),
+4: _("Professional"),
+5: _("Champion"),
+6: _("Hero"),
+7: _("Legend"),
+8: _("Elite")
 }
 
 inara_ranks['federation'] = {
-0: "Recrue",
-1: "Cadet",
-2: "Matelot",
-3: "Second maître",
-4: "Premier maître",
-5: "Major",
-6: "Enseigne",
-7: "Lieutenant",
-8: "Capitaine de corvette",
-9: "Capitaine de frégate",
-10: "Capitaine de vaisseau",
-11: "Contre-Amiral",
-12: "Vice-Amiral",
-13: "Amiral"
+1: _("Recruit"),
+2: _("Cadet"),
+3: _("Midshipman"),
+4: _("Petty Officer"),
+5: _("Chief Petty Officer"),
+6: _("Warrant Officer"),
+7: _("Ensign"),
+8: _("Lieutenant"),
+9: _("Lieutenant Commander"),
+10: _("Post Commander"),
+11: _("Post Captain"),
+12: _("Rear Admiral"),
+13: _("Vice Admiral"),
+14: _("Admiral")
 }
 
 inara_ranks['empire'] = {
-0: "Étranger",
-1: "Serf",
-2: "Vilain",
-3: "Écuyer",
-4: "Chevalier",
-5: "Banneret",
-6: "Baron",
-7: "Vicomte",
-8: "Comte",
-9: "Marquis",
-10: "Duc",
-11: "Archiduc",
-12: "Prince",
-13: "Roi"
+1: _("Outsider"),
+2: _("Serf"),
+3: _("Master"),
+4: _("Squire"),
+5: _("Knight"),
+6: _("Lord"),
+7: _("Baron"),
+8: _("Viscount"),
+9: _("Count"),
+10: _("Earl"),
+11: _("Marquis"),
+12: _("Duke"),
+13: _("Prince"),
+14: _("King")
 }
 
 materials = {}
@@ -294,3 +294,6 @@ translations = {
     "Search and Rescue": _("Search and Rescue"),
     "Interstellar Factors Contact": _("Interstellar Factors Contact")
 }
+
+def module():
+    pass

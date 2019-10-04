@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-04 00:07+0200\n"
+"POT-Creation-Date: 2019-10-04 13:15+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,6 +17,246 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+
+#: data.py:6
+msgid "Harmless"
+msgstr ""
+
+#: data.py:7
+msgid "Mostly harmless"
+msgstr ""
+
+#: data.py:8
+msgid "Novice"
+msgstr ""
+
+#: data.py:9
+msgid "Competent"
+msgstr ""
+
+#: data.py:10
+msgid "Expert"
+msgstr ""
+
+#: data.py:11 data.py:73
+msgid "Master"
+msgstr ""
+
+#: data.py:12
+msgid "Dangerous"
+msgstr ""
+
+#: data.py:13
+msgid "Deadly"
+msgstr ""
+
+#: data.py:14 data.py:26 data.py:38 data.py:50
+msgid "Elite"
+msgstr ""
+
+#: data.py:18
+msgid "Penniless"
+msgstr ""
+
+#: data.py:19
+msgid "Mostly penniless"
+msgstr ""
+
+#: data.py:20
+msgid "Peddler"
+msgstr ""
+
+#: data.py:21
+msgid "Dealer"
+msgstr ""
+
+#: data.py:22
+msgid "Merchant"
+msgstr ""
+
+#: data.py:23
+msgid "Broker"
+msgstr ""
+
+#: data.py:24
+msgid "Entrepreneur"
+msgstr ""
+
+#: data.py:25
+msgid "Tycoon"
+msgstr ""
+
+#: data.py:30
+msgid "Aimless"
+msgstr ""
+
+#: data.py:31
+msgid "Mostly aimless"
+msgstr ""
+
+#: data.py:32
+msgid "Scout"
+msgstr ""
+
+#: data.py:33
+msgid "Surveyor"
+msgstr ""
+
+#: data.py:34
+msgid "Trailblazer"
+msgstr ""
+
+#: data.py:35
+msgid "Pathfinder"
+msgstr ""
+
+#: data.py:36
+msgid "Ranger"
+msgstr ""
+
+#: data.py:37
+msgid "Pioneer"
+msgstr ""
+
+#: data.py:42
+msgid "Helpless"
+msgstr ""
+
+#: data.py:43
+msgid "Mostly Helpless"
+msgstr ""
+
+#: data.py:44
+msgid "Amateur"
+msgstr ""
+
+#: data.py:45
+msgid "Semi-professional"
+msgstr ""
+
+#: data.py:46
+msgid "Professional"
+msgstr ""
+
+#: data.py:47
+msgid "Champion"
+msgstr ""
+
+#: data.py:48
+msgid "Hero"
+msgstr ""
+
+#: data.py:49
+msgid "Legend"
+msgstr ""
+
+#: data.py:54
+msgid "Recruit"
+msgstr ""
+
+#: data.py:55
+msgid "Cadet"
+msgstr ""
+
+#: data.py:56
+msgid "Midshipman"
+msgstr ""
+
+#: data.py:57
+msgid "Petty Officer"
+msgstr ""
+
+#: data.py:58
+msgid "Chief Petty Officer"
+msgstr ""
+
+#: data.py:59
+msgid "Warrant Officer"
+msgstr ""
+
+#: data.py:60
+msgid "Ensign"
+msgstr ""
+
+#: data.py:61
+msgid "Lieutenant"
+msgstr ""
+
+#: data.py:62
+msgid "Lieutenant Commander"
+msgstr ""
+
+#: data.py:63
+msgid "Post Commander"
+msgstr ""
+
+#: data.py:64
+msgid "Post Captain"
+msgstr ""
+
+#: data.py:65
+msgid "Rear Admiral"
+msgstr ""
+
+#: data.py:66
+msgid "Vice Admiral"
+msgstr ""
+
+#: data.py:67
+msgid "Admiral"
+msgstr ""
+
+#: data.py:71
+msgid "Outsider"
+msgstr ""
+
+#: data.py:72
+msgid "Serf"
+msgstr ""
+
+#: data.py:74
+msgid "Squire"
+msgstr ""
+
+#: data.py:75
+msgid "Knight"
+msgstr ""
+
+#: data.py:76
+msgid "Lord"
+msgstr ""
+
+#: data.py:77
+msgid "Baron"
+msgstr ""
+
+#: data.py:78
+msgid "Viscount"
+msgstr ""
+
+#: data.py:79
+msgid "Count"
+msgstr ""
+
+#: data.py:80
+msgid "Earl"
+msgstr ""
+
+#: data.py:81
+msgid "Marquis"
+msgstr ""
+
+#: data.py:82
+msgid "Duke"
+msgstr ""
+
+#: data.py:83
+msgid "Prince"
+msgstr ""
+
+#: data.py:84
+msgid "King"
+msgstr ""
 
 #: data.py:92 data.py:98 data.py:104 data.py:110 data.py:116
 msgid ""
@@ -272,87 +512,87 @@ msgstr ""
 msgid "Interstellar Factors Contact"
 msgstr ""
 
-#: main.py:29
+#: main.py:27
 msgid "LGC's BGS assistant"
 msgstr ""
 
-#: main.py:61
+#: main.py:59
 msgid "Logged in as"
 msgstr ""
 
-#: main.py:71
+#: main.py:69
 msgid "helping the cartographers"
 msgstr ""
 
-#: main.py:77
+#: main.py:75
 msgid "on_command event"
 msgstr ""
 
-#: main.py:91
+#: main.py:89
 msgid "on_message function"
 msgstr ""
 
-#: main.py:97
+#: main.py:95
 msgid "Module {module} loaded"
 msgstr ""
 
-#: main.py:103
+#: main.py:101
 msgid "Module {module} unloaded"
 msgstr ""
 
-#: main.py:113
+#: main.py:111
 msgid "Module {module} reloaded"
 msgstr ""
 
-#: main.py:121
+#: main.py:119
 msgid "test command"
 msgstr ""
 
-#: main.py:122 modules/mercure.py:46
+#: main.py:120 modules/mercure.py:46
 msgid "Yeah yeah i'm here...:smiley_cat: "
 msgstr ""
 
-#: modules/bigbrother.py:16
+#: modules/bigbrother.py:15
 msgid "Bigbrother module loaded"
 msgstr ""
 
-#: modules/bigbrother.py:23
+#: modules/bigbrother.py:22
 msgid "Bigbrother module unloaded"
 msgstr ""
 
-#: modules/bigbrother.py:27
+#: modules/bigbrother.py:26
 msgid "system_presence_for_faction function"
 msgstr ""
 
-#: modules/bigbrother.py:47
+#: modules/bigbrother.py:46
 msgid "refresh_faction_presence function"
 msgstr ""
 
-#: modules/bigbrother.py:56
+#: modules/bigbrother.py:55
 msgid "bb1984 command"
 msgstr ""
 
-#: modules/bigbrother.py:67 modules/edsm.py:239
+#: modules/bigbrother.py:66 modules/edsm.py:239
 msgid "Bubble"
 msgstr ""
 
-#: modules/bigbrother.py:70 modules/edsm.py:246
+#: modules/bigbrother.py:69 modules/edsm.py:246
 msgid "Colonia"
 msgstr ""
 
-#: modules/bigbrother.py:129
+#: modules/bigbrother.py:128
 msgid "Bigbrother command"
 msgstr ""
 
-#: modules/bigbrother.py:134
+#: modules/bigbrother.py:133
 msgid "daily_bgs loop"
 msgstr ""
 
-#: modules/bigbrother.py:143
+#: modules/bigbrother.py:142
 msgid "Bigbrother : waiting for the bot to be ready before we launch the loop..."
 msgstr ""
 
-#: modules/edsm.py:15
+#: modules/edsm.py:14
 msgid "Edsm module loaded"
 msgstr ""
 
@@ -412,7 +652,7 @@ msgstr ""
 msgid "Distance to Arrival"
 msgstr ""
 
-#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:173
+#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:175
 msgid "Allegiance"
 msgstr ""
 
@@ -464,8 +704,20 @@ msgstr ""
 msgid "Coordinates"
 msgstr ""
 
+#: modules/edsm.py:192
+msgid "informationallegiance"
+msgstr ""
+
+#: modules/edsm.py:194
+msgid "informationgovernment"
+msgstr ""
+
 #: modules/edsm.py:195
 msgid "State"
+msgstr ""
+
+#: modules/edsm.py:196
+msgid "informationfactionState"
 msgstr ""
 
 #: modules/edsm.py:197
@@ -478,6 +730,14 @@ msgstr ""
 
 #: modules/edsm.py:207
 msgid "Security and Economy"
+msgstr ""
+
+#: modules/edsm.py:208
+msgid "informationsecurity"
+msgstr ""
+
+#: modules/edsm.py:209
+msgid "informationeconomy"
 msgstr ""
 
 #: modules/edsm.py:219
@@ -498,6 +758,18 @@ msgstr ""
 
 #: modules/edsm.py:255
 msgid "influence command called with {system}"
+msgstr ""
+
+#: modules/edsm.py:282
+msgid "state"
+msgstr ""
+
+#: modules/edsm.py:283
+msgid "allegiance"
+msgstr ""
+
+#: modules/edsm.py:284
+msgid "government"
 msgstr ""
 
 #: modules/edsm.py:291
@@ -538,67 +810,67 @@ msgstr ""
 msgid "faction command called with {cmdrname}"
 msgstr ""
 
-#: modules/galnet.py:16
+#: modules/galnet.py:15
 msgid "Galnet module loaded"
 msgstr ""
 
-#: modules/galnet.py:20
+#: modules/galnet.py:19
 msgid "Galnet module unloaded"
 msgstr ""
 
-#: modules/galnet.py:29
+#: modules/galnet.py:28
 msgid "galnet command"
 msgstr ""
 
-#: modules/galnet.py:64
+#: modules/galnet.py:63
 msgid "** No article found for that date : "
 msgstr ""
 
-#: modules/google.py:60
+#: modules/google.py:59
 msgid "Google module loaded"
 msgstr ""
 
-#: modules/google.py:64
+#: modules/google.py:63
 msgid "Google module unloaded"
 msgstr ""
 
-#: modules/google.py:72
+#: modules/google.py:71
 msgid "farm command"
 msgstr ""
 
-#: modules/google.py:74
+#: modules/google.py:73
 msgid "You must specify a material !"
 msgstr ""
 
-#: modules/google.py:99
+#: modules/google.py:98
 msgid "Can't get data."
 msgstr ""
 
-#: modules/google.py:112
+#: modules/google.py:111
 msgid "**Geyser sites' list for {material}**"
 msgstr ""
 
-#: modules/google.py:115
+#: modules/google.py:114
 msgid "Location"
 msgstr ""
 
-#: modules/google.py:122
+#: modules/google.py:121
 msgid "Body : **"
 msgstr ""
 
-#: modules/google.py:123
+#: modules/google.py:122
 msgid " Coordinates : **"
 msgstr ""
 
-#: modules/google.py:126
+#: modules/google.py:125
 msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
 msgstr ""
 
-#: modules/google.py:128
+#: modules/google.py:127
 msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
 msgstr ""
 
-#: modules/google.py:129
+#: modules/google.py:128
 msgid "Distance from the main star : **{distanceFromStar} ls**"
 msgstr ""
 
@@ -606,93 +878,93 @@ msgstr ""
 msgid "Inara module loaded"
 msgstr ""
 
-#: modules/inara.py:19
+#: modules/inara.py:20
 msgid "Inara module unloaded"
 msgstr ""
 
-#: modules/inara.py:27
+#: modules/inara.py:28
 msgid "cg command"
 msgstr ""
 
-#: modules/inara.py:56
+#: modules/inara.py:57
 msgid "Oops ! :crying_cat_face: "
 msgstr ""
 
-#: modules/inara.py:70
+#: modules/inara.py:71
 msgid "Starsystem"
 msgstr ""
 
-#: modules/inara.py:71
+#: modules/inara.py:72
 msgid "Station"
 msgstr ""
 
-#: modules/inara.py:73
+#: modules/inara.py:74
 msgid "Expiration date"
 msgstr ""
 
-#: modules/inara.py:73
+#: modules/inara.py:74
 #, python-format
 msgid "%d/%m/%Y at %H:%M"
 msgstr ""
 
-#: modules/inara.py:74
+#: modules/inara.py:75
 msgid "Tier reached"
 msgstr ""
 
-#: modules/inara.py:79
+#: modules/inara.py:80
 #, python-format
 msgid "Updated on %d/%m/%Y at %H:%M"
 msgstr ""
 
-#: modules/inara.py:88
+#: modules/inara.py:89
 msgid "Your turn, Commanders !"
 msgstr ""
 
-#: modules/inara.py:90
+#: modules/inara.py:91
 msgid "No active CG, check back later"
 msgstr ""
 
-#: modules/inara.py:99
+#: modules/inara.py:100
 msgid "inara command"
 msgstr ""
 
-#: modules/inara.py:103
+#: modules/inara.py:104
 msgid "LGC Squadron on Inara"
 msgstr ""
 
-#: modules/inara.py:140
+#: modules/inara.py:141
 msgid "Inara API request : nope :crying_cat_face: "
 msgstr ""
 
-#: modules/inara.py:147 modules/inara.py:150
+#: modules/inara.py:148 modules/inara.py:151
 msgid "**Informations on {commander_name}**"
 msgstr ""
 
-#: modules/inara.py:161
+#: modules/inara.py:162
 msgid "*Pilot's Federation ranks*"
 msgstr ""
 
-#: modules/inara.py:174
+#: modules/inara.py:176
 msgid "Prefered game role"
 msgstr ""
 
-#: modules/inara.py:175
+#: modules/inara.py:177
 msgid "Inara profile link"
 msgstr ""
 
-#: modules/inara.py:181
+#: modules/inara.py:183
 msgid "Wing name"
 msgstr ""
 
-#: modules/inara.py:182
+#: modules/inara.py:184
 msgid "Members count"
 msgstr ""
 
-#: modules/inara.py:183
+#: modules/inara.py:185
 msgid "Wing member rank"
 msgstr ""
 
-#: modules/inara.py:184
+#: modules/inara.py:186
 msgid "Inara squadron link"
 msgstr ""
 
@@ -872,5 +1144,656 @@ msgstr ""
 #~ "- !influence <system> : Display "
 #~ "<system>'s faction and their influence/states."
 #~ "\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matériaux très communs (Geysers: \"Amas "
+#~ "Asphaltéeen\" / Spacetree: \"Excroissance de"
+#~ " Cordyceps\")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matériaux communs (Geysers: \"Fragments "
+#~ "Cristallins\" / Spacetree: \"Excroissance de"
+#~ " Polypore\")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matériaux (Geyser: \"Amas Cristallin\" / "
+#~ "Spacetree: \"Excroissance de Polypore\")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matériaux rares (Geysers: \"Amas Cristallin\""
+#~ " / Spacetree: \"Cosse mussidienne\")"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matériaux très rares (Geysers: \"Cristaux "
+#~ "Epineux\"/ Spacetree: \"Excression de "
+#~ "Phloème\")"
+#~ msgstr ""
+
+#~ msgid "Federation"
+#~ msgstr ""
+
+#~ msgid "Empire"
+#~ msgstr ""
+
+#~ msgid "Alliance"
+#~ msgstr ""
+
+#~ msgid "Pilots Federation"
+#~ msgstr ""
+
+#~ msgid "Independant"
+#~ msgstr ""
+
+#~ msgid "Anarchie"
+#~ msgstr ""
+
+#~ msgid "Colony"
+#~ msgstr ""
+
+#~ msgid "Communism"
+#~ msgstr ""
+
+#~ msgid "Confederacy"
+#~ msgstr ""
+
+#~ msgid "Cooperative"
+#~ msgstr ""
+
+#~ msgid "Corporate"
+#~ msgstr ""
+
+#~ msgid "Democracy"
+#~ msgstr ""
+
+#~ msgid "Dictatorship"
+#~ msgstr ""
+
+#~ msgid "Feudal"
+#~ msgstr ""
+
+#~ msgid "Imperial"
+#~ msgstr ""
+
+#~ msgid "None"
+#~ msgstr ""
+
+#~ msgid "Patronage"
+#~ msgstr ""
+
+#~ msgid "Prison Colony"
+#~ msgstr ""
+
+#~ msgid "Theocracy"
+#~ msgstr ""
+
+#~ msgid "Boom"
+#~ msgstr ""
+
+#~ msgid "Bust"
+#~ msgstr ""
+
+#~ msgid "Civil unrest"
+#~ msgstr ""
+
+#~ msgid "Civil war"
+#~ msgstr ""
+
+#~ msgid "Civil liberty"
+#~ msgstr ""
+
+#~ msgid "Election"
+#~ msgstr ""
+
+#~ msgid "Expansion"
+#~ msgstr ""
+
+#~ msgid "Famine"
+#~ msgstr ""
+
+#~ msgid "Investment"
+#~ msgstr ""
+
+#~ msgid "Lockdown"
+#~ msgstr ""
+
+#~ msgid "Outbreak"
+#~ msgstr ""
+
+#~ msgid "Retreat"
+#~ msgstr ""
+
+#~ msgid "War"
+#~ msgstr ""
+
+#~ msgid "Workshop (Engineer)"
+#~ msgstr ""
+
+#~ msgid "Extraction"
+#~ msgstr ""
+
+#~ msgid "Refinery"
+#~ msgstr ""
+
+#~ msgid "Industrial"
+#~ msgstr ""
+
+#~ msgid "High Tech"
+#~ msgstr ""
+
+#~ msgid "Agriculture"
+#~ msgstr ""
+
+#~ msgid "Terraforming"
+#~ msgstr ""
+
+#~ msgid "Tourism"
+#~ msgstr ""
+
+#~ msgid "Service"
+#~ msgstr ""
+
+#~ msgid "Military"
+#~ msgstr ""
+
+#~ msgid "Rescue"
+#~ msgstr ""
+
+#~ msgid "Damaged"
+#~ msgstr ""
+
+#~ msgid "Station Repair"
+#~ msgstr ""
+
+#~ msgid "Low"
+#~ msgstr ""
+
+#~ msgid "Medium"
+#~ msgstr ""
+
+#~ msgid "High"
+#~ msgstr ""
+
+#~ msgid "Lawless"
+#~ msgstr ""
+
+#~ msgid "Black Market"
+#~ msgstr ""
+
+#~ msgid "Restock"
+#~ msgstr ""
+
+#~ msgid "Refuel"
+#~ msgstr ""
+
+#~ msgid "Repair"
+#~ msgstr ""
+
+#~ msgid "Universal Cartographics"
+#~ msgstr ""
+
+#~ msgid "Search and Rescue"
+#~ msgstr ""
+
+#~ msgid "Interstellar Factors Contact"
+#~ msgstr ""
+
+#~ msgid "LGC's BGS assistant"
+#~ msgstr ""
+
+#~ msgid "Logged in as"
+#~ msgstr ""
+
+#~ msgid "helping the cartographers"
+#~ msgstr ""
+
+#~ msgid "on_command event"
+#~ msgstr ""
+
+#~ msgid "on_message function"
+#~ msgstr ""
+
+#~ msgid "Module {module} loaded"
+#~ msgstr ""
+
+#~ msgid "Module {module} unloaded"
+#~ msgstr ""
+
+#~ msgid "Module {module} reloaded"
+#~ msgstr ""
+
+#~ msgid "test command"
+#~ msgstr ""
+
+#~ msgid "Yeah yeah i'm here...:smiley_cat: "
+#~ msgstr ""
+
+#~ msgid "Bigbrother module loaded"
+#~ msgstr ""
+
+#~ msgid "Bigbrother module unloaded"
+#~ msgstr ""
+
+#~ msgid "system_presence_for_faction function"
+#~ msgstr ""
+
+#~ msgid "refresh_faction_presence function"
+#~ msgstr ""
+
+#~ msgid "bb1984 command"
+#~ msgstr ""
+
+#~ msgid "Bubble"
+#~ msgstr ""
+
+#~ msgid "Colonia"
+#~ msgstr ""
+
+#~ msgid "Bigbrother command"
+#~ msgstr ""
+
+#~ msgid "daily_bgs loop"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bigbrother : waiting for the bot "
+#~ "to be ready before we launch the"
+#~ " loop..."
+#~ msgstr ""
+
+#~ msgid "Edsm module loaded"
+#~ msgstr ""
+
+#~ msgid "Edsm module unloaded"
+#~ msgstr ""
+
+#~ msgid "ed command"
+#~ msgstr ""
+
+#~ msgid "Status message returned by the Elite Dangerous servers"
+#~ msgstr ""
+
+#~ msgid "Last updated on : "
+#~ msgstr ""
+
+#~ msgid "traffic command"
+#~ msgstr ""
+
+#~ msgid "***Traffic information for the {system} system***"
+#~ msgstr ""
+
+#~ msgid "Total traffic since the discovery of the system"
+#~ msgstr ""
+
+#~ msgid "Last week's traffic"
+#~ msgstr ""
+
+#~ msgid "Last day's traffic"
+#~ msgstr ""
+
+#~ msgid "***Last 24 hours' detail, by ship***"
+#~ msgstr ""
+
+#~ msgid "stations command"
+#~ msgstr ""
+
+#~ msgid "***Stations in the {system} system***"
+#~ msgstr ""
+
+#~ msgid "```{station} - Type {type}```"
+#~ msgstr ""
+
+#~ msgid "Distance to Arrival"
+#~ msgstr ""
+
+#~ msgid "Allegiance"
+#~ msgstr ""
+
+#~ msgid "Government"
+#~ msgstr ""
+
+#~ msgid "Economy"
+#~ msgstr ""
+
+#~ msgid "Yes"
+#~ msgstr ""
+
+#~ msgid "No"
+#~ msgstr ""
+
+#~ msgid "Market"
+#~ msgstr ""
+
+#~ msgid "Shipyard"
+#~ msgstr ""
+
+#~ msgid "Equipment"
+#~ msgstr ""
+
+#~ msgid "Other services"
+#~ msgstr ""
+
+#~ msgid "Controlling Faction"
+#~ msgstr ""
+
+#~ msgid "system command called with {system}"
+#~ msgstr ""
+
+#~ msgid "***Summary of the {system} system***"
+#~ msgstr ""
+
+#~ msgid "Coordinates"
+#~ msgstr ""
+
+#~ msgid "State"
+#~ msgstr ""
+
+#~ msgid "Population"
+#~ msgstr ""
+
+#~ msgid "Mineral reserves"
+#~ msgstr ""
+
+#~ msgid "Security and Economy"
+#~ msgstr ""
+
+#~ msgid "{starName} / Spectral Type : {starType} / {fuelscoop}"
+#~ msgstr ""
+
+#~ msgid "Main Star"
+#~ msgstr ""
+
+#~ msgid "oracle command"
+#~ msgstr ""
+
+#~ msgid "***LGC Systems' states***"
+#~ msgstr ""
+
+#~ msgid "influence command called with {system}"
+#~ msgstr ""
+
+#~ msgid "***Influences in the {system} system"
+#~ msgstr ""
+
+#~ msgid "*** en date du ***{date}*** \n"
+#~ msgstr ""
+
+#~ msgid "*** as of today *** \n"
+#~ msgstr ""
+
+#~ msgid "No system found with the name {system} :crying_cat_face:"
+#~ msgstr ""
+
+#~ msgid "spy command called with {cmdrname}"
+#~ msgstr ""
+
+#~ msgid "My spies told me that CMDR **{cmdr}** was last seen in {system}**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "** on that day : **{date}**.\n"
+#~ "\n"
+#~ msgstr ""
+
+#~ msgid "For more information, spy that CMDR there : <{url}>"
+#~ msgstr ""
+
+#~ msgid "faction command called with {cmdrname}"
+#~ msgstr ""
+
+#~ msgid "Galnet module loaded"
+#~ msgstr ""
+
+#~ msgid "Galnet module unloaded"
+#~ msgstr ""
+
+#~ msgid "galnet command"
+#~ msgstr ""
+
+#~ msgid "** No article found for that date : "
+#~ msgstr ""
+
+#~ msgid "Google module loaded"
+#~ msgstr ""
+
+#~ msgid "Google module unloaded"
+#~ msgstr ""
+
+#~ msgid "farm command"
+#~ msgstr ""
+
+#~ msgid "You must specify a material !"
+#~ msgstr ""
+
+#~ msgid "Can't get data."
+#~ msgstr ""
+
+#~ msgid "**Geyser sites' list for {material}**"
+#~ msgstr ""
+
+#~ msgid "Location"
+#~ msgstr ""
+
+#~ msgid "Body : **"
+#~ msgstr ""
+
+#~ msgid " Coordinates : **"
+#~ msgstr ""
+
+#~ msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
+#~ msgstr ""
+
+#~ msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
+#~ msgstr ""
+
+#~ msgid "Distance from the main star : **{distanceFromStar} ls**"
+#~ msgstr ""
+
+#~ msgid "Inara module loaded"
+#~ msgstr ""
+
+#~ msgid "Inara module unloaded"
+#~ msgstr ""
+
+#~ msgid "cg command"
+#~ msgstr ""
+
+#~ msgid "Oops ! :crying_cat_face: "
+#~ msgstr ""
+
+#~ msgid "Starsystem"
+#~ msgstr ""
+
+#~ msgid "Station"
+#~ msgstr ""
+
+#~ msgid "Expiration date"
+#~ msgstr ""
+
+#~ msgid "%d/%m/%Y at %H:%M"
+#~ msgstr ""
+
+#~ msgid "Tier reached"
+#~ msgstr ""
+
+#~ msgid "Updated on %d/%m/%Y at %H:%M"
+#~ msgstr ""
+
+#~ msgid "Your turn, Commanders !"
+#~ msgstr ""
+
+#~ msgid "No active CG, check back later"
+#~ msgstr ""
+
+#~ msgid "inara command"
+#~ msgstr ""
+
+#~ msgid "LGC Squadron on Inara"
+#~ msgstr ""
+
+#~ msgid "Inara API request : nope :crying_cat_face: "
+#~ msgstr ""
+
+#~ msgid "**Informations on {commander_name}**"
+#~ msgstr ""
+
+#~ msgid "*Pilot's Federation ranks*"
+#~ msgstr ""
+
+#~ msgid "Prefered game role"
+#~ msgstr ""
+
+#~ msgid "Inara profile link"
+#~ msgstr ""
+
+#~ msgid "Wing name"
+#~ msgstr ""
+
+#~ msgid "Members count"
+#~ msgstr ""
+
+#~ msgid "Wing member rank"
+#~ msgstr ""
+
+#~ msgid "Inara squadron link"
+#~ msgstr ""
+
+#~ msgid "Mercure module loaded"
+#~ msgstr ""
+
+#~ msgid "Mercure module unloaded"
+#~ msgstr ""
+
+#~ msgid "help command"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !influence <system> : Display "
+#~ "<system>'s factions and their "
+#~ "influence/states.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !system <system> : Displays every "
+#~ "information about a system (coordinates, "
+#~ "main state, economy...\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !traffic <system> : Displays recent"
+#~ " traffic information of <system>.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !stations <system> : Displays all "
+#~ "the stations of <system> with their "
+#~ "informations.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !farm <material> : Displays systems"
+#~ " where material can be found, using"
+#~ " CMDR Phoenix's Sheet.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !oracle : Display EDSM/EDBB links "
+#~ "to consult our factions' state in "
+#~ "the Bubble and Colonia.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !galnet 01-DEC-3303 : Displays galnet"
+#~ " articles of the date entered in "
+#~ "shown format. Default is current date."
+#~ "\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !bigbrother : Display followed "
+#~ "factions' influence/state in all the "
+#~ "systems they're in.\n"
+#~ msgstr ""
+
+#~ msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "- !reparations : Shows a list of"
+#~ " commodities needed to repair a "
+#~ "starport.\n"
+#~ msgstr ""
+
+#~ msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
+#~ msgstr ""
+
+#~ msgid "- !cg : Shows the current active cgs' informations.\n"
+#~ msgstr ""
+
+#~ msgid "Available commands"
+#~ msgstr ""
+
+#~ msgid "poke command"
+#~ msgstr ""
+
+#~ msgid "maj command"
+#~ msgstr ""
+
+#~ msgid "It's out !!!!! :ok_hand: :ok_hand: "
+#~ msgstr ""
+
+#~ msgid "repairs command"
+#~ msgstr ""
+
+#~ msgid "- Indium \n"
+#~ msgstr ""
+
+#~ msgid "- Gallium \n"
+#~ msgstr ""
+
+#~ msgid "- Titanium \n"
+#~ msgstr ""
+
+#~ msgid "- Copper \n"
+#~ msgstr ""
+
+#~ msgid "- Aluminium \n"
+#~ msgstr ""
+
+#~ msgid "- Synthetic Fabrics \n"
+#~ msgstr ""
+
+#~ msgid "- Polymers \n"
+#~ msgstr ""
+
+#~ msgid "- Water Purifiers \n"
+#~ msgstr ""
+
+#~ msgid "- Robotics \n"
+#~ msgstr ""
+
+#~ msgid "- Ceramic composites \n"
+#~ msgstr ""
+
+#~ msgid "- CMM composites \n"
+#~ msgstr ""
+
+#~ msgid "- Insulating Membrane \n"
+#~ msgstr ""
+
+#~ msgid "- Power Converters \n"
+#~ msgstr ""
+
+#~ msgid "- Natural Fabrics \n"
+#~ msgstr ""
+
+#~ msgid "Commodities needed to repair a starport"
+#~ msgstr ""
+
+#~ msgid "say command"
 #~ msgstr ""
 

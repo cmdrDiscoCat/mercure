@@ -1,14 +1,13 @@
 import discord, os
 from discord.ext import commands, tasks
 from main import acces_oracle, is_admin, _
+from config import *
+from data import *
 
 import requests
 import urllib.parse
 from datetime import datetime
 from bs4 import BeautifulSoup
-
-from config import *
-from data import *
 
 
 class Bigbrother(commands.Cog):

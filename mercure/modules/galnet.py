@@ -1,14 +1,13 @@
 import discord, os, random
 from discord.ext import commands
 from main import acces_oracle, is_admin, _
+from config import *
+from data import *
 
 from html2text import html2text
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
-
-from config import *
-from data import *
 
 
 class Galnet(commands.Cog):

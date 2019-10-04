@@ -14,6 +14,7 @@ class Inara(commands.Cog):
     def __init__(self, bot):
         if config['DEBUG']: print(_("Inara module loaded"))
         self.bot = bot
+        self.inara_ranks = inara_ranks
 
     def cog_unload(self):
         if config['DEBUG']: print(_("Inara module unloaded"))
@@ -160,17 +161,17 @@ class Inara(commands.Cog):
 
         embed = discord.Embed(title=_("*Pilot's Federation ranks*"), color=0x00ff00)
         for data in inara_data['commanderRanksPilot']:
-            progression = 100 * data['rankProgress']
-            valeur = inara_ranks[data['rankName']][data['rankValue']]
-            if progression != 0:
-                valeur += " - " + str(progression) + "\%"
-            embed.add_field(name=data['rankName'], value= valeur, inline=True)
+            progress = 100 * data['rankProgress']
+            value = self.inara_ranks[data['rankName']][data['rankValue']]
+            if progress != 0:
+                value += " - " + str(progress) + "\%"
+            embed.add_field(name=data['rankName'], value= value, inline=True)
 
         await ctx.send(embed=embed)
 
         embed = discord.Embed(title="", color=0x00ffff)
 
-        embed.add_field(name=_("Allegiance"), value=inara_data['preferredAllegianceName'], inline=False)
+        embed.add_field(name=_("Allegiance"), value=_(inara_data['preferredAllegianceName']), inline=False)
         embed.add_field(name=_("Prefered game role"), value=inara_data['preferredGameRole'], inline=False)
         embed.add_field(name=_("Inara profile link"), value=inara_data['inaraURL'], inline=False)
 

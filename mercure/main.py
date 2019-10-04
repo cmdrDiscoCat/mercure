@@ -2,9 +2,7 @@ import discord, os, gettext
 from discord.ext import commands
 import logging
 from logging.handlers import TimedRotatingFileHandler
-
 from config import *
-
 localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locales')
 translate = gettext.translation('messages', localedir, languages=[config['LANGUAGE']])
 translate.install()

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-04 00:07+0200\n"
+"POT-Creation-Date: 2019-10-04 13:15+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -17,6 +17,246 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+
+#: data.py:6
+msgid "Harmless"
+msgstr ""
+
+#: data.py:7
+msgid "Mostly harmless"
+msgstr ""
+
+#: data.py:8
+msgid "Novice"
+msgstr ""
+
+#: data.py:9
+msgid "Competent"
+msgstr ""
+
+#: data.py:10
+msgid "Expert"
+msgstr ""
+
+#: data.py:11 data.py:73
+msgid "Master"
+msgstr ""
+
+#: data.py:12
+msgid "Dangerous"
+msgstr ""
+
+#: data.py:13
+msgid "Deadly"
+msgstr ""
+
+#: data.py:14 data.py:26 data.py:38 data.py:50
+msgid "Elite"
+msgstr "Elite"
+
+#: data.py:18
+msgid "Penniless"
+msgstr ""
+
+#: data.py:19
+msgid "Mostly penniless"
+msgstr ""
+
+#: data.py:20
+msgid "Peddler"
+msgstr ""
+
+#: data.py:21
+msgid "Dealer"
+msgstr ""
+
+#: data.py:22
+msgid "Merchant"
+msgstr ""
+
+#: data.py:23
+msgid "Broker"
+msgstr ""
+
+#: data.py:24
+msgid "Entrepreneur"
+msgstr ""
+
+#: data.py:25
+msgid "Tycoon"
+msgstr ""
+
+#: data.py:30
+msgid "Aimless"
+msgstr ""
+
+#: data.py:31
+msgid "Mostly aimless"
+msgstr ""
+
+#: data.py:32
+msgid "Scout"
+msgstr ""
+
+#: data.py:33
+msgid "Surveyor"
+msgstr ""
+
+#: data.py:34
+msgid "Trailblazer"
+msgstr ""
+
+#: data.py:35
+msgid "Pathfinder"
+msgstr ""
+
+#: data.py:36
+msgid "Ranger"
+msgstr ""
+
+#: data.py:37
+msgid "Pioneer"
+msgstr ""
+
+#: data.py:42
+msgid "Helpless"
+msgstr "Irrécupérable"
+
+#: data.py:43
+msgid "Mostly Helpless"
+msgstr "Quasi irrécupérable"
+
+#: data.py:44
+msgid "Amateur"
+msgstr "Amateur•ice"
+
+#: data.py:45
+msgid "Semi-professional"
+msgstr "Semi-Professionnel•le"
+
+#: data.py:46
+msgid "Professional"
+msgstr "Professionnel•le"
+
+#: data.py:47
+msgid "Champion"
+msgstr "Champion•e"
+
+#: data.py:48
+msgid "Hero"
+msgstr "Héro•ine"
+
+#: data.py:49
+msgid "Legend"
+msgstr "Légende"
+
+#: data.py:54
+msgid "Recruit"
+msgstr ""
+
+#: data.py:55
+msgid "Cadet"
+msgstr ""
+
+#: data.py:56
+msgid "Midshipman"
+msgstr ""
+
+#: data.py:57
+msgid "Petty Officer"
+msgstr ""
+
+#: data.py:58
+msgid "Chief Petty Officer"
+msgstr ""
+
+#: data.py:59
+msgid "Warrant Officer"
+msgstr ""
+
+#: data.py:60
+msgid "Ensign"
+msgstr ""
+
+#: data.py:61
+msgid "Lieutenant"
+msgstr ""
+
+#: data.py:62
+msgid "Lieutenant Commander"
+msgstr ""
+
+#: data.py:63
+msgid "Post Commander"
+msgstr ""
+
+#: data.py:64
+msgid "Post Captain"
+msgstr ""
+
+#: data.py:65
+msgid "Rear Admiral"
+msgstr ""
+
+#: data.py:66
+msgid "Vice Admiral"
+msgstr ""
+
+#: data.py:67
+msgid "Admiral"
+msgstr ""
+
+#: data.py:71
+msgid "Outsider"
+msgstr ""
+
+#: data.py:72
+msgid "Serf"
+msgstr ""
+
+#: data.py:74
+msgid "Squire"
+msgstr ""
+
+#: data.py:75
+msgid "Knight"
+msgstr ""
+
+#: data.py:76
+msgid "Lord"
+msgstr ""
+
+#: data.py:77
+msgid "Baron"
+msgstr ""
+
+#: data.py:78
+msgid "Viscount"
+msgstr ""
+
+#: data.py:79
+msgid "Count"
+msgstr ""
+
+#: data.py:80
+msgid "Earl"
+msgstr ""
+
+#: data.py:81
+msgid "Marquis"
+msgstr ""
+
+#: data.py:82
+msgid "Duke"
+msgstr ""
+
+#: data.py:83
+msgid "Prince"
+msgstr "Prince"
+
+#: data.py:84
+msgid "King"
+msgstr "Roi"
 
 #: data.py:92 data.py:98 data.py:104 data.py:110 data.py:116
 msgid ""
@@ -69,8 +309,8 @@ msgid "Independant"
 msgstr "Indépendant"
 
 #: data.py:245
-msgid "Anarchy"
-msgstr "Anarchie"
+msgid "Anarchie"
+msgstr ""
 
 #: data.py:246
 msgid "Colony"
@@ -272,89 +512,89 @@ msgstr "Recherche et sauvetage"
 msgid "Interstellar Factors Contact"
 msgstr "Contacts Interstellaires"
 
-#: main.py:29
+#: main.py:27
 msgid "LGC's BGS assistant"
 msgstr "Assistant BGS de la LGC"
 
-#: main.py:61
+#: main.py:59
 msgid "Logged in as"
 msgstr "Connecté en tant que"
 
-#: main.py:71
+#: main.py:69
 msgid "helping the cartographers"
 msgstr "aider les cartographes"
 
-#: main.py:77
+#: main.py:75
 msgid "on_command event"
 msgstr "Evènement on_command"
 
-#: main.py:91
+#: main.py:89
 msgid "on_message function"
 msgstr "Fonction on_message"
 
-#: main.py:97
+#: main.py:95
 msgid "Module {module} loaded"
 msgstr "Module {module} chargé"
 
-#: main.py:103
+#: main.py:101
 msgid "Module {module} unloaded"
 msgstr "Module {module} déchargé"
 
-#: main.py:113
+#: main.py:111
 msgid "Module {module} reloaded"
 msgstr "Module {module} rechargé"
 
-#: main.py:121
+#: main.py:119
 msgid "test command"
 msgstr "Commande test"
 
-#: main.py:122 modules/mercure.py:46
+#: main.py:120 modules/mercure.py:46
 msgid "Yeah yeah i'm here...:smiley_cat: "
 msgstr "Ouais ouais j'suis là...:smiley_cat:"
 
-#: modules/bigbrother.py:16
+#: modules/bigbrother.py:15
 msgid "Bigbrother module loaded"
 msgstr "Module bigbrother chargé"
 
-#: modules/bigbrother.py:23
+#: modules/bigbrother.py:22
 msgid "Bigbrother module unloaded"
 msgstr "Module bigbrother déchargé"
 
-#: modules/bigbrother.py:27
+#: modules/bigbrother.py:26
 msgid "system_presence_for_faction function"
 msgstr "Fonction system_presence_for_faction"
 
-#: modules/bigbrother.py:47
+#: modules/bigbrother.py:46
 msgid "refresh_faction_presence function"
 msgstr "Fonction refresh_faction_presence"
 
-#: modules/bigbrother.py:56
+#: modules/bigbrother.py:55
 msgid "bb1984 command"
 msgstr "Commande bb1984"
 
-#: modules/bigbrother.py:67 modules/edsm.py:239
+#: modules/bigbrother.py:66 modules/edsm.py:239
 msgid "Bubble"
 msgstr "Bulle"
 
-#: modules/bigbrother.py:70 modules/edsm.py:246
+#: modules/bigbrother.py:69 modules/edsm.py:246
 msgid "Colonia"
 msgstr "Colonia"
 
-#: modules/bigbrother.py:129
+#: modules/bigbrother.py:128
 msgid "Bigbrother command"
 msgstr "Commande bigbrother"
 
-#: modules/bigbrother.py:134
+#: modules/bigbrother.py:133
 msgid "daily_bgs loop"
 msgstr "Boucle daily_bgs"
 
-#: modules/bigbrother.py:143
+#: modules/bigbrother.py:142
 msgid "Bigbrother : waiting for the bot to be ready before we launch the loop..."
 msgstr ""
 "Bigbrother : en attente du bon chargement du bot avant de lancer la "
 "boucle..."
 
-#: modules/edsm.py:15
+#: modules/edsm.py:14
 msgid "Edsm module loaded"
 msgstr "Module edsm chargé"
 
@@ -414,7 +654,7 @@ msgstr "```{station} - Type {type}```"
 msgid "Distance to Arrival"
 msgstr "Distance de l'arrivée"
 
-#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:173
+#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:175
 msgid "Allegiance"
 msgstr "Allégeance"
 
@@ -466,9 +706,21 @@ msgstr "***Résumé du système {system}***"
 msgid "Coordinates"
 msgstr "Coordonnées"
 
+#: modules/edsm.py:192
+msgid "informationallegiance"
+msgstr ""
+
+#: modules/edsm.py:194
+msgid "informationgovernment"
+msgstr ""
+
 #: modules/edsm.py:195
 msgid "State"
 msgstr "Etat"
+
+#: modules/edsm.py:196
+msgid "informationfactionState"
+msgstr ""
 
 #: modules/edsm.py:197
 msgid "Population"
@@ -481,6 +733,14 @@ msgstr "Réserves de minéraux"
 #: modules/edsm.py:207
 msgid "Security and Economy"
 msgstr "Sécurité et Economie"
+
+#: modules/edsm.py:208
+msgid "informationsecurity"
+msgstr ""
+
+#: modules/edsm.py:209
+msgid "informationeconomy"
+msgstr ""
 
 #: modules/edsm.py:219
 msgid "{starName} / Spectral Type : {starType} / {fuelscoop}"
@@ -501,6 +761,18 @@ msgstr "***Etats des systèmes LGC***"
 #: modules/edsm.py:255
 msgid "influence command called with {system}"
 msgstr "Commande influence appelée avec {system}"
+
+#: modules/edsm.py:282
+msgid "state"
+msgstr ""
+
+#: modules/edsm.py:283
+msgid "allegiance"
+msgstr ""
+
+#: modules/edsm.py:284
+msgid "government"
+msgstr ""
 
 #: modules/edsm.py:291
 msgid "***Influences in the {system} system"
@@ -544,67 +816,67 @@ msgstr "Pour plus d'information, espionnez ce CMDR là-bas : <{url}>"
 msgid "faction command called with {cmdrname}"
 msgstr "Commande faction appelée avec {cmdrname}"
 
-#: modules/galnet.py:16
+#: modules/galnet.py:15
 msgid "Galnet module loaded"
 msgstr "Module Galnet chargé"
 
-#: modules/galnet.py:20
+#: modules/galnet.py:19
 msgid "Galnet module unloaded"
 msgstr "Module galnet déchargé"
 
-#: modules/galnet.py:29
+#: modules/galnet.py:28
 msgid "galnet command"
 msgstr "Commande galnet"
 
-#: modules/galnet.py:64
+#: modules/galnet.py:63
 msgid "** No article found for that date : "
 msgstr "** Pas d'article trouvé à cette date : "
 
-#: modules/google.py:60
+#: modules/google.py:59
 msgid "Google module loaded"
 msgstr "Module google chargé"
 
-#: modules/google.py:64
+#: modules/google.py:63
 msgid "Google module unloaded"
 msgstr "Module google déchargé"
 
-#: modules/google.py:72
+#: modules/google.py:71
 msgid "farm command"
 msgstr "Commande farm"
 
-#: modules/google.py:74
+#: modules/google.py:73
 msgid "You must specify a material !"
 msgstr "Vous devez indiquer un matériau"
 
-#: modules/google.py:99
+#: modules/google.py:98
 msgid "Can't get data."
 msgstr "Impossible de récupérer les données."
 
-#: modules/google.py:112
+#: modules/google.py:111
 msgid "**Geyser sites' list for {material}**"
 msgstr "**Sites de geysers pour {material}**"
 
-#: modules/google.py:115
+#: modules/google.py:114
 msgid "Location"
 msgstr "Localisation"
 
-#: modules/google.py:122
+#: modules/google.py:121
 msgid "Body : **"
 msgstr "Planète : **"
 
-#: modules/google.py:123
+#: modules/google.py:122
 msgid " Coordinates : **"
 msgstr " Coordonnées : **"
 
-#: modules/google.py:126
+#: modules/google.py:125
 msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
 msgstr "Distance de 32 MU : **{distanceFromBubble} al** - "
 
-#: modules/google.py:128
+#: modules/google.py:127
 msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
 msgstr "Distance de Pytheas : **{distanceFromColonia} al** - "
 
-#: modules/google.py:129
+#: modules/google.py:128
 msgid "Distance from the main star : **{distanceFromStar} ls**"
 msgstr "Distance de l'étoile principale : **{distanceFromStar} sl**"
 
@@ -612,93 +884,93 @@ msgstr "Distance de l'étoile principale : **{distanceFromStar} sl**"
 msgid "Inara module loaded"
 msgstr "Module inara chargé"
 
-#: modules/inara.py:19
+#: modules/inara.py:20
 msgid "Inara module unloaded"
 msgstr "Module inara déchargé"
 
-#: modules/inara.py:27
+#: modules/inara.py:28
 msgid "cg command"
 msgstr "Commande cg"
 
-#: modules/inara.py:56
+#: modules/inara.py:57
 msgid "Oops ! :crying_cat_face: "
 msgstr "Oops ! :crying_cat_face: "
 
-#: modules/inara.py:70
+#: modules/inara.py:71
 msgid "Starsystem"
 msgstr "Système"
 
-#: modules/inara.py:71
+#: modules/inara.py:72
 msgid "Station"
 msgstr "Station"
 
-#: modules/inara.py:73
+#: modules/inara.py:74
 msgid "Expiration date"
 msgstr "Date de fin"
 
-#: modules/inara.py:73
+#: modules/inara.py:74
 #, python-format
 msgid "%d/%m/%Y at %H:%M"
 msgstr "%d/%m/%Y à %H:%M"
 
-#: modules/inara.py:74
+#: modules/inara.py:75
 msgid "Tier reached"
 msgstr "Rang atteint"
 
-#: modules/inara.py:79
+#: modules/inara.py:80
 #, python-format
 msgid "Updated on %d/%m/%Y at %H:%M"
 msgstr "Mis à jour le %d/%m/%Y à %H:%M"
 
-#: modules/inara.py:88
+#: modules/inara.py:89
 msgid "Your turn, Commanders !"
 msgstr "A vous de jouer, pilotes !"
 
-#: modules/inara.py:90
+#: modules/inara.py:91
 msgid "No active CG, check back later"
 msgstr "Pas de CG actif, revenez plus tard"
 
-#: modules/inara.py:99
+#: modules/inara.py:100
 msgid "inara command"
 msgstr "Commande Inara"
 
-#: modules/inara.py:103
+#: modules/inara.py:104
 msgid "LGC Squadron on Inara"
 msgstr "Squadron LGC sur Inara"
 
-#: modules/inara.py:140
+#: modules/inara.py:141
 msgid "Inara API request : nope :crying_cat_face: "
 msgstr "Requête à l'API d'Inara : nope :crying_cat_face: "
 
-#: modules/inara.py:147 modules/inara.py:150
+#: modules/inara.py:148 modules/inara.py:151
 msgid "**Informations on {commander_name}**"
 msgstr "**Informations sur {commander_name}**"
 
-#: modules/inara.py:161
+#: modules/inara.py:162
 msgid "*Pilot's Federation ranks*"
 msgstr "*Rangs du Cercle des Pilotes*"
 
-#: modules/inara.py:174
+#: modules/inara.py:176
 msgid "Prefered game role"
 msgstr "Métier préféré"
 
-#: modules/inara.py:175
+#: modules/inara.py:177
 msgid "Inara profile link"
 msgstr "Lien du profil Inara"
 
-#: modules/inara.py:181
+#: modules/inara.py:183
 msgid "Wing name"
 msgstr "Nom de l'escadron"
 
-#: modules/inara.py:182
+#: modules/inara.py:184
 msgid "Members count"
 msgstr "Nombre de membres"
 
-#: modules/inara.py:183
+#: modules/inara.py:185
 msgid "Wing member rank"
 msgstr "Rang du membre dans l'escadron"
 
-#: modules/inara.py:184
+#: modules/inara.py:186
 msgid "Inara squadron link"
 msgstr "Lien de l'escadron sur Inara"
 

@@ -1,7 +1,6 @@
 import discord, os
 from discord.ext import commands
 from main import acces_oracle, is_admin, _
-
 from config import *
 from data import *
 
@@ -14,6 +13,7 @@ class Edsm(commands.Cog):
     def __init__(self, bot):
         if config['DEBUG']: print(_("Edsm module loaded"))
         self.bot = bot
+        self.translations = translations
 
     def cog_unload(self):
         if config['DEBUG']: print(_("Edsm module unloaded"))
@@ -102,9 +102,9 @@ class Edsm(commands.Cog):
                 except:
                     pass
 
-                embed.add_field(name=_("Allegiance"), value=translations[station["allegiance"]], inline=True)
-                embed.add_field(name=_("Government"), value=translations[station["government"]], inline=True)
-                embed.add_field(name=_("Economy"), value=translations[station["economy"]], inline=True)
+                embed.add_field(name=_("Allegiance"), value=self.translations[station["allegiance"]], inline=True)
+                embed.add_field(name=_("Government"), value=self.translations[station["government"]], inline=True)
+                embed.add_field(name=_("Economy"), value=self.translations[station["economy"]], inline=True)
 
                 yes_checkbox = _("Yes")
                 no_checkbox = _("No")
@@ -132,7 +132,7 @@ class Edsm(commands.Cog):
                 else:
                     other_services = ""
                     for service in station['otherServices']:
-                        other_services += translations[service] + " / "
+                        other_services += self.translations[service] + " / "
                     other_services = other_services.rstrip(' / ')
                     embed.add_field(name=_("Other services"), value=other_services, inline=True)
 
@@ -189,11 +189,11 @@ class Edsm(commands.Cog):
 
             embed = discord.Embed(title="", color=0x00ffff)
             embed.add_field(name=_("Allegiance"),
-                            value=_("%s" % (translations[informations["information"]["allegiance"]])), inline=True)
+                            value=_(self.translations[informations["information"]["allegiance"]]), inline=True)
             embed.add_field(name=_("Government"),
-                            value=_(f'{translations[informations["information"]["government"]]}'), inline=True)
+                            value=_(self.translations[informations["information"]["government"]]), inline=True)
             embed.add_field(name=_("State"),
-                            value=_(translations[informations["information"]["factionState"]]), inline=True)
+                            value=_(self.translations[informations["information"]["factionState"]]), inline=True)
             embed.add_field(name=_("Population"),
                             value=informations["information"]["population"], inline=True)
 
