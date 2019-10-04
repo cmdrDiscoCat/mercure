@@ -20,35 +20,35 @@ msgstr ""
 
 #: data.py:6
 msgid "Harmless"
-msgstr ""
+msgstr "Inoffensif•ve"
 
 #: data.py:7
 msgid "Mostly harmless"
-msgstr ""
+msgstr "Bleu•e"
 
 #: data.py:8
 msgid "Novice"
-msgstr ""
+msgstr "Novice"
 
 #: data.py:9
 msgid "Competent"
-msgstr ""
+msgstr "Compétent•e"
 
 #: data.py:10
 msgid "Expert"
-msgstr ""
+msgstr "Expert•e"
 
 #: data.py:11 data.py:73
 msgid "Master"
-msgstr ""
+msgstr "Maître•sse"
 
 #: data.py:12
 msgid "Dangerous"
-msgstr ""
+msgstr "Vétéran"
 
 #: data.py:13
 msgid "Deadly"
-msgstr ""
+msgstr "Létal•e"
 
 #: data.py:14 data.py:26 data.py:38 data.py:50
 msgid "Elite"
@@ -56,67 +56,67 @@ msgstr "Elite"
 
 #: data.py:18
 msgid "Penniless"
-msgstr ""
+msgstr "Sans-le-sou"
 
 #: data.py:19
 msgid "Mostly penniless"
-msgstr ""
+msgstr "Mendiant•e"
 
 #: data.py:20
 msgid "Peddler"
-msgstr ""
+msgstr "Boutiquier•e"
 
 #: data.py:21
 msgid "Dealer"
-msgstr ""
+msgstr "Revendeur•se"
 
 #: data.py:22
 msgid "Merchant"
-msgstr ""
+msgstr "Marchand•e"
 
 #: data.py:23
 msgid "Broker"
-msgstr ""
+msgstr "Courtier•e"
 
 #: data.py:24
 msgid "Entrepreneur"
-msgstr ""
+msgstr "Entrepreneur•euse"
 
 #: data.py:25
 msgid "Tycoon"
-msgstr ""
+msgstr "Magnat•e"
 
 #: data.py:30
 msgid "Aimless"
-msgstr ""
+msgstr "Vagabond•e"
 
 #: data.py:31
 msgid "Mostly aimless"
-msgstr ""
+msgstr "Touriste"
 
 #: data.py:32
 msgid "Scout"
-msgstr ""
+msgstr "Voyageur•euse"
 
 #: data.py:33
 msgid "Surveyor"
-msgstr ""
+msgstr "Eclaireur•euse"
 
 #: data.py:34
 msgid "Trailblazer"
-msgstr ""
+msgstr "Prospecteur•ice"
 
 #: data.py:35
 msgid "Pathfinder"
-msgstr ""
+msgstr "Découvreur•euse"
 
 #: data.py:36
 msgid "Ranger"
-msgstr ""
+msgstr "Navigateur•ice"
 
 #: data.py:37
 msgid "Pioneer"
-msgstr ""
+msgstr "Pionnier•e"
 
 #: data.py:42
 msgid "Helpless"
@@ -152,103 +152,103 @@ msgstr "Légende"
 
 #: data.py:54
 msgid "Recruit"
-msgstr ""
+msgstr "Recrue"
 
 #: data.py:55
 msgid "Cadet"
-msgstr ""
+msgstr "Cadet"
 
 #: data.py:56
 msgid "Midshipman"
-msgstr ""
+msgstr "Matelot"
 
 #: data.py:57
 msgid "Petty Officer"
-msgstr ""
+msgstr "Second Maître"
 
 #: data.py:58
 msgid "Chief Petty Officer"
-msgstr ""
+msgstr "Premier Maître"
 
 #: data.py:59
 msgid "Warrant Officer"
-msgstr ""
+msgstr "Major"
 
 #: data.py:60
 msgid "Ensign"
-msgstr ""
+msgstr "Enseigne"
 
 #: data.py:61
 msgid "Lieutenant"
-msgstr ""
+msgstr "Lieutenant"
 
 #: data.py:62
 msgid "Lieutenant Commander"
-msgstr ""
+msgstr "Capitaine de Corvette"
 
 #: data.py:63
 msgid "Post Commander"
-msgstr ""
+msgstr "Capitaine de Frégate"
 
 #: data.py:64
 msgid "Post Captain"
-msgstr ""
+msgstr "Capitaine de Vaisseau"
 
 #: data.py:65
 msgid "Rear Admiral"
-msgstr ""
+msgstr "Contre-Amiral"
 
 #: data.py:66
 msgid "Vice Admiral"
-msgstr ""
+msgstr "Vice-Amiral"
 
 #: data.py:67
 msgid "Admiral"
-msgstr ""
+msgstr "Amiral"
 
 #: data.py:71
 msgid "Outsider"
-msgstr ""
+msgstr "Étranger•e"
 
 #: data.py:72
 msgid "Serf"
-msgstr ""
+msgstr "Serf"
 
 #: data.py:74
 msgid "Squire"
-msgstr ""
+msgstr "Ecuyer•e"
 
 #: data.py:75
 msgid "Knight"
-msgstr ""
+msgstr "Chevalier"
 
 #: data.py:76
 msgid "Lord"
-msgstr ""
+msgstr "Banneret"
 
 #: data.py:77
 msgid "Baron"
-msgstr ""
+msgstr "Baron"
 
 #: data.py:78
 msgid "Viscount"
-msgstr ""
+msgstr "Vicomte"
 
 #: data.py:79
 msgid "Count"
-msgstr ""
+msgstr "Comte"
 
 #: data.py:80
 msgid "Earl"
-msgstr ""
+msgstr "Marquis"
 
 #: data.py:81
 msgid "Marquis"
-msgstr ""
+msgstr "Duc"
 
 #: data.py:82
 msgid "Duke"
-msgstr ""
+msgstr "Archiduc"
 
 #: data.py:83
 msgid "Prince"
