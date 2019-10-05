@@ -1138,11 +1138,11 @@ msgstr ""
 
 #: modules/mercure.py:90
 msgid "- Titanium \n"
-msgstr ""
+msgstr "- Titane \n"
 
 #: modules/mercure.py:91
 msgid "- Copper \n"
-msgstr ""
+msgstr "- Cuivre \n"
 
 #: modules/mercure.py:92
 msgid "- Aluminium \n"
@@ -1162,27 +1162,27 @@ msgstr "- Purificateurs d'eau \n"
 
 #: modules/mercure.py:96
 msgid "- Robotics \n"
-msgstr ""
+msgstr "- Robotiques \n"
 
 #: modules/mercure.py:97
 msgid "- Ceramic composites \n"
-msgstr ""
+msgstr "- Composés céramiques \n"
 
 #: modules/mercure.py:98
 msgid "- CMM composites \n"
-msgstr ""
+msgstr "- Composés CMM \n"
 
 #: modules/mercure.py:99
 msgid "- Insulating Membrane \n"
-msgstr ""
+msgstr "- Membranes isolantes \n"
 
 #: modules/mercure.py:100
 msgid "- Power Converters \n"
-msgstr ""
+msgstr "- Convertisseurs d'énergie \n"
 
 #: modules/mercure.py:101
 msgid "- Natural Fabrics \n"
-msgstr ""
+msgstr "- Tissus naturels \n"
 
 #: modules/mercure.py:103
 msgid "Commodities needed to repair a starport"
@@ -1191,7 +1191,4 @@ msgstr "Commodités nécessaires pour réparer une station"
 #: modules/mercure.py:113
 msgid "say command"
 msgstr "commande say"
-
-#~ msgid "*** en date du ***{date}*** \n"
-#~ msgstr ""
 
