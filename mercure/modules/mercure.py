@@ -16,6 +16,7 @@ class Mercure(commands.Cog):
 
     def to_be_deleted(m):
         check = False
+        print(m)
         if m.author == self.bot.user:
             check = True
         if m.content.startswith(config["prefix"]):
@@ -31,7 +32,7 @@ class Mercure(commands.Cog):
     @is_admin()
     async def clean(self, ctx, limit: int):
         if config['DEBUG']: print(_("clean function"))
-        deleted = await ctx.channel.purge(limit=limit)
+        deleted = await ctx.channel.purge(limit=limit, check=self.to_be_deleted)
         await ctx.channel.send(_('Deleted {number} message(s)').format(number=len(deleted)))
 
     @clean.error
