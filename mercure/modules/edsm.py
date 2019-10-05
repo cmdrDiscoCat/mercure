@@ -205,8 +205,8 @@ class Edsm(commands.Cog):
                                 value=_("None"), inline=True)
 
             embed.add_field(name=_("Security and Economy"),
-                            value=_(translations[informations["information"]["security"]])
-                                  + " / " + _(translations[informations["information"]["economy"]]),
+                            value=_(self.translations[informations["information"]["security"]])
+                                  + " / " + _(self.translations[informations["information"]["economy"]]),
                             inline=True)
             await ctx.send(embed=embed)
 
@@ -279,9 +279,9 @@ class Edsm(commands.Cog):
                     player_faction = ":robot:"
 
                 information_embed += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
-                information_embed += " | " + _(translations[faction['state']])
-                information_embed += " | " + _(translations[faction['allegiance']])
-                information_embed += " | " + _(translations[faction['government']])
+                information_embed += " | " + _(self.translations[faction['state']])
+                information_embed += " | " + _(self.translations[faction['allegiance']])
+                information_embed += " | " + _(self.translations[faction['government']])
                 information_embed += " " + player_faction + "\n"
                 if faction['lastUpdate'] > last_update:
                     last_update = faction['lastUpdate']
