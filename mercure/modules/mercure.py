@@ -17,10 +17,11 @@ class Mercure(commands.Cog):
     def to_be_deleted(self, m):
         if config['DEBUG']: print(_("to_be_deleted function"))
         check = False
-        print(m)
         if m.author == self.bot.user:
+            if config['DEBUG']: print(_("Deleted a message from the bot"))
             check = True
         if m.content.startswith(config["prefix"]):
+            if config['DEBUG']: print(_("Deleted a message that was a command"))
             check = True
         return check
 
