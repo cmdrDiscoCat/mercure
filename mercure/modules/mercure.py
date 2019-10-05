@@ -15,6 +15,7 @@ class Mercure(commands.Cog):
         if config['DEBUG']: print(_("Mercure module unloaded"))
 
     def to_be_deleted(m):
+        if config['DEBUG']: print(_("to_be_deleted function"))
         check = False
         print(m)
         if m.author == self.bot.user:
