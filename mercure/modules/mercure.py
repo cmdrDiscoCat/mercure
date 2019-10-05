@@ -14,7 +14,7 @@ class Mercure(commands.Cog):
     def cog_unload(self):
         if config['DEBUG']: print(_("Mercure module unloaded"))
 
-    def to_be_deleted(m):
+    def to_be_deleted(self, m):
         if config['DEBUG']: print(_("to_be_deleted function"))
         check = False
         print(m)
