@@ -35,7 +35,7 @@ class Mercure(commands.Cog):
     @clean.error
     async def clear_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
-            await ctx.send(_("The bot should have the right to manage messages to do that here ! Check the permissions you gave it.")
+            await ctx.send(_("The bot should have the right to manage messages to do that here ! Check the permissions you gave it."))
 
     @commands.command(pass_context=True, aliases=['aide', 'liste'])
     @acces_oracle()
