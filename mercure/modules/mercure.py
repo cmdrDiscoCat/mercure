@@ -18,6 +18,11 @@ class Mercure(commands.Cog):
     async def presence(self, ctx, *, arg):
         await self.bot.change_presence(activity=discord.Game(name=arg))
 
+    @commands.command(pass_context=True)
+    @is_admin()
+    async def clean(self, ctx, limit: int):
+        await ctx.channel.purge(limit=limit)
+
     @commands.command(pass_context=True, aliases=['aide', 'liste'])
     @acces_oracle()
     async def help(self, ctx):
