@@ -31,7 +31,7 @@ class Mercure(commands.Cog):
     @is_admin()
     async def clean(self, ctx, limit: int):
         if config['DEBUG']: print(_("clean function"))
-        deleted = await ctx.channel.purge(limit=limit, check=self.to_be_deleted)
+        deleted = await ctx.channel.purge(limit=limit)
         await ctx.channel.send(_('Deleted {number} message(s)').format(number=len(deleted)))
 
     @clean.error
