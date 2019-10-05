@@ -290,7 +290,7 @@ class Edsm(commands.Cog):
             last_update = datetime.fromtimestamp(faction['lastUpdate'])
             header_embed = _("***Influences in the {system} system").format(system=informations['name'])
             if last_update != 0:
-                header_embed += _("*** en date du ***{date}*** \n").format(date=last_update.strftime("%d/%m/%Y à %Hh%M"))
+                header_embed += _("*** on the ***{date}*** \n").format(date=last_update.strftime("%d/%m/%Y at %Hh%M"))
             else:
                 header_embed += _("*** as of today *** \n")
             header_embed += "<https://www.edsm.net/en/system/id/"
