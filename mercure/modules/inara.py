@@ -177,7 +177,7 @@ class Inara(commands.Cog):
 
         await ctx.send(embed=embed)
 
-        embed = discord.Embed(title="*Informations d\'escadrille*", color=0x0000ff)
+        embed = discord.Embed(title=_("*Squadron informations*"), color=0x0000ff)
 
         embed.add_field(name=_("Wing name"), value=inara_data['commanderWing']['wingName'], inline=True)
         embed.add_field(name=_("Members count"), value=inara_data['commanderWing']['wingMembersCount'], inline=True)
