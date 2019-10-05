@@ -24,11 +24,13 @@ class Mercure(commands.Cog):
 
     @commands.command(pass_context=True)
     async def presence(self, ctx, *, arg):
+        if config['DEBUG']: print(_("presence function"))
         await self.bot.change_presence(activity=discord.Game(name=arg))
 
     @commands.command(pass_context=True)
     @is_admin()
     async def clean(self, ctx, limit: int):
+        if config['DEBUG']: print(_("clean function"))
         deleted = await ctx.channel.purge(limit=limit, check=self.to_be_deleted)
         await ctx.channel.send(_('Deleted {number} message(s)').format(number=len(deleted)))
 
