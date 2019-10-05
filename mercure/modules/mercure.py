@@ -33,7 +33,7 @@ class Mercure(commands.Cog):
         await ctx.channel.send(_('Deleted {number} message(s)').format(number=len(deleted)))
 
     @clean.error
-    async def clear_error(ctx, error):
+    async def clear_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
             await ctx.send(_("The bot should have the right to manage messages to do that here ! Check the permissions you gave it.")
 
