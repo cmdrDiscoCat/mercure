@@ -14,6 +14,14 @@ class Mercure(commands.Cog):
     def cog_unload(self):
         if config['DEBUG']: print(_("Mercure module unloaded"))
 
+    def to_be_deleted(m):
+        check = False
+        if m.author == self.bot.user:
+            check = True
+        if m.content.startswith(config["prefix"]):
+            check = True
+        return check
+
     @commands.command(pass_context=True)
     async def presence(self, ctx, *, arg):
         await self.bot.change_presence(activity=discord.Game(name=arg))
@@ -21,7 +29,13 @@ class Mercure(commands.Cog):
     @commands.command(pass_context=True)
     @is_admin()
     async def clean(self, ctx, limit: int):
-        await ctx.channel.purge(limit=limit)
+        deleted = await ctx.channel.purge(limit=limit, check=self.to_be_deleted)
+        await ctx.channel.send(_('Deleted {number} message(s)').format(number=len(deleted)))
+
+    @clean.error
+    async def clear_error(ctx, error):
+        if isinstance(error, commands.MissingPermissions):
+            await ctx.send(_("The bot should have the right to manage messages to do that here ! Check the permissions you gave it.")
 
     @commands.command(pass_context=True, aliases=['aide', 'liste'])
     @acces_oracle()
