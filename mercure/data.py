@@ -242,7 +242,7 @@ translations = {
     "Alliance": _("Alliance"),
     "Pilots Federation": _("Pilots Federation"),
     "Independent": _("Independant"),
-    "Anarchy": _("Anarchie"),
+    "Anarchy": _("Anarchy"),
     "Colony": _("Colony"),
     "Communism": _("Communism"),
     "Confederacy": _("Confederacy"),
