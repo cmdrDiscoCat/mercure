@@ -9,3 +9,6 @@ venv
 env
 # Logs
 mercure.log*
+# Cache/Compiled python files
+__pycache__/
+*.py[cod]
