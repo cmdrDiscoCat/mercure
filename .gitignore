@@ -12,3 +12,4 @@ mercure.log*
 # Cache/Compiled python files
 __pycache__/
 *.py[cod]
+client_secret.json
