@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-05 20:57+0200\n"
+"POT-Creation-Date: 2019-10-07 15:08+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -512,118 +512,234 @@ msgstr ""
 msgid "Interstellar Factors Contact"
 msgstr ""
 
-#: main.py:27
+#: farm.py:6 farm.py:8 farm.py:9 farm.py:10 farm.py:11 farm.py:12 farm.py:13
+#: farm.py:14 farm.py:15
+msgid "iron"
+msgstr ""
+
+#: farm.py:9 farm.py:11 farm.py:12 farm.py:13 farm.py:14 farm.py:19 farm.py:21
+#: farm.py:26 farm.py:28 farm.py:33 farm.py:35 farm.py:40 farm.py:42 farm.py:47
+#: farm.py:49 farm.py:54 farm.py:56 farm.py:61 farm.py:63 farm.py:68 farm.py:70
+#: farm.py:75 farm.py:77 farm.py:82 farm.py:84 farm.py:89 farm.py:91 farm.py:96
+#: farm.py:98 farm.py:103 farm.py:105 farm.py:110 farm.py:112 farm.py:117
+#: farm.py:119 farm.py:124 farm.py:126 farm.py:131 farm.py:133 farm.py:138
+#: farm.py:140 farm.py:145 farm.py:147 farm.py:152 farm.py:154 farm.py:159
+#: farm.py:161 farm.py:166 farm.py:168 farm.py:173 farm.py:175 farm.py:180
+#: farm.py:182 main.py:149
+msgid "bubble"
+msgstr ""
+
+#: farm.py:10 farm.py:15 farm.py:20 farm.py:22 farm.py:27 farm.py:29 farm.py:34
+#: farm.py:36 farm.py:41 farm.py:43 farm.py:48 farm.py:50 farm.py:55 farm.py:57
+#: farm.py:62 farm.py:64 farm.py:69 farm.py:71 farm.py:76 farm.py:78 farm.py:83
+#: farm.py:85 farm.py:90 farm.py:92 farm.py:97 farm.py:99 farm.py:104
+#: farm.py:106 farm.py:111 farm.py:113 farm.py:118 farm.py:120 farm.py:125
+#: farm.py:127 farm.py:132 farm.py:134 farm.py:139 farm.py:141 farm.py:146
+#: farm.py:148 farm.py:153 farm.py:155 farm.py:160 farm.py:162 farm.py:167
+#: farm.py:169 farm.py:174 farm.py:176 farm.py:181 farm.py:183
+msgid "colonia"
+msgstr ""
+
+#: farm.py:17 farm.py:18 farm.py:19 farm.py:20 farm.py:21 farm.py:22
+msgid "nickel"
+msgstr ""
+
+#: farm.py:24 farm.py:25 farm.py:26 farm.py:27 farm.py:28 farm.py:29
+msgid "carbon"
+msgstr ""
+
+#: farm.py:31 farm.py:32 farm.py:33 farm.py:34 farm.py:35 farm.py:36
+msgid "sulfur"
+msgstr ""
+
+#: farm.py:38 farm.py:39 farm.py:40 farm.py:41 farm.py:42 farm.py:43
+msgid "phosphorus"
+msgstr ""
+
+#: farm.py:45 farm.py:46 farm.py:47 farm.py:48 farm.py:49 farm.py:50
+msgid "chromium"
+msgstr ""
+
+#: farm.py:52 farm.py:53 farm.py:54 farm.py:55 farm.py:56 farm.py:57
+msgid "manganese"
+msgstr ""
+
+#: farm.py:59 farm.py:60 farm.py:61 farm.py:62 farm.py:63 farm.py:64
+msgid "zinc"
+msgstr ""
+
+#: farm.py:66 farm.py:67 farm.py:68 farm.py:69 farm.py:70 farm.py:71
+msgid "vanadium"
+msgstr ""
+
+#: farm.py:73 farm.py:74 farm.py:75 farm.py:76 farm.py:77 farm.py:78
+msgid "germanium"
+msgstr ""
+
+#: farm.py:80 farm.py:81 farm.py:82 farm.py:83 farm.py:84 farm.py:85
+msgid "arsenic"
+msgstr ""
+
+#: farm.py:87 farm.py:88 farm.py:89 farm.py:90 farm.py:91 farm.py:92
+msgid "tungsten"
+msgstr ""
+
+#: farm.py:94 farm.py:95 farm.py:96 farm.py:97 farm.py:98 farm.py:99
+msgid "niobium"
+msgstr ""
+
+#: farm.py:101 farm.py:102 farm.py:103 farm.py:104 farm.py:105 farm.py:106
+msgid "selenium"
+msgstr ""
+
+#: farm.py:108 farm.py:109 farm.py:110 farm.py:111 farm.py:112 farm.py:113
+msgid "zirconium"
+msgstr ""
+
+#: farm.py:115 farm.py:116 farm.py:117 farm.py:118 farm.py:119 farm.py:120
+msgid "yttrium"
+msgstr ""
+
+#: farm.py:122 farm.py:123 farm.py:124 farm.py:125 farm.py:126 farm.py:127
+msgid "molydbenum"
+msgstr ""
+
+#: farm.py:129 farm.py:130 farm.py:131 farm.py:132 farm.py:133 farm.py:134
+msgid "tin"
+msgstr ""
+
+#: farm.py:136 farm.py:137 farm.py:138 farm.py:139 farm.py:140 farm.py:141
+msgid "mercury"
+msgstr ""
+
+#: farm.py:143 farm.py:144 farm.py:145 farm.py:146 farm.py:147 farm.py:148
+msgid "cadmium"
+msgstr ""
+
+#: farm.py:150 farm.py:151 farm.py:152 farm.py:153 farm.py:154 farm.py:155
+msgid "technetium"
+msgstr ""
+
+#: farm.py:157 farm.py:158 farm.py:159 farm.py:160 farm.py:161 farm.py:162
+msgid "tellurium"
+msgstr ""
+
+#: farm.py:164 farm.py:165 farm.py:166 farm.py:167 farm.py:168 farm.py:169
+msgid "polonium"
+msgstr ""
+
+#: farm.py:171 farm.py:172 farm.py:173 farm.py:174 farm.py:175 farm.py:176
+msgid "antimony"
+msgstr ""
+
+#: farm.py:178 farm.py:179 farm.py:180 farm.py:181 farm.py:182 farm.py:183
+msgid "ruthenium"
+msgstr ""
+
+#: main.py:28
 msgid "LGC's BGS assistant"
 msgstr ""
 
-#: main.py:59
+#: main.py:60
 msgid "Logged in as"
 msgstr ""
 
-#: main.py:69
+#: main.py:70
 msgid "helping the cartographers"
 msgstr ""
 
-#: main.py:75
+#: main.py:76
 msgid "on_command event"
 msgstr ""
 
-#: main.py:85
+#: main.py:86
 msgid "on_command_error event"
 msgstr ""
 
-#: main.py:101 modules/mercure.py:50
+#: main.py:102 modules/mercure.py:50
 msgid ""
 "- !influence <system> : Display <system>'s factions and their "
 "influence/states.\n"
 msgstr ""
 
-#: main.py:102 modules/mercure.py:51
+#: main.py:103 modules/mercure.py:51
 msgid ""
 "- !system <system> : Displays every information about a system "
 "(coordinates, main state, economy...\n"
 msgstr ""
 
-#: main.py:104 modules/mercure.py:52
+#: main.py:105 modules/mercure.py:52
 msgid "- !traffic <system> : Displays recent traffic information of <system>.\n"
 msgstr ""
 
-#: main.py:105 modules/mercure.py:53
+#: main.py:106 modules/mercure.py:53
 msgid ""
 "- !stations <system> : Displays all the stations of <system> with their "
 "informations.\n"
 msgstr ""
 
-#: main.py:106 modules/mercure.py:54
+#: main.py:107 modules/mercure.py:54
 msgid ""
 "- !farm <material> : Displays systems where material can be found, using "
 "CMDR Phoenix's Sheet.\n"
 msgstr ""
 
-#: main.py:107 modules/mercure.py:55
+#: main.py:108 modules/mercure.py:55
 msgid ""
 "- !oracle : Display EDSM/EDBB links to consult our factions' state in the"
 " Bubble and Colonia.\n"
 msgstr ""
 
-#: main.py:108 modules/mercure.py:56
+#: main.py:109 modules/mercure.py:56
 msgid ""
 "- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in "
 "shown format. Default is current date.\n"
 msgstr ""
 
-#: main.py:110 modules/mercure.py:57
+#: main.py:111 modules/mercure.py:57
 msgid ""
 "- !bigbrother : Display followed factions' influence/state in all the "
 "systems they're in.\n"
 msgstr ""
 
-#: main.py:111 modules/mercure.py:58
+#: main.py:112 modules/mercure.py:58
 msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
 msgstr ""
 
-#: main.py:112 modules/mercure.py:59
+#: main.py:113 modules/mercure.py:59
 msgid "- !repairs : Shows a list of commodities needed to repair a starport.\n"
 msgstr ""
 
-#: main.py:113 modules/mercure.py:60
+#: main.py:114 modules/mercure.py:60
 msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
 msgstr ""
 
-#: main.py:114 modules/mercure.py:61
+#: main.py:115 modules/mercure.py:61
 msgid "- !cg : Shows the current active cgs' informations.\n"
 msgstr ""
 
-#: main.py:116 modules/mercure.py:63
+#: main.py:117 modules/mercure.py:63
 msgid "Available commands"
 msgstr ""
 
-#: main.py:120
+#: main.py:121
 msgid "Ignoring exception in command {}:"
 msgstr ""
 
-#: main.py:130
+#: main.py:131
 msgid "on_message function"
 msgstr ""
 
-#: main.py:136
-msgid "Module {module} loaded"
-msgstr ""
-
-#: main.py:142
-msgid "Module {module} unloaded"
-msgstr ""
-
-#: main.py:152
+#: main.py:141
 msgid "Module {module} reloaded"
 msgstr ""
 
-#: main.py:160
-msgid "test command"
+#: main.py:148 main.py:155
+msgid "test_farm command"
 msgstr ""
 
-#: main.py:161 modules/mercure.py:70
-msgid "Yeah yeah i'm here...:smiley_cat: "
+#: main.py:156
+msgid "Sorry, but that element is unknown. Here's a list : \n"
 msgstr ""
 
 #: modules/bigbrother.py:15
@@ -932,55 +1048,55 @@ msgstr ""
 msgid "** No article found for that date : "
 msgstr ""
 
-#: modules/google.py:59
+#: modules/google.py:60
 msgid "Google module loaded"
 msgstr ""
 
-#: modules/google.py:63
+#: modules/google.py:64
 msgid "Google module unloaded"
 msgstr ""
 
-#: modules/google.py:65
+#: modules/google.py:66
 msgid "farm"
 msgstr ""
 
-#: modules/google.py:71
+#: modules/google.py:72
 msgid "farm command"
 msgstr ""
 
-#: modules/google.py:73
+#: modules/google.py:74
 msgid "You must specify a material !"
 msgstr ""
 
-#: modules/google.py:98
+#: modules/google.py:99
 msgid "Can't get data."
 msgstr ""
 
-#: modules/google.py:111
+#: modules/google.py:112
 msgid "**Geyser sites' list for {material}**"
 msgstr ""
 
-#: modules/google.py:114
+#: modules/google.py:115
 msgid "Location"
 msgstr ""
 
-#: modules/google.py:121
+#: modules/google.py:122
 msgid "Body : **"
 msgstr ""
 
-#: modules/google.py:122
+#: modules/google.py:123
 msgid " Coordinates : **"
 msgstr ""
 
-#: modules/google.py:125
+#: modules/google.py:126
 msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
 msgstr ""
 
-#: modules/google.py:127
+#: modules/google.py:128
 msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
 msgstr ""
 
-#: modules/google.py:128
+#: modules/google.py:129
 msgid "Distance from the main star : **{distanceFromStar} ls**"
 msgstr ""
 
@@ -1150,6 +1266,10 @@ msgstr ""
 
 #: modules/mercure.py:69
 msgid "poke command"
+msgstr ""
+
+#: modules/mercure.py:70
+msgid "Yeah yeah i'm here...:smiley_cat: "
 msgstr ""
 
 #: modules/mercure.py:73
@@ -1922,5 +2042,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "liste"
+#~ msgstr ""
+
+#~ msgid "on_command_error event"
+#~ msgstr ""
+
+#~ msgid "Ignoring exception in command {}:"
 #~ msgstr ""
 
