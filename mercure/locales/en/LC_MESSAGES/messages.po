@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 01:13+0200\n"
+"POT-Creation-Date: 2019-10-08 01:20+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1222,11 +1222,11 @@ msgstr ""
 msgid "farm"
 msgstr ""
 
-#: modules/edsm.py:406 modules/google.py:72
+#: modules/edsm.py:406
 msgid "farm command"
 msgstr ""
 
-#: modules/edsm.py:408 modules/google.py:74
+#: modules/edsm.py:408
 msgid "You must specify a material !"
 msgstr ""
 
@@ -1272,46 +1272,6 @@ msgstr ""
 
 #: modules/galnet.py:63
 msgid "** No article found for that date : "
-msgstr ""
-
-#: modules/google.py:60
-msgid "Google module loaded"
-msgstr ""
-
-#: modules/google.py:64
-msgid "Google module unloaded"
-msgstr ""
-
-#: modules/google.py:99
-msgid "Can't get data."
-msgstr ""
-
-#: modules/google.py:112
-msgid "**Geyser sites' list for {material}**"
-msgstr ""
-
-#: modules/google.py:115
-msgid "Location"
-msgstr ""
-
-#: modules/google.py:122
-msgid "Body : **"
-msgstr ""
-
-#: modules/google.py:123
-msgid " Coordinates : **"
-msgstr ""
-
-#: modules/google.py:126
-msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
-msgstr ""
-
-#: modules/google.py:128
-msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
-msgstr ""
-
-#: modules/google.py:129
-msgid "Distance from the main star : **{distanceFromStar} ls**"
 msgstr ""
 
 #: modules/inara.py:15

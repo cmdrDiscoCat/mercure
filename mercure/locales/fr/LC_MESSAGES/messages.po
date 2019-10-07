@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 01:13+0200\n"
+"POT-Creation-Date: 2019-10-08 01:20+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -1228,11 +1228,11 @@ msgstr ""
 msgid "farm"
 msgstr "farmer"
 
-#: modules/edsm.py:406 modules/google.py:72
+#: modules/edsm.py:406
 msgid "farm command"
 msgstr "Commande farm"
 
-#: modules/edsm.py:408 modules/google.py:74
+#: modules/edsm.py:408
 msgid "You must specify a material !"
 msgstr "Vous devez indiquer un matériau"
 
@@ -1281,46 +1281,6 @@ msgstr "Commande galnet"
 #: modules/galnet.py:63
 msgid "** No article found for that date : "
 msgstr "** Pas d'article trouvé à cette date : "
-
-#: modules/google.py:60
-msgid "Google module loaded"
-msgstr "Module google chargé"
-
-#: modules/google.py:64
-msgid "Google module unloaded"
-msgstr "Module google déchargé"
-
-#: modules/google.py:99
-msgid "Can't get data."
-msgstr "Impossible de récupérer les données."
-
-#: modules/google.py:112
-msgid "**Geyser sites' list for {material}**"
-msgstr "**Sites de geysers pour {material}**"
-
-#: modules/google.py:115
-msgid "Location"
-msgstr "Localisation"
-
-#: modules/google.py:122
-msgid "Body : **"
-msgstr "Planète : **"
-
-#: modules/google.py:123
-msgid " Coordinates : **"
-msgstr " Coordonnées : **"
-
-#: modules/google.py:126
-msgid "Distance from 32 MU : **{distanceFromBubble} ly** - "
-msgstr "Distance de 32 MU : **{distanceFromBubble} al** - "
-
-#: modules/google.py:128
-msgid "Distance from Pytheas : **{distanceFromColonia} ly** - "
-msgstr "Distance de Pytheas : **{distanceFromColonia} al** - "
-
-#: modules/google.py:129
-msgid "Distance from the main star : **{distanceFromStar} ls**"
-msgstr "Distance de l'étoile principale : **{distanceFromStar} sl**"
 
 #: modules/inara.py:15
 msgid "Inara module loaded"
