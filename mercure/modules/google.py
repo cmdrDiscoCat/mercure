@@ -3,6 +3,7 @@ from discord.ext import commands, tasks
 from main import acces_oracle, is_admin, _
 from config import *
 from data import *
+from farm import *
 
 import httplib2
 from apiclient import discovery

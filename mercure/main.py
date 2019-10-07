@@ -9,6 +9,7 @@ translate.install()
 _ = translate.gettext
 
 from data import *
+from farm import *
 
 
 logger = logging.getLogger('discord')
@@ -81,7 +82,7 @@ async def on_command(ctx):
 
 
 @bot.event
-async def on_command_error(error,ctx):
+async def on_command_error(error, ctx):
     if config['DEBUG']: print(_("on_command_error event"))
     # This prevents any commands with local handlers being handled here in on_command_error.
     if hasattr(ctx.command, 'on_error'):
@@ -132,18 +133,6 @@ async def on_message(message):
 
 
 @bot.command()
-async def load(ctx, ext):
-    if config['DEBUG']: print(_("Module {module} loaded").format(module=ext))
-    bot.load_extension(f"modules.{ext}")
-
-
-@bot.command()
-async def unload(ctx, ext):
-    if config['DEBUG']: print(_("Module {module} unloaded").format(module=ext))
-    bot.unload_extension(f"modules.{ext}")
-
-
-@bot.command()
 async def reload(ctx):
     # we reload all modules
     # we load all modules
@@ -155,10 +144,19 @@ async def reload(ctx):
 
 
 @bot.command()
-async def test(ctx):
-    """ Just a poke to be sure the bot is still processing commands """
-    if config['DEBUG']: print(_("test command"))
-    await ctx.send(_("Yeah yeah i'm here...:smiley_cat: "))
+async def test_farm(ctx, arg):
+    if config['DEBUG']: print(_("test_farm command"))
+    for site in farm[str(arg).lower()]["sites"][_("bubble")]:
+        await ctx.send(site)
+
+
+@test_farm.error
+async def test_farm_error(ctx, error):
+    if config['DEBUG']: print(_("test_farm command"))
+    message = _("Sorry, but that element is unknown. Here's a list : \n")
+    for key in farm.keys():
+        message += "- "+str(key).capitalize()+"\n"
+    await ctx.send(message)
 
 if __name__ == "__main__":
     try:
