@@ -18,9 +18,9 @@ class Edsm(commands.Cog):
     def cog_unload(self):
         if config['DEBUG']: print(_("Edsm module unloaded"))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=[_('ed')])
     @acces_oracle()
-    async def ed(self, ctx):
+    async def edsm_ed(self, ctx):
         """
         Displays the edsm data about elite dangerous servers status
         """
@@ -44,9 +44,9 @@ class Edsm(commands.Cog):
         embed.set_footer(text=_("Last updated on : ") + informations['lastUpdate'])
         await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True, aliases=['trafic'])
+    @commands.command(pass_context=True, aliases=[_('traffic')])
     @acces_oracle()
-    async def traffic(self, ctx, *, arg):
+    async def edsm_traffic(self, ctx, *, arg):
         """
         Displays the edsm data about traffic in a star system
         """
@@ -75,9 +75,9 @@ class Edsm(commands.Cog):
                 embed.add_field(name=name, value=count, inline=False)
             await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True, aliases=[])
+    @commands.command(pass_context=True, aliases=[_("stations")])
     @acces_oracle()
-    async def stations(self, ctx, *, arg):
+    async def edsm_stations(self, ctx, *, arg):
         """
         Displays the edsm data about a star system
         """
@@ -158,9 +158,9 @@ class Edsm(commands.Cog):
                 embed.set_thumbnail(url=url)
                 await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True, aliases=['systeme'])
+    @commands.command(pass_context=True, aliases=[_('system')])
     @acces_oracle()
-    async def system(self, ctx, *, arg):
+    async def edsm_system(self, ctx, *, arg):
         """
         Displays the edsm data about a star system
         """
@@ -205,8 +205,8 @@ class Edsm(commands.Cog):
                                 value=_("None"), inline=True)
 
             embed.add_field(name=_("Security and Economy"),
-                            value=_(translations[informations["information"]["security"]])
-                                  + " / " + _(translations[informations["information"]["economy"]]),
+                            value=_(self.translations[informations["information"]["security"]])
+                                  + " / " + _(self.translations[informations["information"]["economy"]]),
                             inline=True)
             await ctx.send(embed=embed)
 
@@ -223,9 +223,9 @@ class Edsm(commands.Cog):
                 embed = discord.Embed(title=_("Main Star"), description = desc, color=0xffaaaa)
                 await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=[_('oracle')])
     @acces_oracle()
-    async def oracle(self, ctx):
+    async def edsm_oracle(self, ctx):
         """
         Displays all the links to follow our influence in the star systems we're in
         """
@@ -246,9 +246,9 @@ class Edsm(commands.Cog):
         embed = discord.Embed(title=_("Colonia"), description=desc, color=0x147119)
         await ctx.send(embed=embed)
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=[_('influence')])
     @acces_oracle()
-    async def influence(self, ctx, *, arg):
+    async def edsm_influence(self, ctx, *, arg):
         """
         Displays the factions present in asked start system and their influence percentage
         """
@@ -279,9 +279,9 @@ class Edsm(commands.Cog):
                     player_faction = ":robot:"
 
                 information_embed += "[{:.1%}".format(faction['influence']) + "]\t" + nom_faction
-                information_embed += " | " + _(translations[faction['state']])
-                information_embed += " | " + _(translations[faction['allegiance']])
-                information_embed += " | " + _(translations[faction['government']])
+                information_embed += " | " + _(self.translations[faction['state']])
+                information_embed += " | " + _(self.translations[faction['allegiance']])
+                information_embed += " | " + _(self.translations[faction['government']])
                 information_embed += " " + player_faction + "\n"
                 if faction['lastUpdate'] > last_update:
                     last_update = faction['lastUpdate']
@@ -290,7 +290,7 @@ class Edsm(commands.Cog):
             last_update = datetime.fromtimestamp(faction['lastUpdate'])
             header_embed = _("***Influences in the {system} system").format(system=informations['name'])
             if last_update != 0:
-                header_embed += _("*** en date du ***{date}*** \n").format(date=last_update.strftime("%d/%m/%Y à %Hh%M"))
+                header_embed += _("*** on the ***{date}*** \n").format(date=last_update.strftime("%d/%m/%Y at %Hh%M"))
             else:
                 header_embed += _("*** as of today *** \n")
             header_embed += "<https://www.edsm.net/en/system/id/"
@@ -302,9 +302,9 @@ class Edsm(commands.Cog):
         else:
             await ctx.send(_("No system found with the name {system} :crying_cat_face:").format(system=system))
 
-    @commands.command(pass_context=True, aliases=['espionner'])
+    @commands.command(pass_context=True, aliases=[_('spy')])
     @acces_oracle()
-    async def spy(self, ctx, *, arg):
+    async def edsm_spy(self, ctx, *, arg):
         """
         Displays the last known location in EDSM for a commander
         """
@@ -324,9 +324,9 @@ class Edsm(commands.Cog):
         except:
             await ctx.send("Oops ! :crying_cat_face: ")
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=[_('faction')])
     @acces_oracle()
-    async def faction(self, ctx, *, arg):
+    async def edsm_faction(self, ctx, *, arg):
         """ One day, this will be a thing returning the systems where a faction is present """
         if config['DEBUG']: print(_("faction command called with {cmdrname}").format(cmdrname=urllib.parse.quote(arg)))
         system = urllib.parse.quote(arg)

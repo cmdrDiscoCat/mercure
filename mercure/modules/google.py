@@ -62,9 +62,9 @@ class Google(commands.Cog):
     def cog_unload(self):
         if config['DEBUG']: print(_("Google module unloaded"))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=[_('farm')])
     @acces_oracle()
-    async def farm(self, ctx, arg1):
+    async def google_farm(self, ctx, arg1):
         """
         Displays the lines from Phoenix's spreadsheet to know which geysers sites contains asked material
         """

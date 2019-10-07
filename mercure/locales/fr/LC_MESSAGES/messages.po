@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-04 13:15+0200\n"
+"POT-Creation-Date: 2019-10-05 20:57+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -309,8 +309,8 @@ msgid "Independant"
 msgstr "Indépendant"
 
 #: data.py:245
-msgid "Anarchie"
-msgstr ""
+msgid "Anarchy"
+msgstr "Anarchie"
 
 #: data.py:246
 msgid "Colony"
@@ -422,7 +422,7 @@ msgstr "Atelier (Ingénieur•e)"
 
 #: data.py:273
 msgid "Extraction"
-msgstr ""
+msgstr "Extraction"
 
 #: data.py:274
 msgid "Refinery"
@@ -528,27 +528,119 @@ msgstr "aider les cartographes"
 msgid "on_command event"
 msgstr "Evènement on_command"
 
-#: main.py:89
+#: main.py:85
+msgid "on_command_error event"
+msgstr "Evènement on_command_error"
+
+#: main.py:101 modules/mercure.py:50
+msgid ""
+"- !influence <system> : Display <system>'s factions and their "
+"influence/states.\n"
+msgstr ""
+"- !influence <system> : Affiche les factions de <system> et leur "
+"influence/états.\n"
+
+#: main.py:102 modules/mercure.py:51
+msgid ""
+"- !system <system> : Displays every information about a system "
+"(coordinates, main state, economy...\n"
+msgstr ""
+"- !systeme <system> : Displays every information about a system "
+"(coordinates, main state, economy...\n"
+
+#: main.py:104 modules/mercure.py:52
+msgid "- !traffic <system> : Displays recent traffic information of <system>.\n"
+msgstr ""
+"- !trafic <system> : Affiche les infos de trafic récent du système "
+"<system>.\n"
+
+#: main.py:105 modules/mercure.py:53
+msgid ""
+"- !stations <system> : Displays all the stations of <system> with their "
+"informations.\n"
+msgstr ""
+"- !stations <system> : Affiche toutes les stations du système <system> "
+"avec leurs informations.\n"
+
+#: main.py:106 modules/mercure.py:54
+msgid ""
+"- !farm <material> : Displays systems where material can be found, using "
+"CMDR Phoenix's Sheet.\n"
+msgstr ""
+"- !farmer <material> : Affiche les systèmes où le matériau peut être "
+"trouvé, grâce à la Google Sheet du CMDR Phoenix.\n"
+
+#: main.py:107 modules/mercure.py:55
+msgid ""
+"- !oracle : Display EDSM/EDBB links to consult our factions' state in the"
+" Bubble and Colonia.\n"
+msgstr ""
+"- !oracle : Affiche les liens EDSM/EDBB pour consulter l'état de nos "
+"factions dans la Bulle et Colonia.\n"
+
+#: main.py:108 modules/mercure.py:56
+msgid ""
+"- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in "
+"shown format. Default is current date.\n"
+msgstr ""
+"- !galnet 01-DEC-3303 : Affiche les articles galnet de la date entrée "
+"dans le format montré en exemple. Par défaut c'est la date du jour.\n"
+
+#: main.py:110 modules/mercure.py:57
+msgid ""
+"- !bigbrother : Display followed factions' influence/state in all the "
+"systems they're in.\n"
+msgstr ""
+"- !bigbrother : Affiche les influences/états des factions suivies dans "
+"tous les systèmes où elles sont présentes.\n"
+
+#: main.py:111 modules/mercure.py:58
+msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
+msgstr "- !inara <cmdr name> : Affiche le profile inara de ce CMDR.\n"
+
+#: main.py:112 modules/mercure.py:59
+msgid "- !repairs : Shows a list of commodities needed to repair a starport.\n"
+msgstr ""
+"- !reparations : Affiche une liste de commodités nécessaires pour réparer"
+" une station. \n"
+
+#: main.py:113 modules/mercure.py:60
+msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
+msgstr "- !ed : Affiche l'état des serveurs Frontier pour Elite Dangerous.\n"
+
+#: main.py:114 modules/mercure.py:61
+msgid "- !cg : Shows the current active cgs' informations.\n"
+msgstr "- !cg : Montre les informations des CGs actuellement actifs"
+
+#: main.py:116 modules/mercure.py:63
+msgid "Available commands"
+msgstr "Commandes disponibles"
+
+#: main.py:120
+msgid "Ignoring exception in command {}:"
+msgstr "Omission d'une exception dans la commande {}:"
+
+#: main.py:130
 msgid "on_message function"
 msgstr "Fonction on_message"
 
-#: main.py:95
+#: main.py:136
 msgid "Module {module} loaded"
 msgstr "Module {module} chargé"
 
-#: main.py:101
+#: main.py:142
 msgid "Module {module} unloaded"
 msgstr "Module {module} déchargé"
 
-#: main.py:111
+#: main.py:152
 msgid "Module {module} reloaded"
 msgstr "Module {module} rechargé"
 
-#: main.py:119
+#: main.py:160
 msgid "test command"
 msgstr "Commande test"
 
-#: main.py:120 modules/mercure.py:46
+#: main.py:161 modules/mercure.py:70
 msgid "Yeah yeah i'm here...:smiley_cat: "
 msgstr "Ouais ouais j'suis là...:smiley_cat:"
 
@@ -602,17 +694,25 @@ msgstr "Module edsm chargé"
 msgid "Edsm module unloaded"
 msgstr "Module edsm déchargé"
 
+#: modules/edsm.py:21
+msgid "ed"
+msgstr "ed"
+
 #: modules/edsm.py:27
 msgid "ed command"
 msgstr "Commande ed"
 
 #: modules/edsm.py:42
 msgid "Status message returned by the Elite Dangerous servers"
-msgstr ""
+msgstr "Message de status retourné par les serveurs d'Elite Dangerous"
 
 #: modules/edsm.py:44
 msgid "Last updated on : "
-msgstr ""
+msgstr "Mis à jour le : "
+
+#: modules/edsm.py:47
+msgid "traffic"
+msgstr "trafic"
 
 #: modules/edsm.py:53
 msgid "traffic command"
@@ -638,6 +738,10 @@ msgstr "Trafic d'hier"
 msgid "***Last 24 hours' detail, by ship***"
 msgstr "***Détail des dernières 24 heures, par vaisseau***"
 
+#: modules/edsm.py:78
+msgid "stations"
+msgstr "stations"
+
 #: modules/edsm.py:84
 msgid "stations command"
 msgstr "Commande stations"
@@ -654,7 +758,7 @@ msgstr "```{station} - Type {type}```"
 msgid "Distance to Arrival"
 msgstr "Distance de l'arrivée"
 
-#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:175
+#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:174
 msgid "Allegiance"
 msgstr "Allégeance"
 
@@ -688,11 +792,15 @@ msgstr "Equipement"
 
 #: modules/edsm.py:137
 msgid "Other services"
-msgstr ""
+msgstr "Autres services"
 
 #: modules/edsm.py:139 modules/edsm.py:186
 msgid "Controlling Faction"
 msgstr "Faction dirigeante"
+
+#: modules/edsm.py:161
+msgid "system"
+msgstr "systeme"
 
 #: modules/edsm.py:167
 msgid "system command called with {system}"
@@ -750,6 +858,10 @@ msgstr "{starName} / Type spectral : {starType} / {fuelscoop}"
 msgid "Main Star"
 msgstr "Etoile principale"
 
+#: modules/edsm.py:226
+msgid "oracle"
+msgstr "oracle"
+
 #: modules/edsm.py:232
 msgid "oracle command"
 msgstr "Commande oracle"
@@ -758,29 +870,33 @@ msgstr "Commande oracle"
 msgid "***LGC Systems' states***"
 msgstr "***Etats des systèmes LGC***"
 
+#: modules/edsm.py:249
+msgid "influence"
+msgstr "influence"
+
 #: modules/edsm.py:255
 msgid "influence command called with {system}"
 msgstr "Commande influence appelée avec {system}"
 
 #: modules/edsm.py:282
 msgid "state"
-msgstr ""
+msgstr "Etat"
 
 #: modules/edsm.py:283
 msgid "allegiance"
-msgstr ""
+msgstr "Allégeance"
 
 #: modules/edsm.py:284
 msgid "government"
-msgstr ""
+msgstr "Gouvernement"
 
 #: modules/edsm.py:291
 msgid "***Influences in the {system} system"
 msgstr "***Influences dans le système {system}"
 
 #: modules/edsm.py:293
-msgid "*** en date du ***{date}*** \n"
-msgstr ""
+msgid "*** on the ***{date}*** \n"
+msgstr "*** en date du ***{date}*** \n"
 
 #: modules/edsm.py:295
 msgid "*** as of today *** \n"
@@ -789,6 +905,10 @@ msgstr "*** au jour d'aujourd'hui *** \n"
 #: modules/edsm.py:303
 msgid "No system found with the name {system} :crying_cat_face:"
 msgstr "Pas de système trouvé avec le nom {system} :crying_cat_face:"
+
+#: modules/edsm.py:305
+msgid "spy"
+msgstr "espionner"
 
 #: modules/edsm.py:311
 msgid "spy command called with {cmdrname}"
@@ -811,6 +931,10 @@ msgstr ""
 #: modules/edsm.py:321
 msgid "For more information, spy that CMDR there : <{url}>"
 msgstr "Pour plus d'information, espionnez ce CMDR là-bas : <{url}>"
+
+#: modules/edsm.py:327
+msgid "faction"
+msgstr "faction"
 
 #: modules/edsm.py:331
 msgid "faction command called with {cmdrname}"
@@ -839,6 +963,10 @@ msgstr "Module google chargé"
 #: modules/google.py:63
 msgid "Google module unloaded"
 msgstr "Module google déchargé"
+
+#: modules/google.py:65
+msgid "farm"
+msgstr "farmer"
 
 #: modules/google.py:71
 msgid "farm command"
@@ -950,27 +1078,35 @@ msgstr "**Informations sur {commander_name}**"
 msgid "*Pilot's Federation ranks*"
 msgstr "*Rangs du Cercle des Pilotes*"
 
-#: modules/inara.py:176
+#: modules/inara.py:174
+msgid "preferredAllegianceName"
+msgstr ""
+
+#: modules/inara.py:175
 msgid "Prefered game role"
 msgstr "Métier préféré"
 
-#: modules/inara.py:177
+#: modules/inara.py:176
 msgid "Inara profile link"
 msgstr "Lien du profil Inara"
 
-#: modules/inara.py:183
+#: modules/inara.py:180
+msgid "*Squadron informations*"
+msgstr "*Informations sur l'escadron*"
+
+#: modules/inara.py:182
 msgid "Wing name"
 msgstr "Nom de l'escadron"
 
-#: modules/inara.py:184
+#: modules/inara.py:183
 msgid "Members count"
 msgstr "Nombre de membres"
 
-#: modules/inara.py:185
+#: modules/inara.py:184
 msgid "Wing member rank"
 msgstr "Rang du membre dans l'escadron"
 
-#: modules/inara.py:186
+#: modules/inara.py:185
 msgid "Inara squadron link"
 msgstr "Lien de l'escadron sur Inara"
 
@@ -982,173 +1118,163 @@ msgstr "Module mercure chargé"
 msgid "Mercure module unloaded"
 msgstr "Module mercure déchargé"
 
+#: modules/mercure.py:18
+msgid "to_be_deleted function"
+msgstr "Fonction to_be_deleted"
+
+#: modules/mercure.py:21
+msgid "Deleted a message from the bot"
+msgstr "Un message du bot supprimé"
+
 #: modules/mercure.py:24
+msgid "Deleted a message that was a command"
+msgstr "Une commande supprimée"
+
+#: modules/mercure.py:28
+msgid "presence"
+msgstr "présence"
+
+#: modules/mercure.py:30
+msgid "presence function"
+msgstr "Fonction présence"
+
+#: modules/mercure.py:33
+msgid "clean"
+msgstr "nettoyer"
+
+#: modules/mercure.py:36
+msgid "clean function"
+msgstr "Fonction nettoyer"
+
+#: modules/mercure.py:38
+msgid "Deleted {number} message(s)"
+msgstr "{number} message(s) effacé(s)"
+
+#: modules/mercure.py:43
+msgid ""
+"The bot should have the right to manage messages to do that here ! Check "
+"the permissions you gave it."
+msgstr ""
+"Le bot doit avoir le droit de gérer les messages pour le faire ici ! "
+"Vérifiez les permissions que vous lui avez données."
+
+#: modules/mercure.py:45
+msgid "help"
+msgstr "aide"
+
+#: modules/mercure.py:45
+msgid "list"
+msgstr "liste"
+
+#: modules/mercure.py:48
 msgid "help command"
 msgstr "Commande aide"
 
-#: modules/mercure.py:26
-msgid ""
-"- !influence <system> : Display <system>'s factions and their "
-"influence/states.\n"
-msgstr ""
-"- !influence <system> : Affiche les factions de <system> et leur "
-"influence/états.\n"
+#: modules/mercure.py:66
+msgid "poke"
+msgstr "poke"
 
-#: modules/mercure.py:27
-msgid ""
-"- !system <system> : Displays every information about a system "
-"(coordinates, main state, economy...\n"
-msgstr ""
-"- !system <system> : Displays every information about a system "
-"(coordinates, main state, economy...\n"
-
-#: modules/mercure.py:28
-msgid "- !traffic <system> : Displays recent traffic information of <system>.\n"
-msgstr ""
-"- !traffic <system> : Affiche les infos de trafic récent du système "
-"<system>.\n"
-
-#: modules/mercure.py:29
-msgid ""
-"- !stations <system> : Displays all the stations of <system> with their "
-"informations.\n"
-msgstr ""
-"- !stations <system> : Affiche toutes les stations du système <system> "
-"avec leurs informations.\n"
-
-#: modules/mercure.py:30
-msgid ""
-"- !farm <material> : Displays systems where material can be found, using "
-"CMDR Phoenix's Sheet.\n"
-msgstr ""
-"- !farm <material> : Affiche les systèmes où le matériau peut être "
-"trouvé, grâce à la Google Sheet du CMDR Phoenix.\n"
-
-#: modules/mercure.py:31
-msgid ""
-"- !oracle : Display EDSM/EDBB links to consult our factions' state in the"
-" Bubble and Colonia.\n"
-msgstr ""
-"- !oracle : Affiche les liens EDSM/EDBB pour consulter l'état de nos "
-"factions dans la Bulle et Colonia.\n"
-
-#: modules/mercure.py:32
-msgid ""
-"- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in "
-"shown format. Default is current date.\n"
-msgstr ""
-"- !galnet 01-DEC-3303 : Affiche les articles galnet de la date entrée "
-"dans le format montré en exemple. Par défaut c'est la date du jour.\n"
-
-#: modules/mercure.py:33
-msgid ""
-"- !bigbrother : Display followed factions' influence/state in all the "
-"systems they're in.\n"
-msgstr ""
-"- !bigbrother : Affiche les influences/états des factions suivies dans "
-"tous les systèmes où elles sont présentes.\n"
-
-#: modules/mercure.py:34
-msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
-msgstr "- !inara <cmdr name> : Affiche le profile inara de ce CMDR.\n"
-
-#: modules/mercure.py:35
-msgid ""
-"- !reparations : Shows a list of commodities needed to repair a starport."
-"\n"
-msgstr ""
-"- !reparations : Affiche une liste de commodités nécessaires pour réparer"
-" une station.\n"
-
-#: modules/mercure.py:36
-msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
-msgstr "- !ed : Affiche l'état des serveurs Frontier pour Elite Dangerous.\n"
-
-#: modules/mercure.py:37
-msgid "- !cg : Shows the current active cgs' informations.\n"
-msgstr "- !cg : Montre les informations des CGs actuellement actifs"
-
-#: modules/mercure.py:39
-msgid "Available commands"
-msgstr "Commandes disponibles"
-
-#: modules/mercure.py:45
+#: modules/mercure.py:69
 msgid "poke command"
 msgstr "Commande poke"
 
-#: modules/mercure.py:53
+#: modules/mercure.py:73
+msgid "patch"
+msgstr "patch"
+
+#: modules/mercure.py:73
+msgid "update"
+msgstr "maj"
+
+#: modules/mercure.py:73
+msgid "whenistheupdate"
+msgstr "cestquandlamaj"
+
+#: modules/mercure.py:73
+msgid "whenisbeyondarriving"
+msgstr "cestquandbeyond"
+
+#: modules/mercure.py:77
 msgid "maj command"
 msgstr "Commande maj"
 
-#: modules/mercure.py:54
+#: modules/mercure.py:78
 msgid "It's out !!!!! :ok_hand: :ok_hand: "
 msgstr "C'est sorti !!!!! :ok_hand: :ok_hand: "
 
-#: modules/mercure.py:62
+#: modules/mercure.py:80
+msgid "repairs"
+msgstr "reparations"
+
+#: modules/mercure.py:86
 msgid "repairs command"
 msgstr "Commande reparations"
 
-#: modules/mercure.py:64
+#: modules/mercure.py:88
 msgid "- Indium \n"
 msgstr ""
 
-#: modules/mercure.py:65
+#: modules/mercure.py:89
 msgid "- Gallium \n"
 msgstr ""
 
-#: modules/mercure.py:66
+#: modules/mercure.py:90
 msgid "- Titanium \n"
-msgstr ""
+msgstr "- Titane \n"
 
-#: modules/mercure.py:67
+#: modules/mercure.py:91
 msgid "- Copper \n"
-msgstr ""
+msgstr "- Cuivre \n"
 
-#: modules/mercure.py:68
+#: modules/mercure.py:92
 msgid "- Aluminium \n"
 msgstr ""
 
-#: modules/mercure.py:69
+#: modules/mercure.py:93
 msgid "- Synthetic Fabrics \n"
 msgstr "- Tissus synthétiques \n"
 
-#: modules/mercure.py:70
+#: modules/mercure.py:94
 msgid "- Polymers \n"
 msgstr "- Polymères \n"
 
-#: modules/mercure.py:71
+#: modules/mercure.py:95
 msgid "- Water Purifiers \n"
 msgstr "- Purificateurs d'eau \n"
 
-#: modules/mercure.py:72
+#: modules/mercure.py:96
 msgid "- Robotics \n"
-msgstr ""
+msgstr "- Robotiques \n"
 
-#: modules/mercure.py:73
+#: modules/mercure.py:97
 msgid "- Ceramic composites \n"
-msgstr ""
+msgstr "- Composés céramiques \n"
 
-#: modules/mercure.py:74
+#: modules/mercure.py:98
 msgid "- CMM composites \n"
-msgstr ""
+msgstr "- Composés CMM \n"
 
-#: modules/mercure.py:75
+#: modules/mercure.py:99
 msgid "- Insulating Membrane \n"
-msgstr ""
+msgstr "- Membranes isolantes \n"
 
-#: modules/mercure.py:76
+#: modules/mercure.py:100
 msgid "- Power Converters \n"
-msgstr ""
+msgstr "- Convertisseurs d'énergie \n"
 
-#: modules/mercure.py:77
+#: modules/mercure.py:101
 msgid "- Natural Fabrics \n"
-msgstr ""
+msgstr "- Tissus naturels \n"
 
-#: modules/mercure.py:79
+#: modules/mercure.py:103
 msgid "Commodities needed to repair a starport"
 msgstr "Commodités nécessaires pour réparer une station"
 
-#: modules/mercure.py:89
+#: modules/mercure.py:107
+msgid "say"
+msgstr "dire"
+
+#: modules/mercure.py:113
 msgid "say command"
-msgstr "commande say"
+msgstr "commande dire"
 
