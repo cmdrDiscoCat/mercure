@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-07 15:08+0200\n"
+"POT-Creation-Date: 2019-10-08 01:13+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -348,7 +348,7 @@ msgstr ""
 msgid "Imperial"
 msgstr ""
 
-#: data.py:255 modules/edsm.py:205
+#: data.py:255 modules/edsm.py:207
 msgid "None"
 msgstr ""
 
@@ -512,128 +512,376 @@ msgstr ""
 msgid "Interstellar Factors Contact"
 msgstr ""
 
-#: farm.py:6 farm.py:8 farm.py:9 farm.py:10 farm.py:11 farm.py:12 farm.py:13
-#: farm.py:14 farm.py:15
-msgid "iron"
-msgstr ""
-
-#: farm.py:9 farm.py:11 farm.py:12 farm.py:13 farm.py:14 farm.py:19 farm.py:21
-#: farm.py:26 farm.py:28 farm.py:33 farm.py:35 farm.py:40 farm.py:42 farm.py:47
-#: farm.py:49 farm.py:54 farm.py:56 farm.py:61 farm.py:63 farm.py:68 farm.py:70
-#: farm.py:75 farm.py:77 farm.py:82 farm.py:84 farm.py:89 farm.py:91 farm.py:96
-#: farm.py:98 farm.py:103 farm.py:105 farm.py:110 farm.py:112 farm.py:117
-#: farm.py:119 farm.py:124 farm.py:126 farm.py:131 farm.py:133 farm.py:138
-#: farm.py:140 farm.py:145 farm.py:147 farm.py:152 farm.py:154 farm.py:159
-#: farm.py:161 farm.py:166 farm.py:168 farm.py:173 farm.py:175 farm.py:180
-#: farm.py:182 main.py:149
-msgid "bubble"
-msgstr ""
-
-#: farm.py:10 farm.py:15 farm.py:20 farm.py:22 farm.py:27 farm.py:29 farm.py:34
-#: farm.py:36 farm.py:41 farm.py:43 farm.py:48 farm.py:50 farm.py:55 farm.py:57
-#: farm.py:62 farm.py:64 farm.py:69 farm.py:71 farm.py:76 farm.py:78 farm.py:83
-#: farm.py:85 farm.py:90 farm.py:92 farm.py:97 farm.py:99 farm.py:104
-#: farm.py:106 farm.py:111 farm.py:113 farm.py:118 farm.py:120 farm.py:125
-#: farm.py:127 farm.py:132 farm.py:134 farm.py:139 farm.py:141 farm.py:146
-#: farm.py:148 farm.py:153 farm.py:155 farm.py:160 farm.py:162 farm.py:167
-#: farm.py:169 farm.py:174 farm.py:176 farm.py:181 farm.py:183
-msgid "colonia"
-msgstr ""
-
-#: farm.py:17 farm.py:18 farm.py:19 farm.py:20 farm.py:21 farm.py:22
-msgid "nickel"
-msgstr ""
-
-#: farm.py:24 farm.py:25 farm.py:26 farm.py:27 farm.py:28 farm.py:29
-msgid "carbon"
-msgstr ""
-
-#: farm.py:31 farm.py:32 farm.py:33 farm.py:34 farm.py:35 farm.py:36
-msgid "sulfur"
-msgstr ""
-
-#: farm.py:38 farm.py:39 farm.py:40 farm.py:41 farm.py:42 farm.py:43
-msgid "phosphorus"
-msgstr ""
-
-#: farm.py:45 farm.py:46 farm.py:47 farm.py:48 farm.py:49 farm.py:50
-msgid "chromium"
-msgstr ""
-
-#: farm.py:52 farm.py:53 farm.py:54 farm.py:55 farm.py:56 farm.py:57
-msgid "manganese"
-msgstr ""
-
-#: farm.py:59 farm.py:60 farm.py:61 farm.py:62 farm.py:63 farm.py:64
-msgid "zinc"
-msgstr ""
-
-#: farm.py:66 farm.py:67 farm.py:68 farm.py:69 farm.py:70 farm.py:71
-msgid "vanadium"
-msgstr ""
-
-#: farm.py:73 farm.py:74 farm.py:75 farm.py:76 farm.py:77 farm.py:78
-msgid "germanium"
-msgstr ""
-
-#: farm.py:80 farm.py:81 farm.py:82 farm.py:83 farm.py:84 farm.py:85
-msgid "arsenic"
-msgstr ""
-
-#: farm.py:87 farm.py:88 farm.py:89 farm.py:90 farm.py:91 farm.py:92
-msgid "tungsten"
-msgstr ""
-
-#: farm.py:94 farm.py:95 farm.py:96 farm.py:97 farm.py:98 farm.py:99
-msgid "niobium"
-msgstr ""
-
-#: farm.py:101 farm.py:102 farm.py:103 farm.py:104 farm.py:105 farm.py:106
-msgid "selenium"
-msgstr ""
-
-#: farm.py:108 farm.py:109 farm.py:110 farm.py:111 farm.py:112 farm.py:113
-msgid "zirconium"
-msgstr ""
-
-#: farm.py:115 farm.py:116 farm.py:117 farm.py:118 farm.py:119 farm.py:120
-msgid "yttrium"
-msgstr ""
-
-#: farm.py:122 farm.py:123 farm.py:124 farm.py:125 farm.py:126 farm.py:127
-msgid "molydbenum"
-msgstr ""
-
-#: farm.py:129 farm.py:130 farm.py:131 farm.py:132 farm.py:133 farm.py:134
-msgid "tin"
-msgstr ""
-
-#: farm.py:136 farm.py:137 farm.py:138 farm.py:139 farm.py:140 farm.py:141
-msgid "mercury"
-msgstr ""
-
-#: farm.py:143 farm.py:144 farm.py:145 farm.py:146 farm.py:147 farm.py:148
-msgid "cadmium"
-msgstr ""
-
-#: farm.py:150 farm.py:151 farm.py:152 farm.py:153 farm.py:154 farm.py:155
-msgid "technetium"
-msgstr ""
-
-#: farm.py:157 farm.py:158 farm.py:159 farm.py:160 farm.py:161 farm.py:162
-msgid "tellurium"
-msgstr ""
-
-#: farm.py:164 farm.py:165 farm.py:166 farm.py:167 farm.py:168 farm.py:169
-msgid "polonium"
-msgstr ""
-
-#: farm.py:171 farm.py:172 farm.py:173 farm.py:174 farm.py:175 farm.py:176
+#: farm.py:12
 msgid "antimony"
 msgstr ""
 
-#: farm.py:178 farm.py:179 farm.py:180 farm.py:181 farm.py:182 farm.py:183
+#: farm.py:13
+msgid "arsenic"
+msgstr ""
+
+#: farm.py:14
+msgid "cadmium"
+msgstr ""
+
+#: farm.py:15
+msgid "carbon"
+msgstr ""
+
+#: farm.py:16
+msgid "chromium"
+msgstr ""
+
+#: farm.py:17
+msgid "germanium"
+msgstr ""
+
+#: farm.py:18
+msgid "iron"
+msgstr ""
+
+#: farm.py:19
+msgid "manganese"
+msgstr ""
+
+#: farm.py:20
+msgid "mercury"
+msgstr ""
+
+#: farm.py:21
+msgid "molybdenum"
+msgstr ""
+
+#: farm.py:22
+msgid "nickel"
+msgstr ""
+
+#: farm.py:23
+msgid "niobium"
+msgstr ""
+
+#: farm.py:24
+msgid "phosphorus"
+msgstr ""
+
+#: farm.py:25
+msgid "polonium"
+msgstr ""
+
+#: farm.py:26
 msgid "ruthenium"
+msgstr ""
+
+#: farm.py:27
+msgid "selenium"
+msgstr ""
+
+#: farm.py:28
+msgid "sulphur"
+msgstr ""
+
+#: farm.py:29
+msgid "technetium"
+msgstr ""
+
+#: farm.py:30
+msgid "tellurium"
+msgstr ""
+
+#: farm.py:31
+msgid "tin"
+msgstr ""
+
+#: farm.py:32
+msgid "tungsten"
+msgstr ""
+
+#: farm.py:33
+msgid "vanadium"
+msgstr ""
+
+#: farm.py:34
+msgid "yttrium"
+msgstr ""
+
+#: farm.py:35
+msgid "zinc"
+msgstr ""
+
+#: farm.py:36
+msgid "zirconium"
+msgstr ""
+
+#: farm.py:41
+msgid "O (Blue-White) Star"
+msgstr ""
+
+#: farm.py:42
+msgid "B (Blue-White) Star"
+msgstr ""
+
+#: farm.py:43
+msgid "B (Blue-White super giant) Star"
+msgstr ""
+
+#: farm.py:44 farm.py:45
+msgid "A (Blue-White) Star"
+msgstr ""
+
+#: farm.py:46
+msgid "F (White) Star"
+msgstr ""
+
+#: farm.py:47
+msgid "F (White super giant) Star"
+msgstr ""
+
+#: farm.py:48
+msgid "G (White-Yellow) Star"
+msgstr ""
+
+#: farm.py:49
+msgid "G (White-Yellow super giant) Star"
+msgstr ""
+
+#: farm.py:50
+msgid "K (Yellow-Orange) Star"
+msgstr ""
+
+#: farm.py:51
+msgid "K (Yellow-Orange super giant) Star"
+msgstr ""
+
+#: farm.py:52
+msgid "M (Red dwarf) Star"
+msgstr ""
+
+#: farm.py:53
+msgid "M (Red giant) Star"
+msgstr ""
+
+#: farm.py:54
+msgid "M (Red super giant) Star"
+msgstr ""
+
+#: farm.py:55
+msgid "L (Brown dwarf) Star"
+msgstr ""
+
+#: farm.py:56
+msgid "T (Brown dwarf) Star"
+msgstr ""
+
+#: farm.py:57
+msgid "Y (Brown dwarf) Star"
+msgstr ""
+
+#: farm.py:58
+msgid "T Tauri Star"
+msgstr ""
+
+#: farm.py:59
+msgid "Herbig Ae/Be Star"
+msgstr ""
+
+#: farm.py:60
+msgid "Wolf-Rayet Star"
+msgstr ""
+
+#: farm.py:61
+msgid "Wolf-Rayet N Star"
+msgstr ""
+
+#: farm.py:62
+msgid "Wolf-Rayet NC Star"
+msgstr ""
+
+#: farm.py:63
+msgid "Wolf-Rayet C Star"
+msgstr ""
+
+#: farm.py:64
+msgid "Wolf-Rayet O Star"
+msgstr ""
+
+#: farm.py:65
+msgid "CS Star"
+msgstr ""
+
+#: farm.py:66
+msgid "C Star"
+msgstr ""
+
+#: farm.py:67
+msgid "CN Star"
+msgstr ""
+
+#: farm.py:68
+msgid "CJ Star"
+msgstr ""
+
+#: farm.py:69
+msgid "CH Star"
+msgstr ""
+
+#: farm.py:70
+msgid "CHd Star"
+msgstr ""
+
+#: farm.py:71
+msgid "MS-type Star"
+msgstr ""
+
+#: farm.py:72
+msgid "S-type Star"
+msgstr ""
+
+#: farm.py:73
+msgid "White Dwarf (D) Star"
+msgstr ""
+
+#: farm.py:74
+msgid "White Dwarf (DA) Star"
+msgstr ""
+
+#: farm.py:75
+msgid "White Dwarf (DAB) Star"
+msgstr ""
+
+#: farm.py:76
+msgid "White Dwarf (DAO) Star"
+msgstr ""
+
+#: farm.py:77
+msgid "White Dwarf (DAZ) Star"
+msgstr ""
+
+#: farm.py:78
+msgid "White Dwarf (DAV) Star"
+msgstr ""
+
+#: farm.py:79
+msgid "White Dwarf (DB) Star"
+msgstr ""
+
+#: farm.py:80
+msgid "White Dwarf (DBZ) Star"
+msgstr ""
+
+#: farm.py:81
+msgid "White Dwarf (DBV) Star"
+msgstr ""
+
+#: farm.py:82
+msgid "White Dwarf (DO) Star"
+msgstr ""
+
+#: farm.py:83
+msgid "White Dwarf (DOV) Star"
+msgstr ""
+
+#: farm.py:84
+msgid "White Dwarf (DQ) Star"
+msgstr ""
+
+#: farm.py:85
+msgid "White Dwarf (DC) Star"
+msgstr ""
+
+#: farm.py:86
+msgid "White Dwarf (DCV) Star"
+msgstr ""
+
+#: farm.py:87
+msgid "White Dwarf (DX) Star"
+msgstr ""
+
+#: farm.py:88
+msgid "Neutron Star"
+msgstr ""
+
+#: farm.py:89
+msgid "Black Hole"
+msgstr ""
+
+#: farm.py:90
+msgid "Supermassive Black Hole"
+msgstr ""
+
+#: farm.py:91
+msgid "X"
+msgstr ""
+
+#: farm.py:92
+msgid "Rogue Planet"
+msgstr ""
+
+#: farm.py:93
+msgid "Nebula"
+msgstr ""
+
+#: farm.py:94
+msgid "Stellar Remnant Nebula"
+msgstr ""
+
+#: farm.py:99
+msgid "No volcanism"
+msgstr ""
+
+#: farm.py:100
+msgid "Water Magma"
+msgstr ""
+
+#: farm.py:101
+msgid "Sulphur Dioxide Magma"
+msgstr ""
+
+#: farm.py:102
+msgid "Ammonia Magma"
+msgstr ""
+
+#: farm.py:103
+msgid "Methane Magma"
+msgstr ""
+
+#: farm.py:104
+msgid "Nitrogen Magma"
+msgstr ""
+
+#: farm.py:105
+msgid "Rocky Magma"
+msgstr ""
+
+#: farm.py:106
+msgid "Metallic Magma"
+msgstr ""
+
+#: farm.py:107
+msgid "Water Geysers"
+msgstr ""
+
+#: farm.py:108
+msgid "Carbon Dioxide Geysers"
+msgstr ""
+
+#: farm.py:109
+msgid "Ammonia Geysers"
+msgstr ""
+
+#: farm.py:110
+msgid "Methane Geysers"
+msgstr ""
+
+#: farm.py:111
+msgid "Nitrogen Geysers"
+msgstr ""
+
+#: farm.py:112
+msgid "Helium Geysers"
+msgstr ""
+
+#: farm.py:113
+msgid "Silicate Vapour Geysers"
 msgstr ""
 
 #: main.py:28
@@ -652,93 +900,23 @@ msgstr ""
 msgid "on_command event"
 msgstr ""
 
-#: main.py:86
-msgid "on_command_error event"
-msgstr ""
-
-#: main.py:102 modules/mercure.py:50
-msgid ""
-"- !influence <system> : Display <system>'s factions and their "
-"influence/states.\n"
-msgstr ""
-
-#: main.py:103 modules/mercure.py:51
-msgid ""
-"- !system <system> : Displays every information about a system "
-"(coordinates, main state, economy...\n"
-msgstr ""
-
-#: main.py:105 modules/mercure.py:52
-msgid "- !traffic <system> : Displays recent traffic information of <system>.\n"
-msgstr ""
-
-#: main.py:106 modules/mercure.py:53
-msgid ""
-"- !stations <system> : Displays all the stations of <system> with their "
-"informations.\n"
-msgstr ""
-
-#: main.py:107 modules/mercure.py:54
-msgid ""
-"- !farm <material> : Displays systems where material can be found, using "
-"CMDR Phoenix's Sheet.\n"
-msgstr ""
-
-#: main.py:108 modules/mercure.py:55
-msgid ""
-"- !oracle : Display EDSM/EDBB links to consult our factions' state in the"
-" Bubble and Colonia.\n"
-msgstr ""
-
-#: main.py:109 modules/mercure.py:56
-msgid ""
-"- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in "
-"shown format. Default is current date.\n"
-msgstr ""
-
-#: main.py:111 modules/mercure.py:57
-msgid ""
-"- !bigbrother : Display followed factions' influence/state in all the "
-"systems they're in.\n"
-msgstr ""
-
-#: main.py:112 modules/mercure.py:58
-msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
-msgstr ""
-
-#: main.py:113 modules/mercure.py:59
-msgid "- !repairs : Shows a list of commodities needed to repair a starport.\n"
-msgstr ""
-
-#: main.py:114 modules/mercure.py:60
-msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
-msgstr ""
-
-#: main.py:115 modules/mercure.py:61
-msgid "- !cg : Shows the current active cgs' informations.\n"
-msgstr ""
-
-#: main.py:117 modules/mercure.py:63
-msgid "Available commands"
-msgstr ""
-
-#: main.py:121
-msgid "Ignoring exception in command {}:"
-msgstr ""
-
-#: main.py:131
+#: main.py:90
 msgid "on_message function"
 msgstr ""
 
-#: main.py:141
+#: main.py:100
 msgid "Module {module} reloaded"
 msgstr ""
 
-#: main.py:148 main.py:155
+#: main.py:107 main.py:114
 msgid "test_farm command"
 msgstr ""
 
-#: main.py:156
+#: main.py:108
+msgid "bubble"
+msgstr ""
+
+#: main.py:115
 msgid "Sorry, but that element is unknown. Here's a list : \n"
 msgstr ""
 
@@ -762,11 +940,11 @@ msgstr ""
 msgid "bb1984 command"
 msgstr ""
 
-#: modules/bigbrother.py:66 modules/edsm.py:239
+#: modules/bigbrother.py:66 modules/edsm.py:241
 msgid "Bubble"
 msgstr ""
 
-#: modules/bigbrother.py:69 modules/edsm.py:246
+#: modules/bigbrother.py:69 modules/edsm.py:248
 msgid "Colonia"
 msgstr ""
 
@@ -782,254 +960,302 @@ msgstr ""
 msgid "Bigbrother : waiting for the bot to be ready before we launch the loop..."
 msgstr ""
 
-#: modules/edsm.py:14
+#: modules/edsm.py:16
 msgid "Edsm module loaded"
 msgstr ""
 
-#: modules/edsm.py:19
+#: modules/edsm.py:21
 msgid "Edsm module unloaded"
 msgstr ""
 
-#: modules/edsm.py:21
+#: modules/edsm.py:23
 msgid "ed"
 msgstr ""
 
-#: modules/edsm.py:27
+#: modules/edsm.py:29
 msgid "ed command"
 msgstr ""
 
-#: modules/edsm.py:42
+#: modules/edsm.py:44
 msgid "Status message returned by the Elite Dangerous servers"
 msgstr ""
 
-#: modules/edsm.py:44
+#: modules/edsm.py:46
 msgid "Last updated on : "
 msgstr ""
 
-#: modules/edsm.py:47
+#: modules/edsm.py:49
 msgid "traffic"
 msgstr ""
 
-#: modules/edsm.py:53
+#: modules/edsm.py:55
 msgid "traffic command"
 msgstr ""
 
-#: modules/edsm.py:60
+#: modules/edsm.py:62
 msgid "***Traffic information for the {system} system***"
 msgstr ""
 
-#: modules/edsm.py:64
+#: modules/edsm.py:66
 msgid "Total traffic since the discovery of the system"
 msgstr ""
 
-#: modules/edsm.py:67
+#: modules/edsm.py:69
 msgid "Last week's traffic"
 msgstr ""
 
-#: modules/edsm.py:68
+#: modules/edsm.py:70
 msgid "Last day's traffic"
 msgstr ""
 
-#: modules/edsm.py:72
+#: modules/edsm.py:74
 msgid "***Last 24 hours' detail, by ship***"
 msgstr ""
 
-#: modules/edsm.py:78
+#: modules/edsm.py:80
 msgid "stations"
 msgstr ""
 
-#: modules/edsm.py:84
+#: modules/edsm.py:86
 msgid "stations command"
 msgstr ""
 
-#: modules/edsm.py:91
+#: modules/edsm.py:93
 msgid "***Stations in the {system} system***"
 msgstr ""
 
-#: modules/edsm.py:96
+#: modules/edsm.py:98
 msgid "```{station} - Type {type}```"
 msgstr ""
 
-#: modules/edsm.py:100
+#: modules/edsm.py:102
 msgid "Distance to Arrival"
 msgstr ""
 
-#: modules/edsm.py:105 modules/edsm.py:191 modules/inara.py:174
+#: modules/edsm.py:107 modules/edsm.py:193 modules/inara.py:174
 msgid "Allegiance"
 msgstr ""
 
-#: modules/edsm.py:106 modules/edsm.py:193
+#: modules/edsm.py:108 modules/edsm.py:195
 msgid "Government"
 msgstr ""
 
-#: modules/edsm.py:107
+#: modules/edsm.py:109
 msgid "Economy"
 msgstr ""
 
-#: modules/edsm.py:109
+#: modules/edsm.py:111
 msgid "Yes"
 msgstr ""
 
-#: modules/edsm.py:110
+#: modules/edsm.py:112
 msgid "No"
 msgstr ""
 
-#: modules/edsm.py:126
+#: modules/edsm.py:128
 msgid "Market"
 msgstr ""
 
-#: modules/edsm.py:127
+#: modules/edsm.py:129
 msgid "Shipyard"
 msgstr ""
 
-#: modules/edsm.py:128
+#: modules/edsm.py:130
 msgid "Equipment"
 msgstr ""
 
-#: modules/edsm.py:137
+#: modules/edsm.py:139
 msgid "Other services"
 msgstr ""
 
-#: modules/edsm.py:139 modules/edsm.py:186
+#: modules/edsm.py:141 modules/edsm.py:188
 msgid "Controlling Faction"
 msgstr ""
 
-#: modules/edsm.py:161
+#: modules/edsm.py:163
 msgid "system"
 msgstr ""
 
-#: modules/edsm.py:167
+#: modules/edsm.py:169
 msgid "system command called with {system}"
 msgstr ""
 
-#: modules/edsm.py:176
+#: modules/edsm.py:178
 msgid "***Summary of the {system} system***"
 msgstr ""
 
-#: modules/edsm.py:182
+#: modules/edsm.py:184
 msgid "Coordinates"
 msgstr ""
 
-#: modules/edsm.py:192
+#: modules/edsm.py:194
 msgid "informationallegiance"
 msgstr ""
 
-#: modules/edsm.py:194
+#: modules/edsm.py:196
 msgid "informationgovernment"
 msgstr ""
 
-#: modules/edsm.py:195
+#: modules/edsm.py:197
 msgid "State"
 msgstr ""
 
-#: modules/edsm.py:196
+#: modules/edsm.py:198
 msgid "informationfactionState"
 msgstr ""
 
-#: modules/edsm.py:197
+#: modules/edsm.py:199
 msgid "Population"
 msgstr ""
 
-#: modules/edsm.py:201 modules/edsm.py:204
+#: modules/edsm.py:203 modules/edsm.py:206
 msgid "Mineral reserves"
 msgstr ""
 
-#: modules/edsm.py:207
+#: modules/edsm.py:209
 msgid "Security and Economy"
 msgstr ""
 
-#: modules/edsm.py:208
+#: modules/edsm.py:210
 msgid "informationsecurity"
 msgstr ""
 
-#: modules/edsm.py:209
+#: modules/edsm.py:211
 msgid "informationeconomy"
 msgstr ""
 
-#: modules/edsm.py:219
+#: modules/edsm.py:221
 msgid "{starName} / Spectral Type : {starType} / {fuelscoop}"
 msgstr ""
 
-#: modules/edsm.py:223
+#: modules/edsm.py:225
 msgid "Main Star"
 msgstr ""
 
-#: modules/edsm.py:226
+#: modules/edsm.py:228
 msgid "oracle"
 msgstr ""
 
-#: modules/edsm.py:232
+#: modules/edsm.py:234
 msgid "oracle command"
 msgstr ""
 
-#: modules/edsm.py:236
+#: modules/edsm.py:238
 msgid "***LGC Systems' states***"
 msgstr ""
 
-#: modules/edsm.py:249
+#: modules/edsm.py:251
 msgid "influence"
 msgstr ""
 
-#: modules/edsm.py:255
+#: modules/edsm.py:257
 msgid "influence command called with {system}"
 msgstr ""
 
-#: modules/edsm.py:282
+#: modules/edsm.py:284
 msgid "state"
 msgstr ""
 
-#: modules/edsm.py:283
+#: modules/edsm.py:285
 msgid "allegiance"
 msgstr ""
 
-#: modules/edsm.py:284
+#: modules/edsm.py:286
 msgid "government"
 msgstr ""
 
-#: modules/edsm.py:291
+#: modules/edsm.py:293
 msgid "***Influences in the {system} system"
 msgstr ""
 
-#: modules/edsm.py:293
+#: modules/edsm.py:295
 msgid "*** on the ***{date}*** \n"
 msgstr ""
 
-#: modules/edsm.py:295
+#: modules/edsm.py:297
 msgid "*** as of today *** \n"
 msgstr ""
 
-#: modules/edsm.py:303
+#: modules/edsm.py:305
 msgid "No system found with the name {system} :crying_cat_face:"
 msgstr ""
 
-#: modules/edsm.py:305
+#: modules/edsm.py:307
 msgid "spy"
 msgstr ""
 
-#: modules/edsm.py:311
+#: modules/edsm.py:313
 msgid "spy command called with {cmdrname}"
 msgstr ""
 
-#: modules/edsm.py:317
+#: modules/edsm.py:319
 msgid "My spies told me that CMDR **{cmdr}** was last seen in {system}**"
 msgstr ""
 
-#: modules/edsm.py:320
+#: modules/edsm.py:322
 msgid ""
 "** on that day : **{date}**.\n"
 "\n"
 msgstr ""
 
-#: modules/edsm.py:321
+#: modules/edsm.py:323
 msgid "For more information, spy that CMDR there : <{url}>"
 msgstr ""
 
-#: modules/edsm.py:327
+#: modules/edsm.py:329
 msgid "faction"
 msgstr ""
 
-#: modules/edsm.py:331
+#: modules/edsm.py:333
 msgid "faction command called with {cmdrname}"
+msgstr ""
+
+#: modules/edsm.py:351
+msgid "farm body function called with {volcanism_id}"
+msgstr ""
+
+#: modules/edsm.py:396
+msgid "farm body function returned for {volcanism_id} :"
+msgstr ""
+
+#: modules/edsm.py:400
+msgid "farm"
+msgstr ""
+
+#: modules/edsm.py:406 modules/google.py:72
+msgid "farm command"
+msgstr ""
+
+#: modules/edsm.py:408 modules/google.py:74
+msgid "You must specify a material !"
+msgstr ""
+
+#: modules/edsm.py:412
+msgid "You must specify a system !"
+msgstr ""
+
+#: modules/edsm.py:418
+msgid "You asked for the mineral {} near {}. Please wait while I'm searching..."
+msgstr ""
+
+#: modules/edsm.py:427
+msgid "Here are the results for some {} near {}."
+msgstr ""
+
+#: modules/edsm.py:430
+msgid "Body"
+msgstr ""
+
+#: modules/edsm.py:432
+msgid "Gravity"
+msgstr ""
+
+#: modules/edsm.py:434
+msgid "Distance from {}"
+msgstr ""
+
+#: modules/edsm.py:439
+msgid "No results... :crying_cat_face: "
 msgstr ""
 
 #: modules/galnet.py:15
@@ -1054,18 +1280,6 @@ msgstr ""
 
 #: modules/google.py:64
 msgid "Google module unloaded"
-msgstr ""
-
-#: modules/google.py:66
-msgid "farm"
-msgstr ""
-
-#: modules/google.py:72
-msgid "farm command"
-msgstr ""
-
-#: modules/google.py:74
-msgid "You must specify a material !"
 msgstr ""
 
 #: modules/google.py:99
@@ -1258,6 +1472,72 @@ msgstr ""
 
 #: modules/mercure.py:48
 msgid "help command"
+msgstr ""
+
+#: modules/mercure.py:50
+msgid ""
+"- !influence <system> : Display <system>'s factions and their "
+"influence/states.\n"
+msgstr ""
+
+#: modules/mercure.py:51
+msgid ""
+"- !system <system> : Displays every information about a system "
+"(coordinates, main state, economy...\n"
+msgstr ""
+
+#: modules/mercure.py:52
+msgid "- !traffic <system> : Displays recent traffic information of <system>.\n"
+msgstr ""
+
+#: modules/mercure.py:53
+msgid ""
+"- !stations <system> : Displays all the stations of <system> with their "
+"informations.\n"
+msgstr ""
+
+#: modules/mercure.py:54
+msgid ""
+"- !farm <material> : Displays systems where material can be found, using "
+"CMDR Phoenix's Sheet.\n"
+msgstr ""
+
+#: modules/mercure.py:55
+msgid ""
+"- !oracle : Display EDSM/EDBB links to consult our factions' state in the"
+" Bubble and Colonia.\n"
+msgstr ""
+
+#: modules/mercure.py:56
+msgid ""
+"- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in "
+"shown format. Default is current date.\n"
+msgstr ""
+
+#: modules/mercure.py:57
+msgid ""
+"- !bigbrother : Display followed factions' influence/state in all the "
+"systems they're in.\n"
+msgstr ""
+
+#: modules/mercure.py:58
+msgid "- !inara <cmdr name> : Displays the inara profile of that CMDR.\n"
+msgstr ""
+
+#: modules/mercure.py:59
+msgid "- !repairs : Shows a list of commodities needed to repair a starport.\n"
+msgstr ""
+
+#: modules/mercure.py:60
+msgid "- !ed : Displays Frontier servers' state for Elite Dangerous.\n"
+msgstr ""
+
+#: modules/mercure.py:61
+msgid "- !cg : Shows the current active cgs' informations.\n"
+msgstr ""
+
+#: modules/mercure.py:63
+msgid "Available commands"
 msgstr ""
 
 #: modules/mercure.py:66
@@ -2048,5 +2328,20 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Ignoring exception in command {}:"
+#~ msgstr ""
+
+#~ msgid "colonia"
+#~ msgstr ""
+
+#~ msgid "sulfur"
+#~ msgstr ""
+
+#~ msgid "molydbenum"
+#~ msgstr ""
+
+#~ msgid "You asked for the mineral {} near {}"
+#~ msgstr ""
+
+#~ msgid "Here are the results for {} near {}."
 #~ msgstr ""
 

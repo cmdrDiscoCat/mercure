@@ -82,47 +82,6 @@ async def on_command(ctx):
 
 
 @bot.event
-async def on_command_error(error, ctx):
-    if config['DEBUG']: print(_("on_command_error event"))
-    # This prevents any commands with local handlers being handled here in on_command_error.
-    if hasattr(ctx.command, 'on_error'):
-        return
-
-    # Allows us to check for original exceptions raised and sent to CommandInvokeError.
-    # If nothing is found. We keep the exception passed to on_command_error.
-    error = getattr(error, 'original', error)
-
-    # Anything in ignored will return and prevent anything happening.
-    if isinstance(error, commands.UserInputError):
-        return
-
-    # Anything in ignored will return and prevent anything happening.
-    elif isinstance(error, commands.CommandNotFound):
-        text_help = ""
-        text_help += _("- !influence <system> : Display <system>'s factions and their influence/states.\n")
-        text_help += _(
-            "- !system <system> : Displays every information about a system (coordinates, main state, economy...\n")
-        text_help += _("- !traffic <system> : Displays recent traffic information of <system>.\n")
-        text_help += _("- !stations <system> : Displays all the stations of <system> with their informations.\n")
-        text_help += _("- !farm <material> : Displays systems where material can be found, using CMDR Phoenix's Sheet.\n")
-        text_help += _("- !oracle : Display EDSM/EDBB links to consult our factions' state in the Bubble and Colonia.\n")
-        text_help += _(
-            "- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in shown format. Default is current date.\n")
-        text_help += _("- !bigbrother : Display followed factions' influence/state in all the systems they're in.\n")
-        text_help += _("- !inara <cmdr name> : Displays the inara profile of that CMDR.\n")
-        text_help += _("- !repairs : Shows a list of commodities needed to repair a starport.\n")
-        text_help += _("- !ed : Displays Frontier servers' state for Elite Dangerous.\n")
-        text_help += _("- !cg : Shows the current active cgs' informations.\n")
-
-        embed = discord.Embed(title=_("Available commands"), description=text_help, color=0x00ff00)
-        await ctx.send(embed=embed)
-
-    # All other Errors not returned come here... And we can just print the default TraceBack.
-    print(_('Ignoring exception in command {}:').format(ctx.command), file=sys.stderr)
-    traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
-
-
-@bot.event
 async def on_message(message):
     """Called every time a message is sent on a visible channel.
     This is used to make commands case insensitive.

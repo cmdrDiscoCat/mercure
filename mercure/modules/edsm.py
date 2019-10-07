@@ -3,10 +3,12 @@ from discord.ext import commands
 from main import acces_oracle, is_admin, _
 from config import *
 from data import *
+from farm import *
 
 import requests
 import urllib.parse
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 
 class Edsm(commands.Cog):
@@ -336,6 +338,105 @@ class Edsm(commands.Cog):
             informations = r.json()
         except:
             await ctx.send("Oops ! :crying_cat_face: ")
+
+    def edsm_farm_body_search(self, ctx, material, system, volcanism_id):
+        """
+        this function returns a dict of any body meeting the material, system and volcanism id asked
+        :param ctx:
+        :param material:
+        :param system:
+        :param volcanism_id:
+        :return:
+        """
+        if config['DEBUG']: print(_("farm body function called with {volcanism_id}").format(volcanism_id=str(volcanism_id)))
+
+        # Let's build the url request for edsm
+        url_to_call = "https://www.edsm.net/en/search/bodies/index/group/"+str(EDSM_BODIES)+"/"
+        url_to_call += "cmdrPosition/"+system+"/"
+        url_to_call += "material/"+str(minerals[material])+"/"
+        url_to_call += "materialProportion"+str(minerals[material])+"/1%2C100/"
+        url_to_call += "distanceToArrival/0%2C7000/"
+        url_to_call += "gravity/0.1%2C2.5/"
+        url_to_call += "isLandable/1/"
+        url_to_call += "radius/100/"
+        url_to_call += "sortBy/distanceCMDR/"
+        url_to_call += "volcanism/"+str(volcanism_id)+"/"
+
+        print(url_to_call)
+
+        try:
+            r = requests.get(url_to_call)
+        except:
+            ctx.send("Oops ! :crying_cat_face: ")
+
+        # Now, we have a returned page, we seek system links to know if there are result
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        bodies = {}
+
+        # this works too but it's less elegant
+        # systems_links = soup.findAll('a', href=re.compile('^/galaxy-starsystem/'))
+        row = 1
+        tbody = soup.find('tbody')
+        for tr in tbody.find_all('tr'):
+            if row < 6:
+                col = 0
+                bodies[row] = {}
+                for td in tr.find_all('td'):
+                    if col == 1:
+                        bodies[row]["name"] = td.a.get_text()
+                    if col == 3:
+                        bodies[row]["gravity"] = td.get_text().strip()
+                    if col == 4:
+                        bodies[row]["distance"] = td.get_text().strip()
+                    col += 1
+                row += 1
+
+        if config['DEBUG']: print(
+            _("farm body function returned for {volcanism_id} :").format(volcanism_id=str(volcanism_id)))
+        if config['DEBUG']: print(bodies)
+        return bodies
+
+    @commands.command(pass_context=True, aliases=[_('farm')])
+    @acces_oracle()
+    async def edsm_farm(self, ctx, material, *, system):
+        """
+        Launches a search, volcanism type by volcanism type, to find a body near system with said material AND geology
+        """
+        if config['DEBUG']: print(_("farm command"))
+        if not material:
+            await ctx.send(_("You must specify a material !"))
+            return
+
+        if not system:
+            await ctx.send(_("You must specify a system !"))
+            return
+
+        material = str(material).lower()
+        system = urllib.parse.quote(system)
+        # As this is gonna take time, we tell them to be patient
+        waiting_message = await ctx.send(_("You asked for the mineral {} near {}. Please wait while I'm searching...")
+                       .format(material, system))
+
+        # Now, for each volcanism type above 0 , we call our function returning a list of the bodies matching the search
+        for volcanism_id in volcanism_types.keys():
+            if volcanism_id > 0:
+                bodies = self.edsm_farm_body_search(ctx, material, system, volcanism_id)
+                if len(bodies) > 0:
+                    await waiting_message.delete()
+                    await ctx.send(_("Here are the results for some {} near {}.").format(material, system))
+                    for body_id, body in bodies.items():
+                        embed = discord.Embed(title="", color=0x00ffff)
+                        embed.add_field(name=_("Body"),
+                                        value=body['name'], inline=True)
+                        embed.add_field(name=_("Gravity"),
+                                        value=body['gravity'], inline=True)
+                        embed.add_field(name=_("Distance from {}").format(str(system).capitalize()),
+                                        value=body['distance'], inline=True)
+                        await ctx.send(embed=embed)
+                    return
+
+        await ctx.send(_("No results... :crying_cat_face: "))
 
 
 def setup(bot):
