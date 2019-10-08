@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 11:16+0200\n"
+"POT-Creation-Date: 2019-10-08 11:24+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -1200,6 +1200,11 @@ msgstr ""
 msgid ""
 " on that day : **{date}**.\n"
 "\n"
+msgstr ""
+
+#: modules/edsm.py:323
+#, python-format
+msgid "%d/%m/%Y at %Hh%M"
 msgstr ""
 
 #: modules/edsm.py:324

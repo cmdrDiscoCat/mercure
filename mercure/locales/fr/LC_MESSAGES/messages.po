@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 11:16+0200\n"
+"POT-Creation-Date: 2019-10-08 11:24+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -1196,7 +1196,9 @@ msgstr "Commande spy appelée avec {cmdrname}"
 
 #: modules/edsm.py:320
 msgid "My spies told me that CMDR **{cmdr}** was last seen in **{system}**"
-msgstr "Mes espions m'ont dit que le CMDR **{cmdr}** a été vu.e récemment dans le système **{system}**"
+msgstr ""
+"Mes espions m'ont dit que le CMDR **{cmdr}** a été vu.e récemment dans le"
+" système **{system}**"
 
 #: modules/edsm.py:323
 msgid ""
@@ -1205,6 +1207,11 @@ msgid ""
 msgstr ""
 " à cette date : **{date}**.\n"
 "\n"
+
+#: modules/edsm.py:323
+#, python-format
+msgid "%d/%m/%Y at %Hh%M"
+msgstr "%d/%m/%Y à %Hh%M"
 
 #: modules/edsm.py:324
 msgid "For more information, spy that CMDR there : <{url}>"

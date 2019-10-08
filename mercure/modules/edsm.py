@@ -293,7 +293,7 @@ class Edsm(commands.Cog):
             last_update = datetime.fromtimestamp(faction['lastUpdate'])
             header_embed = _("***Influences in the {system} system").format(system=informations['name'])
             if last_update != 0:
-                header_embed += _("*** on the ***{date}*** \n").format(date=last_update.strftime("%d/%m/%Y at %Hh%M"))
+                header_embed += _("*** on the ***{date}*** \n").format(date=last_update)
             else:
                 header_embed += _("*** as of today *** \n")
             header_embed += "<https://www.edsm.net/en/system/id/"
@@ -320,7 +320,7 @@ class Edsm(commands.Cog):
             information_embed = _("My spies told me that CMDR **{cmdr}** was last seen in **{system}**")\
                                     .format(cmdr=str(arg).title(),
                                             system=informations['system'])
-            information_embed += _(" on that day : **{date}**.\n\n").format(date=informations['date'])
+            information_embed += _(" on that day : **{date}**.\n\n").format(date=str(informations['date']).strftime(_("%d/%m/%Y at %Hh%M")))
             information_embed += _("For more information, spy that CMDR there : <{url}>")\
                 .format(url=informations['url'])
             await ctx.send(information_embed)
