@@ -166,7 +166,7 @@ class Edsm(commands.Cog):
         """
         Displays the edsm data about a star system
         """
-        if config['DEBUG']: print(_("system command called with {system}").format(system=urllib.parse.quote(arg)))
+        if config['DEBUG']: print(_("system command called with {system}").format(system=str(arg)))
         system = urllib.parse.quote(arg)
         url_to_call = "https://www.edsm.net/api-v1/system?systemName="
         url_to_call += system+"&showId=1&showCoordinates=1&showPermit=1&showInformation=1&showPrimaryStar=1"
@@ -413,6 +413,7 @@ class Edsm(commands.Cog):
             return
 
         material = str(material).lower()
+        system_display = system
         system = urllib.parse.quote(system)
         # As this is gonna take time, we tell them to be patient
         waiting_message = await ctx.send(_("You asked for the mineral {} near {}. Please wait while I'm searching...")
@@ -424,14 +425,14 @@ class Edsm(commands.Cog):
                 bodies = self.edsm_farm_body_search(ctx, material, system, volcanism_id)
                 if len(bodies) > 0:
                     await waiting_message.delete()
-                    await ctx.send(_("Here are the results for some {} near {}.").format(material, system))
+                    await ctx.send(_("Here are the results for some {} near {}.").format(material, system_display))
                     for body_id, body in bodies.items():
                         embed = discord.Embed(title="", color=0x00ffff)
                         embed.add_field(name=_("Body"),
                                         value=body['name'], inline=True)
                         embed.add_field(name=_("Gravity"),
                                         value=body['gravity'], inline=True)
-                        embed.add_field(name=_("Distance from {}").format(str(system).capitalize()),
+                        embed.add_field(name=_("Distance from {}").format(str(system_display).capitalize()),
                                         value=body['distance'], inline=True)
                         await ctx.send(embed=embed)
                     return
