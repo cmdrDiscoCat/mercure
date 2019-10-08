@@ -362,7 +362,7 @@ class Edsm(commands.Cog):
         url_to_call += "sortBy/distanceCMDR/"
         url_to_call += "volcanism/"+str(volcanism_id)+"/"
 
-        print(url_to_call)
+        if config['DEBUG']: print(url_to_call)
 
         try:
             r = requests.get(url_to_call)
