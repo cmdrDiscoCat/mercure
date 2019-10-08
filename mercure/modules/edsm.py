@@ -417,7 +417,7 @@ class Edsm(commands.Cog):
         system = urllib.parse.quote(system)
         # As this is gonna take time, we tell them to be patient
         waiting_message = await ctx.send(_("You asked for the mineral {} near {}. Please wait while I'm searching...")
-                       .format(material, system))
+                       .format(material, system_display))
 
         # Now, for each volcanism type above 0 , we call our function returning a list of the bodies matching the search
         for volcanism_id in volcanism_types.keys():
