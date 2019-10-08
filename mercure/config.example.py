@@ -1,9 +1,9 @@
 # Config
 config = {}
-config["discord_token"] = ""  # TO FILL
-config["inara_api_key"] = ""
-config["inara_appname"] = ""
-config["inara_cmdr_name"] = ""
+config["discord_token"] = ""  # TO FILL : you'll have to go to discord's dev portal and create a bot there
+config["inara_api_key"] = ""  # you can generate this by contact the inara devs to create an app with an api key
+config["inara_appname"] = ""  # put here what you told the inara devs the bot's name would be
+config["inara_cmdr_name"] = ""  # the name of your commander (the one of the account tied to the api key above)
 config["prefix"] = "!"
 config['DEBUG'] = False
 config['LANGUAGE'] = "en"
