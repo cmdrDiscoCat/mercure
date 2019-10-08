@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 10:56+0200\n"
+"POT-Creation-Date: 2019-10-08 11:14+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -361,154 +361,158 @@ msgid "Prison Colony"
 msgstr "Colonie pénitentiaire"
 
 #: data.py:258
+msgid "Prison colony"
+msgstr "Colonie pénitentiaire"
+
+#: data.py:259
 msgid "Theocracy"
 msgstr "Théocracie"
 
-#: data.py:259
+#: data.py:260
 msgid "Boom"
 msgstr "Essor"
 
-#: data.py:260
+#: data.py:261
 msgid "Bust"
 msgstr "Faillite"
 
-#: data.py:261
+#: data.py:262
 msgid "Civil unrest"
 msgstr "Emeutes"
 
-#: data.py:262
+#: data.py:263
 msgid "Civil war"
 msgstr "Guerre civile"
 
-#: data.py:263
+#: data.py:264
 msgid "Civil liberty"
 msgstr "Liberté civile"
 
-#: data.py:264
+#: data.py:265
 msgid "Election"
 msgstr "Election"
 
-#: data.py:265
+#: data.py:266
 msgid "Expansion"
 msgstr "Expansion"
 
-#: data.py:266
+#: data.py:267
 msgid "Famine"
 msgstr "Famine"
 
-#: data.py:267
+#: data.py:268
 msgid "Investment"
 msgstr "Investissements"
 
-#: data.py:268
+#: data.py:269
 msgid "Lockdown"
 msgstr "Loi martiale"
 
-#: data.py:269
+#: data.py:270
 msgid "Outbreak"
 msgstr "Epidémie"
 
-#: data.py:270
+#: data.py:271
 msgid "Retreat"
 msgstr "Retraite"
 
-#: data.py:271
+#: data.py:272
 msgid "War"
 msgstr "Guerre"
 
-#: data.py:272
+#: data.py:273
 msgid "Workshop (Engineer)"
 msgstr "Atelier (Ingénieur•e)"
 
-#: data.py:273
+#: data.py:274
 msgid "Extraction"
 msgstr "Extraction"
 
-#: data.py:274
+#: data.py:275
 msgid "Refinery"
 msgstr "Raffinage"
 
-#: data.py:275
+#: data.py:276
 msgid "Industrial"
 msgstr "Industriel"
 
-#: data.py:276
+#: data.py:277
 msgid "High Tech"
 msgstr "High Tech"
 
-#: data.py:277
+#: data.py:278
 msgid "Agriculture"
 msgstr "Agriculture"
 
-#: data.py:278
+#: data.py:279
 msgid "Terraforming"
 msgstr "Terraformation"
 
-#: data.py:279
+#: data.py:280
 msgid "Tourism"
 msgstr "Tourisme"
 
-#: data.py:280
+#: data.py:281
 msgid "Service"
 msgstr "Service"
 
-#: data.py:281
+#: data.py:282
 msgid "Military"
 msgstr "Militaire"
 
-#: data.py:282
+#: data.py:283
 msgid "Rescue"
 msgstr "Sauvetage"
 
-#: data.py:283
+#: data.py:284
 msgid "Damaged"
 msgstr "Endommagé•e"
 
-#: data.py:284
+#: data.py:285
 msgid "Station Repair"
 msgstr "Réparation de station"
 
-#: data.py:285
+#: data.py:286
 msgid "Low"
 msgstr "Basse"
 
-#: data.py:286
+#: data.py:287
 msgid "Medium"
 msgstr "Moyenne"
 
-#: data.py:287
+#: data.py:288
 msgid "High"
 msgstr "Elevée"
 
-#: data.py:288
+#: data.py:289
 msgid "Lawless"
 msgstr "Anarchie"
 
-#: data.py:289
+#: data.py:290
 msgid "Black Market"
 msgstr "Marché noir"
 
-#: data.py:290
+#: data.py:291
 msgid "Restock"
 msgstr "Rechargement"
 
-#: data.py:291
+#: data.py:292
 msgid "Refuel"
 msgstr "Refaire le plein"
 
-#: data.py:292
+#: data.py:293
 msgid "Repair"
 msgstr "Reparer"
 
-#: data.py:293
+#: data.py:294
 msgid "Universal Cartographics"
 msgstr "Universal Cartographics"
 
-#: data.py:294
+#: data.py:295
 msgid "Search and Rescue"
 msgstr "Recherche et sauvetage"
 
-#: data.py:295
+#: data.py:296
 msgid "Interstellar Factors Contact"
 msgstr "Contacts Interstellaires"
 
@@ -1154,49 +1158,49 @@ msgstr "influence"
 msgid "influence command called with {system}"
 msgstr "Commande influence appelée avec {system}"
 
-#: modules/edsm.py:284
+#: modules/edsm.py:285
 msgid "state"
 msgstr "Etat"
 
-#: modules/edsm.py:285
+#: modules/edsm.py:286
 msgid "allegiance"
 msgstr "Allégeance"
 
-#: modules/edsm.py:286
+#: modules/edsm.py:287
 msgid "government"
 msgstr "Gouvernement"
 
-#: modules/edsm.py:293
+#: modules/edsm.py:294
 msgid "***Influences in the {system} system"
 msgstr "***Influences dans le système {system}"
 
-#: modules/edsm.py:295
+#: modules/edsm.py:296
 msgid "*** on the ***{date}*** \n"
 msgstr "*** en date du ***{date}*** \n"
 
-#: modules/edsm.py:297
+#: modules/edsm.py:298
 msgid "*** as of today *** \n"
 msgstr "*** au jour d'aujourd'hui *** \n"
 
-#: modules/edsm.py:305
+#: modules/edsm.py:306
 msgid "No system found with the name {system} :crying_cat_face:"
 msgstr "Pas de système trouvé avec le nom {system} :crying_cat_face:"
 
-#: modules/edsm.py:307
+#: modules/edsm.py:308
 msgid "spy"
 msgstr "espionner"
 
-#: modules/edsm.py:313
+#: modules/edsm.py:314
 msgid "spy command called with {cmdrname}"
 msgstr "Commande spy appelée avec {cmdrname}"
 
-#: modules/edsm.py:319
+#: modules/edsm.py:320
 msgid "My spies told me that CMDR **{cmdr}** was last seen in {system}**"
 msgstr ""
 "Mes espions m'ont dit que le CMDR **{cmdr}** a été vu.e récemment à "
 "{system}**"
 
-#: modules/edsm.py:322
+#: modules/edsm.py:323
 msgid ""
 "** on that day : **{date}**.\n"
 "\n"
@@ -1204,65 +1208,65 @@ msgstr ""
 "** à cette date : **{date}**.\n"
 "\n"
 
-#: modules/edsm.py:323
+#: modules/edsm.py:324
 msgid "For more information, spy that CMDR there : <{url}>"
 msgstr "Pour plus d'information, espionnez ce CMDR là-bas : <{url}>"
 
-#: modules/edsm.py:329
+#: modules/edsm.py:330
 msgid "faction"
 msgstr "faction"
 
-#: modules/edsm.py:333
+#: modules/edsm.py:334
 msgid "faction command called with {cmdrname}"
 msgstr "Commande faction appelée avec {cmdrname}"
 
-#: modules/edsm.py:351
+#: modules/edsm.py:352
 msgid "farm body function called with {volcanism_id}"
 msgstr ""
 
-#: modules/edsm.py:396
+#: modules/edsm.py:397
 msgid "farm body function returned for {volcanism_id} :"
 msgstr ""
 
-#: modules/edsm.py:400
+#: modules/edsm.py:401
 msgid "farm"
 msgstr "farmer"
 
-#: modules/edsm.py:406
+#: modules/edsm.py:407
 msgid "farm command"
 msgstr "Commande farm"
 
-#: modules/edsm.py:408
+#: modules/edsm.py:409
 msgid "You must specify a material !"
 msgstr "Vous devez indiquer un matériau"
 
-#: modules/edsm.py:412
+#: modules/edsm.py:413
 msgid "You must specify a system !"
 msgstr "Vous devez spécifier un système !"
 
-#: modules/edsm.py:419
+#: modules/edsm.py:420
 msgid "You asked for the mineral {} near {}. Please wait while I'm searching..."
 msgstr ""
 "Vous avez demandé le minéral {} près de {}. Veuillez patienter pendant "
 "que je recherche..."
 
-#: modules/edsm.py:428
+#: modules/edsm.py:429
 msgid "Here are the results for some {} near {}."
 msgstr "Voilà les résultats pour le minéral {} près de {}."
 
-#: modules/edsm.py:431
+#: modules/edsm.py:432
 msgid "Body"
 msgstr "Planète"
 
-#: modules/edsm.py:433
+#: modules/edsm.py:434
 msgid "Gravity"
 msgstr "Gravité"
 
-#: modules/edsm.py:435
+#: modules/edsm.py:436
 msgid "Distance from {}"
 msgstr "Distance de {}"
 
-#: modules/edsm.py:440
+#: modules/edsm.py:441
 msgid "No results... :crying_cat_face: "
 msgstr "Aucun résultat... :crying_cat_face: "
 
