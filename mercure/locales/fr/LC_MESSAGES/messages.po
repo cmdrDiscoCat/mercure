@@ -1479,8 +1479,8 @@ msgid ""
 "- !farm <material> <system> : Displays systems where <material> can be "
 "found near <system>.\n"
 msgstr ""
-"- !farmer <material> <system> :Affiche les planètes où on peut trouver le minéral <material> "
-"près de <system>.\n"
+"- !farmer <mineral> <systeme> :Affiche les planètes où on peut trouver le minéral <mineral> "
+"près de <systeme>.\n"
 
 #: modules/mercure.py:55
 msgid ""
