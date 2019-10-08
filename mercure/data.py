@@ -255,6 +255,7 @@ translations = {
     "None": _("None"),
     "Patronage": _("Patronage"),
     "Prison Colony": _("Prison Colony"),
+    "Prison colony": _("Prison colony"),
     "Theocracy" : _("Theocracy"),
     "Boom": _("Boom"),
     "Bust": _("Bust"),

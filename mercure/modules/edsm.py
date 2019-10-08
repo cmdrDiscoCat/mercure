@@ -256,6 +256,7 @@ class Edsm(commands.Cog):
         """
         if config['DEBUG']: print(_("influence command called with {system}").format(system=urllib.parse.quote(arg)))
 
+        system_display = system
         system = urllib.parse.quote(arg)
         url_to_call = "https://www.edsm.net/api-system-v1/factions?systemName="+system
 
@@ -302,7 +303,7 @@ class Edsm(commands.Cog):
             embed = discord.Embed(title="", description = information_embed, color=0x00ff00)
             await ctx.send(embed=embed)
         else:
-            await ctx.send(_("No system found with the name {system} :crying_cat_face:").format(system=system))
+            await ctx.send(_("No system found with the name {system} :crying_cat_face:").format(system=system_display))
 
     @commands.command(pass_context=True, aliases=[_('spy')])
     @acces_oracle()
@@ -316,10 +317,10 @@ class Edsm(commands.Cog):
         try:
             r = requests.get(url_to_call)
             informations = r.json()
-            information_embed = _("My spies told me that CMDR **{cmdr}** was last seen in {system}**")\
+            information_embed = _("My spies told me that CMDR **{cmdr}** was last seen in **{system}**")\
                                     .format(cmdr=str(arg).title(),
                                             system=informations['system'])
-            information_embed += _("** on that day : **{date}**.\n\n").format(date=informations['date'])
+            information_embed += _(" on that day : **{date}**.\n\n").format(date=informations['date'])
             information_embed += _("For more information, spy that CMDR there : <{url}>")\
                 .format(url=informations['url'])
             await ctx.send(information_embed)
