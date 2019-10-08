@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 01:20+0200\n"
+"POT-Creation-Date: 2019-10-08 10:48+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -1234,27 +1234,27 @@ msgstr ""
 msgid "You must specify a system !"
 msgstr ""
 
-#: modules/edsm.py:418
+#: modules/edsm.py:419
 msgid "You asked for the mineral {} near {}. Please wait while I'm searching..."
 msgstr ""
 
-#: modules/edsm.py:427
+#: modules/edsm.py:428
 msgid "Here are the results for some {} near {}."
 msgstr ""
 
-#: modules/edsm.py:430
+#: modules/edsm.py:431
 msgid "Body"
 msgstr ""
 
-#: modules/edsm.py:432
+#: modules/edsm.py:433
 msgid "Gravity"
 msgstr ""
 
-#: modules/edsm.py:434
+#: modules/edsm.py:435
 msgid "Distance from {}"
 msgstr ""
 
-#: modules/edsm.py:439
+#: modules/edsm.py:440
 msgid "No results... :crying_cat_face: "
 msgstr ""
 
@@ -1458,8 +1458,8 @@ msgstr ""
 
 #: modules/mercure.py:54
 msgid ""
-"- !farm <material> : Displays systems where material can be found, using "
-"CMDR Phoenix's Sheet.\n"
+"- !farm <material> <system> : Displays systems where <material> can be "
+"found near <system>.\n"
 msgstr ""
 
 #: modules/mercure.py:55

@@ -51,7 +51,7 @@ class Mercure(commands.Cog):
         text_help += _("- !system <system> : Displays every information about a system (coordinates, main state, economy...\n")
         text_help += _("- !traffic <system> : Displays recent traffic information of <system>.\n")
         text_help += _("- !stations <system> : Displays all the stations of <system> with their informations.\n")
-        text_help += _("- !farm <material> : Displays systems where material can be found, using CMDR Phoenix's Sheet.\n")
+        text_help += _("- !farm <material> <system> : Displays systems where <material> can be found near <system>.\n")
         text_help += _("- !oracle : Display EDSM/EDBB links to consult our factions' state in the Bubble and Colonia.\n")
         text_help += _("- !galnet 01-DEC-3303 : Displays galnet articles of the date entered in shown format. Default is current date.\n")
         text_help += _("- !bigbrother : Display followed factions' influence/state in all the systems they're in.\n")
