@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-08 11:14+0200\n"
+"POT-Creation-Date: 2019-10-08 11:16+0200\n"
 "PO-Revision-Date: 2019-10-03 21:12+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -1195,17 +1195,15 @@ msgid "spy command called with {cmdrname}"
 msgstr "Commande spy appelée avec {cmdrname}"
 
 #: modules/edsm.py:320
-msgid "My spies told me that CMDR **{cmdr}** was last seen in {system}**"
-msgstr ""
-"Mes espions m'ont dit que le CMDR **{cmdr}** a été vu.e récemment à "
-"{system}**"
+msgid "My spies told me that CMDR **{cmdr}** was last seen in **{system}**"
+msgstr "Mes espions m'ont dit que le CMDR **{cmdr}** a été vu.e récemment dans le système **{system}**"
 
 #: modules/edsm.py:323
 msgid ""
-"** on that day : **{date}**.\n"
+" on that day : **{date}**.\n"
 "\n"
 msgstr ""
-"** à cette date : **{date}**.\n"
+" à cette date : **{date}**.\n"
 "\n"
 
 #: modules/edsm.py:324
@@ -1226,7 +1224,7 @@ msgstr ""
 
 #: modules/edsm.py:397
 msgid "farm body function returned for {volcanism_id} :"
-msgstr ""
+msgstr "function farmer corps appelée avec {volcanism_id} :"
 
 #: modules/edsm.py:401
 msgid "farm"
@@ -1656,4 +1654,17 @@ msgstr "commande dire"
 #~ "systèmes où le matériau peut être "
 #~ "trouvé, grâce à la Google Sheet du"
 #~ " CMDR Phoenix.\n"
+
+#~ msgid "My spies told me that CMDR **{cmdr}** was last seen in {system}**"
+#~ msgstr ""
+#~ "Mes espions m'ont dit que le CMDR"
+#~ " **{cmdr}** a été vu.e récemment à"
+#~ " {system}**"
+
+#~ msgid ""
+#~ "** on that day : **{date}**.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "** à cette date : **{date}**.\n"
+#~ "\n"
 
