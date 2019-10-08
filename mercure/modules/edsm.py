@@ -256,7 +256,7 @@ class Edsm(commands.Cog):
         """
         if config['DEBUG']: print(_("influence command called with {system}").format(system=urllib.parse.quote(arg)))
 
-        system_display = system
+        system_display = arg
         system = urllib.parse.quote(arg)
         url_to_call = "https://www.edsm.net/api-system-v1/factions?systemName="+system
 
