@@ -1,6 +1,6 @@
 # Config
 config = {}
-config["discord_token"] = "" # TO FILL
+config["discord_token"] = ""  # TO FILL
 config["inara_api_key"] = ""
 config["inara_appname"] = ""
 config["inara_cmdr_name"] = ""
@@ -8,7 +8,10 @@ config["prefix"] = "!"
 config['DEBUG'] = False
 config['LANGUAGE'] = "en"
 
-# Admin ids (put the ids directly, not in strings)
+# To get the ids of people and channel, go to discord's display options and activate developer mode
+# Then, right click on people and channel will allow you to copy their id
+
+# Admin ids (put the ids directly, not in strings).
 admin_ids = []
 
 # Daily BGS update channel id
